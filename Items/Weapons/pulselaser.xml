@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Items>
+  <Override>
+    <Item category="Weapon" hideinmenus="true" identifier="pulselaserbolt" name="" scale="0.5"
+      sonarsize="2">
+      <Sprite depth="0.55" sourcerect="143,414,113,9"
+        texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="20" height="10" width="170" />
+      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50"
+        slots="RightHand+LeftHand" />
+      <Projectile characterusable="false" damagedoors="true" hitscan="true" penetration="0.1"
+        removeonhit="true">
+        <ParticleEmitter particle="tracerpulselaser" particleamount="1" velocitymax="0"
+          velocitymin="0" />
+        <ParticleEmitter emitacrossrayinterval="50" particle="FlareBubbles" />
+        <Attack itemdamage="25" penetration="0.1" severlimbsprobability="1.0" structuredamage="50"
+          targetforce="100">
+          <Affliction identifier="burn" strength="300" />
+          <Affliction identifier="stun" strength="3" />
+        </Attack>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <ParticleEmitter anglemax="360" anglemin="0" particle="muzzleflashpulselaser"
+            particleamount="10" scalemax="0.8" scalemin="0.5" velocitymin="0" />
+          <ParticleEmitter anglemax="360" anglemin="0" colormultiplier="255,200,225,180"
+            drawontop="true" particle="weldspark" particleamount="5" scalemax="1.9" scalemin="1.5"
+            velocitymax="350" velocitymin="300" />
+          <ParticleEmitter anglemax="360" anglemin="0" particle="FlareBubbles" particleamount="3"
+            velocitymax="50" velocitymin="0" />
+          <Explosion ballastfloradamage="50" flames="false" flashcolor="255,0,0,255" force="10.0"
+            itemdamage="250" levelwalldamage="80" range="150.0" smoke="false" sparks="false"
+            structuredamage="5" underwaterbubble="false">
+            <Affliction identifier="burn" strength="150" />
+            <Affliction identifier="stun" strength="1.5" />
+          </Explosion>
+        </StatusEffect>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true" particle="spark"
+            particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-200" velocitymin="-10" />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+    <Item category="Weapon" hideinmenus="true" identifier="pulselaserbolttrilaser" name=""
+      nameidentifier="pulselaserbolt" scale="0.5" sonarsize="2">
+      <Sprite depth="0.55" sourcerect="143,414,113,9"
+        texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="20" height="10" width="170" />
+      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50"
+        slots="RightHand+LeftHand" />
+      <Projectile characterusable="false" damagedoors="true" hitscan="true" hitscancount="3"
+        penetration="0.1" removeonhit="true" spread="10" staticspread="true">
+        <ParticleEmitter particle="tracerpulselaser" particleamount="1" velocitymax="0"
+          velocitymin="0" />
+        <Attack itemdamage="17" penetration="0.1" severlimbsprobability="1.0" structuredamage="37.5"
+          targetforce="70">
+          <Affliction identifier="burn" strength="225" />
+          <Affliction identifier="stun" strength="2.25" />
+        </Attack>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <ParticleEmitter anglemax="360" anglemin="0" particle="muzzleflashpulselaser"
+            particleamount="10" scalemax="0.8" scalemin="0.5" velocitymin="0" />
+          <ParticleEmitter anglemax="360" anglemin="0" colormultiplier="255,200,225,180"
+            drawontop="true" particle="weldspark" particleamount="5" scalemax="1.9" scalemin="1.5"
+            velocitymax="350" velocitymin="300" />
+          <ParticleEmitter anglemax="360" anglemin="0" particle="FlareBubbles" particleamount="3"
+            velocitymax="50" velocitymin="0" />
+          <Explosion ballastfloradamage="35" flames="false" flashcolor="255,0,0,255" force="7.0"
+            itemdamage="200" levelwalldamage="50" range="100.0" smoke="false" sparks="false"
+            structuredamage="3.75" underwaterbubble="false">
+            <Affliction identifier="burn" strength="112.5" />
+            <Affliction identifier="stun" strength="1.125" />
+          </Explosion>
+        </StatusEffect>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true" particle="spark"
+            particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-200" velocitymin="-10" />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+  </Override>
+</Items>

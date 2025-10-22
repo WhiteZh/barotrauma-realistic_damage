@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Items>
+  <Override>
+    <Item category="Weapon" hideinmenus="true" identifier="coilgunbolt" name="" scale="0.5"
+      sonarsize="2">
+      <Sprite depth="0.55" sourcerect="143,414,113,9"
+        texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="20" height="10" width="170" />
+      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50"
+        slots="RightHand+LeftHand" />
+      <Projectile characterusable="false" damagedoors="true" launchimpulse="0">
+        <Attack itemdamage="10" penetration="0.1" severlimbsprobability="0.25" structuredamage="20">
+          <Affliction identifier="lacerations" strength="35" />
+          <Affliction identifier="bleeding" strength="16" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect lifetime="2" target="This" type="OnActive">
+          <ParticleEmitter anglemax="5" anglemin="-5" copyentityangle="true"
+            particle="ammotrailwater"
+            particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
+        </StatusEffect>
+        <!-- a 3 second lifetime after being fired -->
+        <StatusEffect delay="3" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnImpact">
+          <ParticleEmitter anglemax="360" anglemin="0" copyentityangle="true" particle="shrapnel"
+            particleamount="10" scalemax="0.5" scalemin="0.25" velocitymax="2000" velocitymin="100" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnBroken">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+      <Upgrade gameversion="0.10.0.0" scale="*0.5" />
+    </Item>
+    <Item category="Weapon" hideinmenus="true" identifier="physicoriumbolt" name="" scale="0.5"
+      sonarsize="2">
+      <Sprite depth="0.55" sourcerect="143,425,113,9"
+        texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="20" height="10" width="160" />
+      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50"
+        slots="RightHand+LeftHand" />
+      <Projectile characterusable="false" damagedoors="true" launchimpulse="0">
+        <Attack itemdamage="15" penetration="0.2" severlimbsprobability="0.5" structuredamage="30"
+          targetforce="50">
+          <Affliction identifier="lacerations" strength="55" />
+          <Affliction identifier="bleeding" strength="16" />
+          <Affliction identifier="stun" strength="0.4" />
+        </Attack>
+        <StatusEffect lifetime="2" target="This" type="OnActive">
+          <ParticleEmitter anglemax="5" anglemin="-5" copyentityangle="true"
+            particle="ammotrailwater"
+            particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
+        </StatusEffect>
+        <!-- a 3 second lifetime after being fired -->
+        <StatusEffect delay="3" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnImpact">
+          <ParticleEmitter colormultiplier="255,150,255" copyentityangle="true"
+            lifetimemultiplier="5"
+            particle="impactfirearm" particleamount="1" scalemax="5.0" scalemin="4.0"
+            velocitymax="0"
+            velocitymin="0" />
+          <ParticleEmitter anglemax="360" anglemin="0" copyentityangle="true" particle="shrapnel"
+            particleamount="10" scalemax="0.5" scalemin="0.25" velocitymax="2000" velocitymin="100" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnBroken">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+      <Upgrade gameversion="0.10.0.0" scale="*0.5" />
+    </Item>
+    <Item category="Weapon" hideinmenus="true" identifier="coilgunboltexplosive" name="" scale="0.5"
+      sonarsize="2">
+      <Sprite depth="0.55" sourcerect="144,436,112,9"
+        texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="20" height="10" width="160" />
+      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50"
+        slots="RightHand+LeftHand" />
+      <Projectile characterusable="false" damagedoors="true" launchimpulse="0">
+        <Attack itemdamage="10" penetration="0.1" severlimbsprobability="0.25" structuredamage="10">
+          <Affliction identifier="explosiondamage" strength="12" />
+          <Affliction identifier="bleeding" strength="8" />
+          <Affliction identifier="stun" strength="0.56" />
+        </Attack>
+        <StatusEffect lifetime="2" target="This" type="OnActive">
+          <ParticleEmitter anglemax="5" anglemin="-5" copyentityangle="true"
+            particle="ammotrailwater"
+            particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
+        </StatusEffect>
+        <!-- a 3 second lifetime after being fired -->
+        <StatusEffect delay="3" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnImpact">
+          <Explosion decal="explosion" decalsize="0.3" force="10.0" itemdamage="250" range="300.0"
+            severlimbsprobability="0.25" structuredamage="6">
+            <Affliction identifier="explosiondamage" strength="24" />
+            <Affliction identifier="bleeding" strength="16" />
+            <Affliction identifier="stun" strength="1.12" />
+          </Explosion>
+          <ParticleEmitter anglemax="360" anglemin="0" copyentityangle="true" particle="shrapnel"
+            particleamount="10" scalemax="0.5" scalemin="0.25" velocitymax="2000" velocitymin="100" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnBroken">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+      <Upgrade gameversion="0.10.0.0" scale="*0.5" />
+    </Item>
+    <Item category="Weapon" hideinmenus="true" identifier="coilgunboltpiercing" name="" scale="0.5"
+      sonarsize="2">
+      <Sprite depth="0.55" sourcerect="144,447,112,12"
+        texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="20" height="10" width="160" />
+      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50"
+        slots="RightHand+LeftHand" />
+      <Projectile characterusable="false" damagedoors="true" launchimpulse="0" maxtargetstohit="2">
+        <Attack itemdamage="10" penetration="0.5" severlimbsprobability="0.1" structuredamage="35">
+          <Affliction identifier="lacerations" strength="25" />
+          <Affliction identifier="bleeding" strength="40" />
+          <Affliction identifier="stun" strength="0.1" />
+        </Attack>
+        <StatusEffect lifetime="2" target="This" type="OnActive">
+          <ParticleEmitter anglemax="5" anglemin="-5" copyentityangle="true"
+            particle="ammotrailwater"
+            particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
+        </StatusEffect>
+        <!-- a 3 second lifetime after being fired -->
+        <StatusEffect delay="3" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect condition="-50" target="This" type="OnImpact" />
+        <StatusEffect target="This" type="OnBroken">
+          <ParticleEmitter anglemax="360" anglemin="0" copyentityangle="true" particle="shrapnel"
+            particleamount="10" scalemax="0.75" scalemin="0.5" velocitymax="2000" velocitymin="100" />
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+      <Upgrade gameversion="0.10.0.0" scale="*0.5" />
+    </Item>
+    <Item category="Weapon" hideinmenus="true" identifier="coilgunharpoon" name="" scale="0.5"
+      sonarsize="2">
+      <Sprite depth="0.55" sourcerect="144,447,112,12"
+        texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="20" height="10" width="160" />
+      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50"
+        slots="RightHand+LeftHand" />
+      <Rope BarrelLengthMultiplier="0.85" IncreaseForceForEscapingTargets="false"
+        SnapWhenWeaponFiredAgain="false" lerpforces="true" maxlength="8000" origin="0.05,0.5"
+        projectilepullforce="5" snaponcollision="true" sourcepullforce="20000" spritewidth="8"
+        targetpullforce="20000" tile="true">
+        <Sprite depth="0.57" origin="0.5,0.5" sourcerect="428,242,81,24"
+          texture="Content/Items/Weapons/weapons_new.png" />
+        <SnapSound file="Content/Items/Weapons/HarpoonGun1.ogg" frequencymultiplier="3.0,4.0"
+          range="500" />
+        <ReelSound ReelSoundPitchSlide="0.7,1.0"
+          file="Content/Items/Weapons/WEAPON_harpoonGunReelLoop.ogg" range="5000" />
+        <!-- Automatically snap after 20 seconds -->
+        <StatusEffect Snapped="true" delay="20" target="This" type="OnUse" />
+        <!-- Remove 1 second after snapping -->
+        <StatusEffect checkconditionalalways="true" conditionalcomparison="And" delay="1"
+          target="This" type="Always">
+          <Conditional Snapped="true" TargetItemComponent="Rope" />
+          <Conditional IsActive="true" TargetItemComponent="Projectile" />
+          <Remove />
+        </StatusEffect>
+        <!-- Snap after 5 seconds if not stuck to anything -->
+        <StatusEffect Snapped="true" checkconditionalalways="true" delay="5" target="This"
+          type="OnUse">
+          <Conditional IsStuckToTarget="false" targetitemcomponent="Projectile" />
+        </StatusEffect>
+      </Rope>
+      <Projectile GoThroughLightTargets="true" JointBreakPoint="20000"
+        LightTargetMassThreshold="0.15"
+        StickToLightTargets="false" characterusable="false" launchimpulse="0" maxtargetstohit="1"
+        sticktocharacters="true" sticktodeflective="true" sticktodoors="true"
+        sticktostructures="true">
+        <Attack itemdamage="10" penetration="0" severlimbsprobability="0.1" structuredamage="25">
+          <Affliction identifier="lacerations" strength="35" />
+          <Affliction identifier="bleeding" strength="35" />
+          <Affliction identifier="stun" strength="0.4" />
+        </Attack>
+        <StatusEffect checkconditionalalways="true" comparison="And" disabledeltatime="true"
+          target="UseTarget,This" type="OnActive">
+          <Conditional Snapped="false" />
+          <Conditional mass="lt 200" />
+          <Affliction identifier="drag" strength="1" />
+        </StatusEffect>
+        <StatusEffect lifetime="2" target="This" type="OnActive">
+          <ParticleEmitter anglemax="5" anglemin="-5" copyentityangle="true"
+            particle="ammotrailwater"
+            particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnImpact">
+          <Sound file="Content/Map/Thalamus/Sounds/CARRIER_harpoonHit1.ogg" range="1000"
+            selectionmode="Random" />
+          <Sound file="Content/Map/Thalamus/Sounds/CARRIER_harpoonHit2.ogg" range="1000" />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnBroken">
+          <ParticleEmitter anglemax="360" anglemin="0" copyentityangle="true" particle="shrapnel"
+            particleamount="10" scalemax="0.75" scalemin="0.5" velocitymax="2000" velocitymin="100" />
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+  </Override>
+</Items>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Realistic Damage" modversion="1.0.1" corepackage="False" gameversion="1.10.7.1">
+  <Item file="%ModDir%/Items/Weapons/coilgun.xml" />
+  <Item file="%ModDir%/Items/Weapons/chaingun.xml" />
+  <Item file="%ModDir%/Items/Weapons/flakcannon.xml" />
+  <Item file="%ModDir%/Items/Weapons/pulselaser.xml" />
+  <Item file="%ModDir%/Items/Weapons/weapons.xml" />
+  <Item file="%ModDir%/Items/Weapons/ek_weapons.xml" />
+  <Item file="%ModDir%/Items/Jobgear/Engineer/engineer_talent_items.xml" />
+  <Character file="%ModDir%/Characters/Human/Human.xml" />
+  <Afflictions file="%ModDir%/Afflictions.xml" />
+  <Text file="%ModDir%/Texts/English/English.xml"/>
+</contentpackage>

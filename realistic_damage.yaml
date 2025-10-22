@@ -1,0 +1,187 @@
+personalweapon:
+  ek_handgun:
+    projectiles:
+      regular:
+        update:
+          afflictions:
+            bleeding: 10
+            gunshotwound: 10
+            stun: 
+              value: 0.16
+              probability: 0.10
+          penetration: 0
+          structdamage: 3.2
+      physicorium:
+        update:
+          afflictions:
+            bleeding: 10
+            gunshotwound: 16.25
+            stun: 
+              value: 0.26
+              probability: 0.10
+          penetration: 0.15
+          structdamage: 5.2
+  ek_mini_smg:
+    mag:
+      action: use corresponding handgun ammo
+  ek_556:
+    projectiles:
+      regular:
+        afflictions:
+          gunshotwound: 18
+          bleeding: 12
+          stun: 0.15
+        penetration: 0.25
+        structdamage: 5
+      physicorium:
+        afflictions:
+          gunshotwound: 24
+          bleeding: 18
+          stun: 0.25
+        penetration: 0.4
+        structdamage: 10
+  ek_laserpistol:
+    projectiles:
+      regular:
+        afflictions:
+          burn: 20
+  ek_laserrifle:
+    projectiles:
+      regular:
+        afflictions:
+          burn: 40
+  beast_ssl:
+    projectiles:
+      regular:
+        update:
+          afflictions:
+            gunshotwound: 50
+            bleeding: 35
+            stun: 1.0
+          structdamage: 14.3
+          penetration: 0.15
+  hmg:
+    mag:
+      action: use assault rifle bullet
+  nucleargun:
+    projectiles:
+      regular:
+        afflictions:
+          explosiondamage: 60
+          radiation: 25
+          stun: 1.5
+        explosion:
+          afflictions:
+            burn: 50
+            radiation: 80
+            stun: 1
+          # rest unchanged
+        # rest unchanged
+submarineweapon:
+  coilgun:
+    # reload:
+    #   single: 0.45
+    #   double: 0.20
+    projectiles:
+      regular:
+        afflictions:
+          lacerations: 35
+          bleeding: 16
+          stun: 0.2
+        penetration: 0.10
+        structdamage: 20
+      harpoon:
+        afflictions:
+          lacerations: 35
+          bleeding: 35
+          stun: 0.4
+        penetration: 0
+        structdamage: 25
+      depleted:
+        afflictions:
+          lacerations: 35
+          bleeding: 16
+          stun: 0.2
+          radiation: 12
+        penetration: 0.40
+        structdamage: 20
+      explosive:
+        afflictions:
+          explosiondamage: 12
+          bleeding: 8
+          stun: 0.56
+        penetration: 0.10
+        structdamage: 10
+        explosion:
+          range: 300
+          structdamage: 6
+          afflictions:
+            explosiondamage: 24
+            bleeding: 16
+            stun: 1.12
+      physicorium:
+        afflictions:
+          lacerations: 55
+          bleeding: 16
+          stun: 0.4
+        penetration: 0.20
+        structdamage: 30
+      piercing:
+        afflictions:
+          lacerations: 25
+          bleeding: 40
+          stun: 0.1
+        penetration: 0.50
+        structdamage: 35
+  chaingun:
+    projectiles:
+      regular:
+        afflictions:
+          gunshotwound: 35
+          bleeding: 25
+          stun: 0.5
+        penetration: 0.10
+        structdamage: 10
+      physicorium:
+        afflictions:
+          gunshotwound: 55
+          bleeding: 25
+          stun: 1.0
+        penetration: 0.20
+        structdamage: 20
+      shredder:
+        afflictions:
+          gunshotwound: 35
+          bleeding: 35
+          stun: 1.0
+        penetration: 0.40
+        structdamage: 25
+  flakcannon:
+    reload: 1.45
+  pulselaser:
+    projectiles:
+      regular:
+        afflictions:
+          burn: 300
+          stun: 3.0
+        penetration: 0.10
+        structdamage: 50
+        explosion:
+          range: 150
+          structdamage: 5
+          afflictions:
+            burn: 150
+            stun: 1.5
+      tri:
+        # remember there are 3 projectiles
+        afflictions:
+          burn: 225
+          stun: 2.25
+        penetration: 0.10
+        structdamage: 37.5
+        explosion:
+          range: 100
+          structdamage: 3.75
+          afflictions:
+            burn: 112.5
+            stun: 1.125
