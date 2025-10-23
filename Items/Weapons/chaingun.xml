@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Items>
   <Override>
-    <Item category="Weapon" hideinmenus="true" identifier="chaingunbolt" name="" scale="0.3"
-      sonarsize="2">
-      <Sprite depth="0.55" sourcerect="143,310,369,66" texture="Content/Items/Weapons/TurretsAndDepthCharges.png" />
+    <Item category="Weapon" hideinmenus="true" identifier="chaingunbolt" name="__chaingunbolt__"
+      scale="0.3" sonarsize="2">
+      <Sprite depth="0.55" sourcerect="143,310,369,66"
+        texture="Content/Items/Weapons/TurretsAndDepthCharges.png" />
       <Body density="10" height="10" width="170" />
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50"
         slots="RightHand+LeftHand" />
@@ -37,9 +38,11 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <Item category="Weapon" hideinmenus="true" identifier="chaingunboltphysicorium" name=""
-      nameidentifier="chaingunbolt" scale="0.5" sonarsize="2" spritecolor="255,150,100,255">
-      <Sprite depth="0.55" sourcerect="143,310,369,66" texture="Content/Items/Weapons/TurretsAndDepthCharges.png" />
+    <Item category="Weapon" hideinmenus="true" identifier="chaingunboltphysicorium"
+      name="__chaingunboltphysicorium__" nameidentifier="chaingunbolt" scale="0.5" sonarsize="2"
+      spritecolor="255,150,100,255">
+      <Sprite depth="0.55" sourcerect="143,310,369,66"
+        texture="Content/Items/Weapons/TurretsAndDepthCharges.png" />
       <Body density="15" height="10" width="170" />
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50"
         slots="RightHand+LeftHand" />
@@ -60,10 +63,8 @@
         </StatusEffect>
         <StatusEffect target="UseTarget" type="OnImpact">
           <ParticleEmitter colormultiplier="255,150,200" copyentityangle="true"
-            lifetimemultiplier="3"
-            particle="impactfirearm" particleamount="1" scalemax="3.0" scalemin="2.0"
-            velocitymax="0"
-            velocitymin="0" />
+            lifetimemultiplier="3" particle="impactfirearm" particleamount="1" scalemax="3.0"
+            scalemin="2.0" velocitymax="0" velocitymin="0" />
           <ParticleEmitter anglemax="40" anglemin="-40" copyentityangle="true" particle="weldspark"
             particleamount="8" scalemax="2" scalemin="1" velocitymax="-800" velocitymin="-300" />
           <ParticleEmitter anglemax="360" anglemin="0" copyentityangle="true" particle="shrapnel"
@@ -77,9 +78,10 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <Item category="Misc" hideinmenus="true" identifier="chaingunboltshredder" name="" scale="0.3"
-      sonarsize="2">
-      <Sprite depth="0.55" sourcerect="143,310,369,66" texture="Content/Items/Weapons/TurretsAndDepthCharges.png" />
+    <Item category="Misc" hideinmenus="true" identifier="chaingunboltshredder"
+      name="__chaingunboltshredder__" scale="0.3" sonarsize="2">
+      <Sprite depth="0.55" sourcerect="143,310,369,66"
+        texture="Content/Items/Weapons/TurretsAndDepthCharges.png" />
       <Body density="10" height="10" width="170" />
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50"
         slots="RightHand+LeftHand" />
@@ -100,8 +102,7 @@
         <StatusEffect target="UseTarget" type="OnImpact">
           <ParticleEmitter colormultiplier="255,220,220" copyentityangle="true"
             particle="impactfirearm" particleamount="1" scalemax="3.0" scalemin="2.0"
-            velocitymax="0"
-            velocitymin="0" />
+            velocitymax="0" velocitymin="0" />
           <ParticleEmitter anglemax="40" anglemin="-40" copyentityangle="true" particle="weldspark"
             particleamount="8" scalemax="2" scalemin="1" velocitymax="-800" velocitymin="-300" />
           <ParticleEmitter anglemax="360" anglemin="0" copyentityangle="true" particle="shrapnel"

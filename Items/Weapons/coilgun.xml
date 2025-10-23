@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Items>
   <Override>
-    <Item category="Weapon" hideinmenus="true" identifier="coilgunbolt" name="" scale="0.5"
-      sonarsize="2">
+    <Item category="Weapon" hideinmenus="true" identifier="coilgunbolt" name="__coilgunbolt__"
+      scale="0.5" sonarsize="2">
       <Sprite depth="0.55" sourcerect="143,414,113,9"
         texture="Content/Items/Weapons/weapons_new.png" />
       <Body density="20" height="10" width="170" />
@@ -16,8 +16,8 @@
         </Attack>
         <StatusEffect lifetime="2" target="This" type="OnActive">
           <ParticleEmitter anglemax="5" anglemin="-5" copyentityangle="true"
-            particle="ammotrailwater"
-            particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
+            particle="ammotrailwater" particleamount="5" scalemax="1" scalemin="0.5"
+            velocitymax="-100" velocitymin="-10" />
         </StatusEffect>
         <!-- a 3 second lifetime after being fired -->
         <StatusEffect delay="3" stackable="false" target="This" type="OnNotContained">
@@ -34,8 +34,8 @@
       </Projectile>
       <Upgrade gameversion="0.10.0.0" scale="*0.5" />
     </Item>
-    <Item category="Weapon" hideinmenus="true" identifier="physicoriumbolt" name="" scale="0.5"
-      sonarsize="2">
+    <Item category="Weapon" hideinmenus="true" identifier="physicoriumbolt"
+      name="__physicoriumbolt__" scale="0.5" sonarsize="2">
       <Sprite depth="0.55" sourcerect="143,425,113,9"
         texture="Content/Items/Weapons/weapons_new.png" />
       <Body density="20" height="10" width="160" />
@@ -50,8 +50,8 @@
         </Attack>
         <StatusEffect lifetime="2" target="This" type="OnActive">
           <ParticleEmitter anglemax="5" anglemin="-5" copyentityangle="true"
-            particle="ammotrailwater"
-            particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
+            particle="ammotrailwater" particleamount="5" scalemax="1" scalemin="0.5"
+            velocitymax="-100" velocitymin="-10" />
         </StatusEffect>
         <!-- a 3 second lifetime after being fired -->
         <StatusEffect delay="3" stackable="false" target="This" type="OnNotContained">
@@ -59,10 +59,8 @@
         </StatusEffect>
         <StatusEffect target="This" type="OnImpact">
           <ParticleEmitter colormultiplier="255,150,255" copyentityangle="true"
-            lifetimemultiplier="5"
-            particle="impactfirearm" particleamount="1" scalemax="5.0" scalemin="4.0"
-            velocitymax="0"
-            velocitymin="0" />
+            lifetimemultiplier="5" particle="impactfirearm" particleamount="1" scalemax="5.0"
+            scalemin="4.0" velocitymax="0" velocitymin="0" />
           <ParticleEmitter anglemax="360" anglemin="0" copyentityangle="true" particle="shrapnel"
             particleamount="10" scalemax="0.5" scalemin="0.25" velocitymax="2000" velocitymin="100" />
           <Remove />
@@ -73,8 +71,8 @@
       </Projectile>
       <Upgrade gameversion="0.10.0.0" scale="*0.5" />
     </Item>
-    <Item category="Weapon" hideinmenus="true" identifier="coilgunboltexplosive" name="" scale="0.5"
-      sonarsize="2">
+    <Item category="Weapon" hideinmenus="true" identifier="coilgunboltexplosive"
+      name="__coilgunboltexplosive__" scale="0.5" sonarsize="2">
       <Sprite depth="0.55" sourcerect="144,436,112,9"
         texture="Content/Items/Weapons/weapons_new.png" />
       <Body density="20" height="10" width="160" />
@@ -88,8 +86,8 @@
         </Attack>
         <StatusEffect lifetime="2" target="This" type="OnActive">
           <ParticleEmitter anglemax="5" anglemin="-5" copyentityangle="true"
-            particle="ammotrailwater"
-            particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
+            particle="ammotrailwater" particleamount="5" scalemax="1" scalemin="0.5"
+            velocitymax="-100" velocitymin="-10" />
         </StatusEffect>
         <!-- a 3 second lifetime after being fired -->
         <StatusEffect delay="3" stackable="false" target="This" type="OnNotContained">
@@ -112,8 +110,8 @@
       </Projectile>
       <Upgrade gameversion="0.10.0.0" scale="*0.5" />
     </Item>
-    <Item category="Weapon" hideinmenus="true" identifier="coilgunboltpiercing" name="" scale="0.5"
-      sonarsize="2">
+    <Item category="Weapon" hideinmenus="true" identifier="coilgunboltpiercing"
+      name="__coilgunboltpiercing__" scale="0.5" sonarsize="2">
       <Sprite depth="0.55" sourcerect="144,447,112,12"
         texture="Content/Items/Weapons/weapons_new.png" />
       <Body density="20" height="10" width="160" />
@@ -127,8 +125,8 @@
         </Attack>
         <StatusEffect lifetime="2" target="This" type="OnActive">
           <ParticleEmitter anglemax="5" anglemin="-5" copyentityangle="true"
-            particle="ammotrailwater"
-            particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
+            particle="ammotrailwater" particleamount="5" scalemax="1" scalemin="0.5"
+            velocitymax="-100" velocitymin="-10" />
         </StatusEffect>
         <!-- a 3 second lifetime after being fired -->
         <StatusEffect delay="3" stackable="false" target="This" type="OnNotContained">
@@ -143,8 +141,8 @@
       </Projectile>
       <Upgrade gameversion="0.10.0.0" scale="*0.5" />
     </Item>
-    <Item category="Weapon" hideinmenus="true" identifier="coilgunharpoon" name="" scale="0.5"
-      sonarsize="2">
+    <Item category="Weapon" hideinmenus="true" identifier="coilgunharpoon" name="__coilgunharpoon__"
+      scale="0.5" sonarsize="2">
       <Sprite depth="0.55" sourcerect="144,447,112,12"
         texture="Content/Items/Weapons/weapons_new.png" />
       <Body density="20" height="10" width="160" />
@@ -176,10 +174,9 @@
         </StatusEffect>
       </Rope>
       <Projectile GoThroughLightTargets="true" JointBreakPoint="20000"
-        LightTargetMassThreshold="0.15"
-        StickToLightTargets="false" characterusable="false" launchimpulse="0" maxtargetstohit="1"
-        sticktocharacters="true" sticktodeflective="true" sticktodoors="true"
-        sticktostructures="true">
+        LightTargetMassThreshold="0.15" StickToLightTargets="false" characterusable="false"
+        launchimpulse="0" maxtargetstohit="1" sticktocharacters="true" sticktodeflective="true"
+        sticktodoors="true" sticktostructures="true">
         <Attack itemdamage="10" penetration="0" severlimbsprobability="0.1" structuredamage="25">
           <Affliction identifier="lacerations" strength="35" />
           <Affliction identifier="bleeding" strength="35" />
@@ -193,8 +190,8 @@
         </StatusEffect>
         <StatusEffect lifetime="2" target="This" type="OnActive">
           <ParticleEmitter anglemax="5" anglemin="-5" copyentityangle="true"
-            particle="ammotrailwater"
-            particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
+            particle="ammotrailwater" particleamount="5" scalemax="1" scalemin="0.5"
+            velocitymax="-100" velocitymin="-10" />
         </StatusEffect>
         <StatusEffect target="This" type="OnImpact">
           <Sound file="Content/Map/Thalamus/Sounds/CARRIER_harpoonHit1.ogg" range="1000"

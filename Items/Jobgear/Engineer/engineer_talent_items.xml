@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Items>
   <Override>
-    <Item category="Weapon" hideinmenus="true" identifier="depletedfuelbolt" name="" scale="0.5"
-      sonarsize="2">
+    <Item category="Weapon" hideinmenus="true" identifier="depletedfuelbolt"
+      name="__depletedfuelbolt__" scale="0.5" sonarsize="2">
       <Sprite depth="0.55" origin="0.5,0.5" sourcerect="143,425,113,9"
         texture="Content/Items/Weapons/weapons_new.png" />
       <Body density="20" height="10" width="160" />
@@ -38,49 +38,49 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <Item name="nucleargunbolt" identifier="nucleargunbolt" category="Weapon" scale="0.5"
-      sonarsize="2" hideinmenus="true">
-      <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9"
-        depth="0.55" origin="0.5,0.5" />
-      <Body width="170" height="10" density="20" />
-      <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0"
-        aimable="false" />
+    <Item category="Weapon" hideinmenus="true" identifier="nucleargunbolt" name="nucleargunbolt"
+      scale="0.5" sonarsize="2">
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="143,414,113,9"
+        texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="20" height="10" width="170" />
+      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50"
+        slots="RightHand+LeftHand" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
-        <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0"
-          velocitymax="0" scalemultiplier="1,0.75" />
-        <ParticleEmitter particle="FlareBubbles" emitacrossrayinterval="50" />
-        <Attack structuredamage="35" targetforce="5" itemdamage="35" severlimbsprobability="0.5"
-          penetration="0.5">
+        <ParticleEmitter particle="tracernucleargun" particleamount="1" scalemultiplier="1,0.75"
+          velocitymax="0" velocitymin="0" />
+        <ParticleEmitter emitacrossrayinterval="50" particle="FlareBubbles" />
+        <Attack itemdamage="35" penetration="0.5" severlimbsprobability="0.5" structuredamage="35"
+          targetforce="5">
           <Affliction identifier="explosiondamage" strength="60" />
           <Affliction identifier="radiationsickness" strength="25" />
           <Affliction identifier="stun" strength="1.5" />
         </Attack>
-        <StatusEffect type="OnImpact" target="UseTarget">
-          <ParticleEmitter particle="muzzleflashnucleargun" anglemin="0" anglemax="360"
-            particleamount="10" velocitymin="0" scalemin="0.5" scalemax="0.8"
-            scalemultiplier="0.75,0.75" />
-          <ParticleEmitter particle="weldspark" particleamount="5" anglemin="0" anglemax="360"
-            velocitymin="300" velocitymax="350" scalemin="1.5" scalemax="1.9" drawontop="true"
-            colormultiplier="150,255,195,180" />
-          <ParticleEmitter particle="FlareBubbles" particleamount="3" anglemin="0" anglemax="360"
-            velocitymin="0" velocitymax="50" />
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <ParticleEmitter anglemax="360" anglemin="0" particle="muzzleflashnucleargun"
+            particleamount="10" scalemax="0.8" scalemin="0.5" scalemultiplier="0.75,0.75"
+            velocitymin="0" />
+          <ParticleEmitter anglemax="360" anglemin="0" colormultiplier="150,255,195,180"
+            drawontop="true" particle="weldspark" particleamount="5" scalemax="1.9" scalemin="1.5"
+            velocitymax="350" velocitymin="300" />
+          <ParticleEmitter anglemax="360" anglemin="0" particle="FlareBubbles" particleamount="3"
+            velocitymax="50" velocitymin="0" />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="UseTarget">
+        <StatusEffect target="UseTarget" type="OnImpact">
           <Conditional entitytype="eq Structure" />
           <Conditional hastag="eq door" />
-          <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10"
-            particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true" particle="spark"
+            particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-200" velocitymin="-10" />
         </StatusEffect>
-        <StatusEffect type="OnImpact" target="UseTarget" disabledeltatime="true">
-          <Explosion range="125.0" ballastfloradamage="50" structuredamage="0" itemdamage="0"
-            force="5.0" flames="false" smoke="false" sparks="false" underwaterbubble="false"
-            flashcolor="255,0,0,255" penetration="1">
+        <StatusEffect disabledeltatime="true" target="UseTarget" type="OnImpact">
+          <Explosion ballastfloradamage="50" flames="false" flashcolor="255,0,0,255" force="5.0"
+            itemdamage="0" penetration="1" range="125.0" smoke="false" sparks="false"
+            structuredamage="0" underwaterbubble="false">
             <Affliction identifier="burn" strength="50" />
             <Affliction identifier="radiationsickness" strength="80" />
             <Affliction identifier="stun" strength="1" />
           </Explosion>
         </StatusEffect>
-        <StatusEffect type="OnNotContained" target="This">
+        <StatusEffect target="This" type="OnNotContained">
           <Remove />
         </StatusEffect>
       </Projectile>

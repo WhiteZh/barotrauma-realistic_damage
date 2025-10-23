@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Items>
   <Override>
-    <Item category="Weapon" hideinmenus="true" identifier="pulselaserbolt" name="" scale="0.5"
-      sonarsize="2">
+    <Item category="Weapon" hideinmenus="true" identifier="pulselaserbolt" name="__pulselaserbolt__"
+      scale="0.5" sonarsize="2">
       <Sprite depth="0.55" sourcerect="143,414,113,9"
         texture="Content/Items/Weapons/weapons_new.png" />
       <Body density="20" height="10" width="170" />
@@ -44,8 +44,8 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <Item category="Weapon" hideinmenus="true" identifier="pulselaserbolttrilaser" name=""
-      nameidentifier="pulselaserbolt" scale="0.5" sonarsize="2">
+    <Item category="Weapon" hideinmenus="true" identifier="pulselaserbolttrilaser"
+      name="__pulselaserbolttrilaser__" nameidentifier="pulselaserbolt" scale="0.5" sonarsize="2">
       <Sprite depth="0.55" sourcerect="143,414,113,9"
         texture="Content/Items/Weapons/weapons_new.png" />
       <Body density="20" height="10" width="170" />

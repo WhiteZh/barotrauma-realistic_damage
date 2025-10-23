@@ -2,8 +2,8 @@
 <Items>
     <Override>
         <Item category="Misc" hideinmenus="true" identifier="ek_drumlmg_round"
-            impactsoundtag="impact_metal_light"
-            interactthroughwalls="true" name="" scale="0.2" tags="smallitem, round">
+            impactsoundtag="impact_metal_light" interactthroughwalls="true"
+            name="__ek_drumlmg_round__" scale="0.2" tags="smallitem, round">
             <InventoryIcon sourcerect="384,384,64,64"
                 texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
             <Sprite depth="0.55" sourcerect="336,688,48,16"
@@ -12,11 +12,9 @@
             <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
             <Projectile characterusable="false" hitscan="true" removeonhit="true">
                 <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm"
-                    particleamount="1"
-                    scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+                    particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
                 <Attack itemdamage="0.5" penetration="0.25" severlimbsprobability="0.05"
-                    structuredamage="5"
-                    targetforce="0.25">
+                    structuredamage="5" targetforce="0.25">
                     <Affliction identifier="bleeding" strength="12" />
                     <Affliction identifier="gunshotwound" strength="18" />
                     <Affliction identifier="stun" probability="1" strength="0.15" />
@@ -29,9 +27,8 @@
                     <Conditional entitytype="eq Structure" />
                     <Conditional hastag="eq door" />
                     <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true"
-                        particle="spark"
-                        particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-200"
-                        velocitymin="-10" />
+                        particle="spark" particleamount="5" scalemax="1" scalemin="0.5"
+                        velocitymax="-200" velocitymin="-10" />
                 </StatusEffect>
                 <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
                     <Remove />
@@ -39,8 +36,8 @@
             </Projectile>
         </Item>
         <Item category="Misc" hideinmenus="true" identifier="ek_drumlmg_alienround"
-            impactsoundtag="impact_metal_light"
-            interactthroughwalls="true" inventoryiconcolor="255,210,125,255" name="" scale="0.2"
+            impactsoundtag="impact_metal_light" interactthroughwalls="true"
+            inventoryiconcolor="255,210,125,255" name="__ek_drumlmg_alienround__" scale="0.2"
             spritecolor="255,210,125,255" tags="smallitem, round">
             <InventoryIcon sourcerect="384,384,64,64"
                 texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
@@ -50,11 +47,9 @@
             <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
             <Projectile characterusable="false" hitscan="true" removeonhit="true">
                 <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm"
-                    particleamount="1"
-                    scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+                    particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
                 <Attack itemdamage="0.5" penetration="0.4" severlimbsprobability="0.05"
-                    structuredamage="10"
-                    targetforce="0.25">
+                    structuredamage="10" targetforce="0.25">
                     <Affliction identifier="bleeding" strength="18" />
                     <Affliction identifier="gunshotwound" strength="24" />
                     <Affliction identifier="stun" probability="1" strength="0.25" />
@@ -65,24 +60,23 @@
                 </StatusEffect>
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="6" flames="false" force="0" range="100.0"
-                        shockwave="false" smoke="false"
-                        underwaterbubble="false" />
+                        shockwave="false" smoke="false" underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
                     <Remove />
                 </StatusEffect>
             </Projectile>
         </Item>
-        <Item category="Misc" hideinmenus="true" identifier="ek_ssl_round" name="" scale="0.32"
-            sonarsize="2">
+        <Item category="Misc" hideinmenus="true" identifier="ek_ssl_round" name="__ek_ssl_round__"
+            scale="0.32" sonarsize="2">
             <Sprite depth="0.55" sourcerect="368,784,128,32"
                 texture="%ModDir:EK Forked%/Items/Containers/containers_ek.png" />
             <Body density="20" height="10" width="160" />
             <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50"
                 slots="RightHand+LeftHand" />
             <Projectile characterusable="false" launchimpulse="45.0">
-                <Attack itemdamage="25" severlimbsprobability="0.5" structuredamage="14.3" penetration="0.15"
-                    structuresoundtype="StructureSlash">
+                <Attack itemdamage="25" penetration="0.15" severlimbsprobability="0.5"
+                    structuredamage="14.3" structuresoundtype="StructureSlash">
                     <Affliction identifier="gunshotwound" strength="50" />
                     <Affliction identifier="bleeding" strength="35" />
                     <Affliction amount="1.0" identifier="stun" probability="1" />
@@ -99,17 +93,16 @@
                     targetidentifiers="aliendoor,alienhatch" type="OnUse" />
                 <StatusEffect target="This" type="OnActive">
                     <ParticleEmitter anglemax="5" anglemin="-5" copyentityangle="true"
-                        particle="ammotrailwater"
-                        particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-100"
-                        velocitymin="-10" />
+                        particle="ammotrailwater" particleamount="5" scalemax="1" scalemin="0.5"
+                        velocitymax="-100" velocitymin="-10" />
                 </StatusEffect>
                 <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
                     <Remove />
                 </StatusEffect>
                 <StatusEffect target="This" type="OnImpact">
                     <Explosion flames="true" force="1.0" itemdamage="5" range="125.0"
-                        severlimbsprobability="0.1"
-                        smoke="false" sparks="true" structuredamage="3" underwaterbubble="true">
+                        severlimbsprobability="0.1" smoke="false" sparks="true" structuredamage="3"
+                        underwaterbubble="true">
                         <Affliction identifier="bleeding" strength="5" />
                         <Affliction identifier="explosiondamage" strength="20" />
                     </Explosion>
@@ -124,8 +117,8 @@
             </Projectile>
         </Item>
         <Item category="Misc" hideinmenus="true" identifier="ek_laserpistol_round"
-            inventoryiconcolor="150,140,120,255"
-            name="" scale="0.32" spritecolor="150,140,120,255" tags="pistolammoitem">
+            inventoryiconcolor="150,140,120,255" name="__ek_laserpistol_round__" scale="0.32"
+            spritecolor="150,140,120,255" tags="pistolammoitem">
             <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64"
                 texture="Content/Items/InventoryIconAtlas.png" />
             <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11"
@@ -136,8 +129,7 @@
             <Projectile characterusable="false" hitscan="true" launchimpulse="80.0"
                 removeonhit="true">
                 <ParticleEmitter colormultiplier="255,255,255,125" particle="eklaserpistoltracer"
-                    particleamount="1"
-                    scalemultiplier="1,1" velocitymax="0" velocitymin="0" />
+                    particleamount="1" scalemultiplier="1,1" velocitymax="0" velocitymin="0" />
                 <Attack itemdamage="18" structuredamage="1" stun="0.05" targetforce="5">
                     <Affliction identifier="burn" strength="20" />
                 </Attack>
@@ -148,13 +140,13 @@
                     <Conditional entitytype="eq Structure" />
                     <Conditional hastag="eq door" />
                     <ParticleEmitter anglemax="90" anglemin="-90" copyentityangle="true"
-                        particle="eklaserspark"
-                        particleamount="4" velocitymax="-750" velocitymin="-250" />
+                        particle="eklaserspark" particleamount="4" velocitymax="-750"
+                        velocitymin="-250" />
                 </StatusEffect>
                 <StatusEffect target="UseTarget" type="OnImpact">
                     <ParticleEmitter anglemax="45" anglemin="-45" copyentityangle="true"
-                        particle="eklasersmoke"
-                        particleamount="1" velocitymax="-25" velocitymin="-5" />
+                        particle="eklasersmoke" particleamount="1" velocitymax="-25"
+                        velocitymin="-5" />
                     <ParticleEmitter particle="eklaserflare" particleamount="1" />
                 </StatusEffect>
                 <StatusEffect target="This" type="OnBroken">
@@ -169,8 +161,8 @@
             </Quality>
         </Item>
         <Item category="Misc" hideinmenus="true" identifier="ek_laserrifle_round"
-            inventoryiconcolor="150,140,120,255"
-            name="" scale="0.32" spritecolor="150,140,120,255">
+            inventoryiconcolor="150,140,120,255" name="__ek_laserrifle_round__" scale="0.32"
+            spritecolor="150,140,120,255">
             <InventoryIcon sourcerect="384,384,64,64"
                 texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
             <Sprite depth="0.55" sourcerect="336,688,48,16"
@@ -181,8 +173,7 @@
             <Projectile characterusable="false" hitscan="true" launchimpulse="80.0"
                 removeonhit="true">
                 <ParticleEmitter colormultiplier="255,255,255,125" particle="eklaserrifletracer"
-                    particleamount="1"
-                    scalemultiplier="1,1" velocitymax="0" velocitymin="0" />
+                    particleamount="1" scalemultiplier="1,1" velocitymax="0" velocitymin="0" />
                 <Attack itemdamage="10" severlimbsprobability="0.05" structuredamage="2" stun="0.16"
                     targetforce="10">
                     <Affliction identifier="burn" strength="40" />
@@ -194,13 +185,13 @@
                     <Conditional entitytype="eq Structure" />
                     <Conditional hastag="eq door" />
                     <ParticleEmitter anglemax="90" anglemin="-90" copyentityangle="true"
-                        particle="eklaserspark"
-                        particleamount="4" velocitymax="-750" velocitymin="-250" />
+                        particle="eklaserspark" particleamount="4" velocitymax="-750"
+                        velocitymin="-250" />
                 </StatusEffect>
                 <StatusEffect target="UseTarget" type="OnImpact">
                     <ParticleEmitter anglemax="45" anglemin="-45" copyentityangle="true"
-                        particle="eklasersmoke"
-                        particleamount="1" velocitymax="-25" velocitymin="-5" />
+                        particle="eklasersmoke" particleamount="1" velocitymax="-25"
+                        velocitymin="-5" />
                     <ParticleEmitter particle="eklaserrifleflare" particleamount="1" />
                 </StatusEffect>
                 <StatusEffect target="This" type="OnBroken">
@@ -215,8 +206,8 @@
             </Quality>
         </Item>
         <Item Scale="0.32" aliases="pipe_rifle, pipegun, pipe_gun, pipe gun"
-            category="Equipment,Weapon"
-            identifier="ek_piperifle" impactsoundtag="impact_metal_light" name=""
+            category="Equipment,Weapon" identifier="ek_piperifle"
+            impactsoundtag="impact_metal_light" name="__ek_piperifle__"
             tags="mediumitem,weapon,ek_ammotag_piperound,gunsmith,mountableweapon">
             <Deconstruct time="10">
                 <Item amount="2" identifier="steel" />
@@ -236,12 +227,12 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="30" width="90" />
             <Holdable aimpos="55,0" controlpose="true" handle1="-50,-15" handle2="30,-7.5"
-                holdangle="-40"
-                holdpos="45,-15" msg="ItemMsgPickUpSelect" slots="Any,RightHand+LeftHand" />
+                holdangle="-40" holdpos="45,-15" msg="ItemMsgPickUpSelect"
+                slots="Any,RightHand+LeftHand" />
             <!-- barrelpos="68,9" holdpos="45,-10" aimpos="40,0" handle1="-35,-10" handle2="28,-30" -->
             <RangedWeapon barrelpos="170,20" combatPriority="50" crosshairscale="0.2"
-                damagemodifier="1.2"
-                drawhudwhenequipped="true" reload="1.25" spread="4" unskilledspread="8">
+                damagemodifier="1.2" drawhudwhenequipped="true" reload="1.25" spread="4"
+                unskilledspread="8">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -253,12 +244,11 @@
                     type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="6.0" flames="false" flash="false" force="2.0"
-                        range="150.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="150.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <RequiredItems identifiers="revolverround,revolverammo,ek_piperound"
-                    msg="ItemMsgAmmoRequired"
-                    type="Contained" />
+                    msg="ItemMsgAmmoRequired" type="Contained" />
                 <RequiredSkill identifier="weapons" level="45" />
                 <!--BEGIN
               MODGUN SUPPRESSOR CODE-->
@@ -268,20 +258,17 @@
                   smg,handgun,battlerifle,battlerifle2,pipegun,pipegun_mono,microsmg,microsmg_mono -->
                     <Sound
                         file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_suppressed_pipegun_mono.ogg"
-                        range="1000"
-                        selectionmode="random" volume="0.5" />
+                        range="1000" selectionmode="random" volume="0.5" />
                     <Sound
                         file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_suppressed_pipegun_mono.ogg"
-                        range="1000"
-                        volume="0.5" />
+                        range="1000" volume="0.5" />
                 </StatusEffect>
                 <StatusEffect forceplaysounds="true" target="Contained,This" targetslot="2"
                     type="OnUse">
                     <RequiredItem items="notsuppressor" targetslot="2" type="Contained" />
                     <!-- GUN SOUNDS GO HERE -->
                     <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_piperifle.ogg"
-                        range="3000"
-                        selectionmode="Random" type="OnUse" />
+                        range="3000" selectionmode="Random" type="OnUse" />
                     <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymax="0"
                         velocitymin="0" />
                 </StatusEffect>
@@ -305,53 +292,43 @@
                         identifier="notsuppressor" />
                 </StatusEffect>
                 <StatusEffect condition="5" delay="0.2" setvalue="true" stackable="false"
-                    target="Contained"
-                    targetslot="2" type="Always" />
+                    target="Contained" targetslot="2" type="Always" />
                 <!--END
               (most) MODGUN SUPPRESSOR CODE-->
             </RangedWeapon>
             <ItemContainer autofill="True" capacity="4" containedstateindicatorslot="0"
-                hideitems="false"
-                iteminterval="0,-4" itempos="27,10" maxstacksize="1">
+                hideitems="false" iteminterval="0,-4" itempos="27,10" maxstacksize="1">
                 <Containable hide="true" identifiers="revolverround,revolverammo,ek_piperound">
                     <StatusEffect condition="100" delay="2.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="1" type="OnInserted" />
+                        stackable="false" target="This" targetslot="1" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="1" type="OnInserted" />
+                        target="This" targetslot="1" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="1" type="OnInserted">
+                        stackable="false" target="This" targetslot="1" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound
                             file="%ModDir:EK Forked%/Items/Weapons/Sounds/boltactionclipreload.ogg"
-                            forceplay="true"
-                            frequencymultiplier="1" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="1" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect comparison="or" delay="1.45" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="1" type="OnInserted">
+                        stackable="false" target="This" targetslot="1" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound
                             file="%ModDir:EK Forked%/Items/Weapons/Sounds/boltactionreloadend.ogg"
-                            forceplay="true"
-                            frequencymultiplier="1" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="1" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="55,0" condition="100"
-                        delay="2.1"
-                        holdangle="-40" holdpos="45,-15" setvalue="true" target="This"
+                        delay="2.1" holdangle="-40" holdpos="45,-15" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
@@ -362,8 +339,7 @@
                     texture="Content/UI/CampaignUIAtlas2.png" />
                 <SubContainer capacity="1" containedspritedepth="0.5" maxstacksize="1">
                     <Containable excludeditems="cuttingequipment,weldingequipment" hide="false"
-                        itempos="25,1"
-                        items="flashlight,taclaser" setactive="true" />
+                        itempos="25,1" items="flashlight,taclaser" setactive="true" />
                 </SubContainer>
                 <SubContainer capacity="1" maxstacksize="1">
                     <Containable containedspritedepth="0.5" hide="false" itempos="73,5"
@@ -377,10 +353,9 @@
             <SkillRequirementHint identifier="weapons" level="45" />
         </Item>
         <Item Scale="0.30" aliases="handgun" cargocontaineridentifier="ek_weapons_case"
-            category="Equipment,Weapon"
-            focusonselected="true" identifier="ek_handgun" impactsoundtag="impact_metal_light"
-            name=""
-            offsetonselected="800" tags="smallitem,weapon,gun,ek_ammotag_9mm,gunsmith,pistolitem">
+            category="Equipment,Weapon" focusonselected="true" identifier="ek_handgun"
+            impactsoundtag="impact_metal_light" name="__ek_handgun__" offsetonselected="800"
+            tags="smallitem,weapon,gun,ek_ammotag_9mm,gunsmith,pistolitem">
             <PreferredContainer primary="weaponholder" spawnprobability="0.1" />
             <PreferredContainer maxamount="2" minamount="0" primary="secarmcab"
                 spawnprobability="0.1" />
@@ -420,9 +395,8 @@
                 slots="Any,RightHand+LeftHand" />
             <!-- barrelpos="20,5" aimpos="80,10" handle1="-9,-11" -->
             <RangedWeapon barrelpos="55,25" combatPriority="55" crosshairscale="0.2"
-                damagemodifier="1.25"
-                drawhudwhenequipped="true" reload="0.33" reloadskillrequirement="30"
-                spread="4" unskilledspread="12">
+                damagemodifier="1.25" drawhudwhenequipped="true" reload="0.33"
+                reloadskillrequirement="30" spread="4" unskilledspread="12">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -434,8 +408,8 @@
                     range="3000" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="4.0" flames="false" flash="false" force="1.5"
-                        range="140.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="140.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect target="Contained" targetslot="0" type="OnUse">
                     <Use />
@@ -450,16 +424,14 @@
                     <!-- SUPPRESSED SOUNDS GO HERE:
                   smg,handgun,battlerifle,battlerifle2,pipegun,pipegun_mono,microsmg,microsmg_mono -->
                     <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_suppressed_handgun.ogg"
-                        range="800"
-                        type="OnUse" />
+                        range="800" type="OnUse" />
                 </StatusEffect>
                 <StatusEffect forceplaysounds="true" target="Contained,This" targetslot="2"
                     type="OnUse">
                     <RequiredItem items="notsuppressor" targetslot="2" type="Contained" />
                     <!-- GUN SOUNDS GO HERE -->
                     <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_handgun_mono.ogg"
-                        range="3000"
-                        type="OnUse" />
+                        range="3000" type="OnUse" />
                     <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymax="0"
                         velocitymin="0" />
                 </StatusEffect>
@@ -483,54 +455,45 @@
                         identifier="notsuppressor" />
                 </StatusEffect>
                 <StatusEffect condition="5" delay="0.2" setvalue="true" stackable="false"
-                    target="Contained"
-                    targetslot="2" type="Always" />
+                    target="Contained" targetslot="2" type="Always" />
                 <!--END
               (most) MODGUN SUPPRESSOR CODE-->
             </RangedWeapon>
             <ItemContainer ContainedStateIndicator="bullet" allowuioverlap="true" autofill="True"
-                canbeselected="false"
-                capacity="1" containedstateindicatorslot="0" hideitems="false" itempos="-40,-20"
-                maxstacksize="1">
+                canbeselected="false" capacity="1" containedstateindicatorslot="0" hideitems="false"
+                itempos="-40,-20" maxstacksize="1">
                 <ContainedStateIndicator sourcerect="16,64,120,24"
                     texture="Content/UI/ContainerIndicators.png" />
                 <Containable items="ek_handgun_mags,9mmpistolammo">
                     <StatusEffect condition="100" delay="1.05" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted" />
+                        stackable="false" target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="0" type="OnInserted" />
+                        target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/pistolreload1.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect comparison="or" delay="0.65" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/pistolreload2.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="80,10" condition="100"
-                        delay="1.2"
-                        holdangle="0" holdpos="0,0" setvalue="true" target="This" type="OnInserted">
+                        delay="1.2" holdangle="0" holdpos="0,0" setvalue="true" target="This"
+                        type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                 </Containable>
@@ -540,8 +503,7 @@
                     texture="Content/UI/CampaignUIAtlas2.png" />
                 <SubContainer capacity="1" containedspritedepth="0.56" maxstacksize="1">
                     <Containable excludeditems="cuttingequipment,weldingequipment" hide="false"
-                        itempos="14,2"
-                        items="flashlight,taclaser" setactive="true" />
+                        itempos="14,2" items="flashlight,taclaser" setactive="true" />
                 </SubContainer>
                 <SubContainer capacity="1" maxstacksize="1">
                     <Containable hide="false" itempos="29,7" items="suppressor,muzzle_attachment" />
@@ -554,10 +516,9 @@
             <SkillRequirementHint identifier="weapons" level="30" />
         </Item>
         <Item Scale="0.32" aliases="marine_smg,ek marine smg,ek smg"
-            cargocontaineridentifier="ek_weapons_case"
-            category="Equipment,Weapon" hideinmenus="true" identifier="ek_smg"
-            impactsoundtag="impact_metal_light"
-            name="" tags="mediumitem,weapon,gun,ek_ammotag_57mm,gunsmith,mountableweapon">
+            cargocontaineridentifier="ek_weapons_case" category="Equipment,Weapon"
+            hideinmenus="true" identifier="ek_smg" impactsoundtag="impact_metal_light"
+            name="__ek_smg__" tags="mediumitem,weapon,gun,ek_ammotag_57mm,gunsmith,mountableweapon">
             <!--<Price
           baseprice="400" sold="false" minleveldifficulty="25">
             <Price storeidentifier="merchantoutpost" multiplier="1.5" />
@@ -590,8 +551,8 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="64" width="240" />
             <Holdable aimpos="45,3" controlpose="true" handle1="5,-22" handle2="110,-16"
-                holdangle="-40"
-                holdpos="50,-10" msg="ItemMsgPickUpSelect" slots="Any,RightHand+LeftHand" />
+                holdangle="-40" holdpos="50,-10" msg="ItemMsgPickUpSelect"
+                slots="Any,RightHand+LeftHand" />
             <!-- barrelpos="52,4" holdpos="45,-10" aimpos="40,10" handle1="18,-21" handle2="102,-17"
           holdangle="-40" -->
             <!--<RangedWeapon
@@ -615,8 +576,7 @@
             <RequiredSkill identifier="weapons" level="50" />
           </RangedWeapon>-->
             <RangedWeapon barrelpos="124,8" combatPriority="85" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="0.09" spread="9" unskilledspread="18">
+                drawhudwhenequipped="true" reload="0.09" spread="9" unskilledspread="18">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -628,11 +588,11 @@
                     range="3000" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <ParticleEmitter CopyEntityAngle="true" anglemax="150" anglemin="90"
-                        particle="casingfirearm"
-                        particleamount="1" velocitymax="250" velocitymin="50" />
+                        particle="casingfirearm" particleamount="1" velocitymax="250"
+                        velocitymin="50" />
                     <Explosion camerashake="4.0" flames="false" flash="false" force="0.5"
-                        range="140.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="140.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect target="Contained" type="OnUse">
                     <RequiredItem identifier="ek_smg_mags" type="Contained" />
@@ -642,21 +602,18 @@
                 <RequiredSkill identifier="weapons" level="50" />
             </RangedWeapon>
             <ItemContainer autofill="True" canbeselected="false" capacity="1"
-                containedstateindicatorslot="0"
-                hideitems="false" itempos="-60,-16" maxstacksize="1">
+                containedstateindicatorslot="0" hideitems="false" itempos="-60,-16" maxstacksize="1">
                 <ContainedStateIndicator sourcerect="16,64,120,24"
                     texture="Content/UI/ContainerIndicators.png" />
                 <Containable identifier="ek_smg_mags">
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="45,3" condition="100"
-                        delay="1.8"
-                        holdangle="-40" holdpos="50,-10" setvalue="true" target="This"
+                        delay="1.8" holdangle="-40" holdpos="50,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
@@ -667,8 +624,7 @@
                 </StatusEffect>
             </ItemContainer>
             <ItemContainer allowuioverlap="true" autofill="False" canbeselected="false" capacity="1"
-                hideitems="false"
-                hudpos="0.5, 0.4" itempos="0,0" slotsperrow="1" uilabel="">
+                hideitems="false" hudpos="0.5, 0.4" itempos="0,0" slotsperrow="1" uilabel="">
                 <Containable identifiers="ek_smg_skin" />
             </ItemContainer>
             <Quality>
@@ -676,9 +632,9 @@
             </Quality>
         </Item>
         <Item Scale="0.32" aliases="torpedorifle, torpedo rifle"
-            cargocontaineridentifier="ek_weapons_case"
-            category="Equipment,Weapon" identifier="ek_torpedorifle"
-            impactsoundtag="impact_metal_heavy" name=""
+            cargocontaineridentifier="ek_weapons_case" category="Equipment,Weapon"
+            identifier="ek_torpedorifle" impactsoundtag="impact_metal_heavy"
+            name="__ek_torpedorifle__"
             tags="mediumitem,weapon,gun,ek_ammotag_microtorpedo,gunsmith,mountableweapon,bulkyweapon">
             <Price baseprice="500" minleveldifficulty="25" sold="false">
                 <Price multiplier="1.5" storeidentifier="merchantoutpost" />
@@ -713,21 +669,19 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="40" height="96" width="304" />
             <Holdable aimpos="50,0" controlpose="true" handle1="-18,-40" handle2="92,-25"
-                holdangle="-40"
-                holdpos="45,-10" msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" />
+                holdangle="-40" holdpos="45,-10" msg="ItemMsgPickUpSelect"
+                slots="RightHand+LeftHand" />
             <Wearable canbepicked="true" canbeselected="false" msg="ItemMsgEquipSelect"
                 pickkey="Select" slots="Bag">
                 <sprite canbehiddenbyotherwearables="false" depth="0.6" inheritlimbdepth="false"
-                    limb="Torso"
-                    name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.32"
+                    limb="Torso" name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.32"
                     sourcerect="0,256,320,128"
                     texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             </Wearable>
             <!-- barrelpos="80,8" holdpos="45,-10" aimpos="40,10" handle1="-16,-40" handle2="92,-25"
           holdangle="-40" -->
             <RangedWeapon barrelpos="150,8" combatPriority="75" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="1.5" spread="1" unskilledspread="15">
+                drawhudwhenequipped="true" reload="1.5" spread="1" unskilledspread="15">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -736,12 +690,11 @@
                 <ParticleEmitter particle="ekmuzzlebreaklauncher" particleamount="1" velocitymax="0"
                     velocitymin="0" />
                 <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_torpedo_rifle_mono.ogg"
-                    range="3000"
-                    type="OnUse" />
+                    range="3000" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="9.0" flames="false" flash="false" force="3"
-                        range="180.0" shockwave="false"
-                        smoke="false" sparks="false" underwaterbubble="false" />
+                        range="180.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <RequiredItems identifier="ek_microtorpedo" msg="ItemMsgAmmoRequired"
                     type="Contained" />
@@ -751,14 +704,12 @@
                 <Containable identifiers="ek_microtorpedo">
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="50,0" condition="100"
-                        delay="2.9"
-                        holdangle="-40" holdpos="45,-10" setvalue="true" target="This"
+                        delay="2.9" holdangle="-40" holdpos="45,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
@@ -813,8 +764,7 @@
                 slots="Any,RightHand,LeftHand" />
             <!-- barrelpos="41,12" aimpos="80,10" handle1="-7,-9" -->
             <RangedWeapon barrelpos="54,22" combatPriority="30" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="0.33" spread="1" unskilledspread="20">
+                drawhudwhenequipped="true" reload="0.33" spread="1" unskilledspread="20">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -826,15 +776,13 @@
                     velocitymin="0" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="4.0" flames="false" force="1.5" range="140.0"
-                        shockwave="false"
-                        smoke="false" sparks="true" underwaterbubble="false" />
+                        shockwave="false" smoke="false" sparks="true" underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect target="Contained" type="OnUse">
                     <Use />
                 </StatusEffect>
                 <RequiredItems identifier="ek_flare_rounds" mincondition="0.98"
-                    msg="ItemMsgAmmoRequired"
-                    type="Contained" />
+                    msg="ItemMsgAmmoRequired" type="Contained" />
                 <RequiredSkill identifier="weapons" level="30" />
             </RangedWeapon>
             <ItemContainer autofill="False" canbeselected="false" capacity="1" hideitems="true"
@@ -845,14 +793,13 @@
 
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="80,10" condition="100"
-                        delay="1.2"
-                        holdangle="0" holdpos="0,0" setvalue="true" target="This" type="OnInserted">
+                        delay="1.2" holdangle="0" holdpos="0,0" setvalue="true" target="This"
+                        type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                 </Containable>
@@ -861,8 +808,8 @@
         <Item Scale="0.35"
             aliases="double barrel shotgun, double_barrel_shotgun, shorty, ek_double_shotgun"
             cargocontaineridentifier="ek_weapons_case" category="Equipment,Weapon"
-            identifier="ek_double_shotgun"
-            impactsoundtag="impact_metal_light" name=""
+            identifier="ek_double_shotgun" impactsoundtag="impact_metal_light"
+            name="__ek_double_shotgun__"
             tags="mediumitem,weapon,gun,ek_ammotag_shotgunshell,shotgun,gunsmith,mountableweapon">
             <Price baseprice="350" minleveldifficulty="20" sold="false">
                 <Price multiplier="1.5" storeidentifier="merchantoutpost" />
@@ -893,13 +840,12 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="40" height="32" width="160" />
             <Holdable aimpos="45,-5" controlpose="true" handle1="-35,-8" handle2="80,0"
-                holdangle="-40" holdpos="45,-10"
-                msg="ItemMsgPickUpSelect" slots="Any,RightHand+LeftHand" />
+                holdangle="-40" holdpos="45,-10" msg="ItemMsgPickUpSelect"
+                slots="Any,RightHand+LeftHand" />
             <!-- barrelpos="56,16" holdpos="45,-10" aimpos="30,-10" handle1="-2,-9" handle2="80,-8"
           holdangle="-40" -->
             <RangedWeapon barrelpos="135,25" combatPriority="70" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="0.4" spread="0" unskilledspread="8">
+                drawhudwhenequipped="true" reload="0.4" spread="0" unskilledspread="8">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -908,16 +854,14 @@
                 <ParticleEmitter particle="ekmuzzlebreakshotgun" particleamount="1" velocitymax="0"
                     velocitymin="0" />
                 <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_shotgun_short_mono.ogg"
-                    range="3000"
-                    type="OnUse" />
+                    range="3000" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="12.0" flames="false" flash="false" force="0.5"
-                        range="140.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="140.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <RequiredItems identifier="ek_shotgun_shells,shotgunshell,shotgunammo"
-                    msg="ItemMsgAmmoRequired"
-                    type="Contained" />
+                    msg="ItemMsgAmmoRequired" type="Contained" />
                 <RequiredSkill identifier="weapons" level="40" />
             </RangedWeapon>
             <ItemContainer autofill="False" capacity="2" hideitems="true" itempos="-60,-16"
@@ -926,30 +870,25 @@
                     texture="Content/UI/ContainerIndicators.png" />
                 <Containable identifier="ek_shotgun_shells,shotgunshell,shotgunammo">
                     <StatusEffect condition="100" delay="3.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted" />
+                        stackable="false" target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="0" type="OnInserted" />
+                        target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/dbreload.ogg"
-                            frequencymultiplier="0.65"
-                            loop="false" range="700.0" type="OnUse" volume="1.35" />
+                            frequencymultiplier="0.65" loop="false" range="700.0" type="OnUse"
+                            volume="1.35" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="45,-5" condition="100"
-                        delay="2.5"
-                        holdangle="-40" holdpos="45,-10" setvalue="true" target="This"
+                        delay="2.5" holdangle="-40" holdpos="45,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
@@ -961,8 +900,8 @@
             <SkillRequirementHint identifier="weapons" level="40" />
         </Item>
         <Item Scale="0.35" aliases="ek_shotgun" cargocontaineridentifier="ek_weapons_case"
-            category="Equipment,Weapon"
-            identifier="ek_tactical_shotgun" impactsoundtag="impact_metal_light" name=""
+            category="Equipment,Weapon" identifier="ek_tactical_shotgun"
+            impactsoundtag="impact_metal_light" name="__ek_tactical_shotgun__"
             tags="mediumitem,weapon,gun,ek_ammotag_shotgunshell,shotgun,gunsmith,mountableweapon">
             <Price baseprice="500" minleveldifficulty="30" sold="false">
                 <Price multiplier="1.5" storeidentifier="merchantoutpost" />
@@ -995,13 +934,13 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="64" width="272" />
             <Holdable aimpos="35,-5" controlpose="true" handle1="-25,-18" handle2="100,-6"
-                holdangle="-40"
-                holdpos="40,-10" msg="ItemMsgPickUpSelect" slots="Any,RightHand+LeftHand" />
+                holdangle="-40" holdpos="40,-10" msg="ItemMsgPickUpSelect"
+                slots="Any,RightHand+LeftHand" />
             <!-- barrelpos="56,8" holdpos="45,-10" aimpos="30,5" handle1="-2,-18" handle2="100,-16"
           holdangle="-40" -->
             <RangedWeapon barrelpos="136,16" combatPriority="85" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="1.1" reloadskillrequirement="40" spread="0" unskilledspread="8">
+                drawhudwhenequipped="true" reload="1.1" reloadskillrequirement="40" spread="0"
+                unskilledspread="8">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -1013,64 +952,53 @@
                     range="3000" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="12.0" flames="false" flash="false" force="0.5"
-                        range="140.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="140.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <RequiredItems identifier="ek_shotgun_shells,shotgunshell,shotgunammo"
-                    msg="ItemMsgAmmoRequired"
-                    type="Contained" />
+                    msg="ItemMsgAmmoRequired" type="Contained" />
                 <RequiredSkill identifier="weapons" level="40" />
             </RangedWeapon>
             <ItemContainer autofill="False" capacity="8" containedstateindicatorslot="0"
-                hideitems="false"
-                maxstacksize="1">
+                hideitems="false" maxstacksize="1">
                 <ContainedStateIndicator sourcerect="16,64,120,24"
                     texture="Content/UI/ContainerIndicators.png" />
                 <Containable hide="true" identifier="ek_shotgun_shells,shotgunshell,shotgunammo">
                     <StatusEffect condition="100" delay="2.4" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted" />
+                        stackable="false" target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="0" type="OnInserted" />
+                        target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/shotguntubereload1.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect comparison="or" delay="2.4" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/shotgunm4reload.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="35,-5" condition="100"
-                        delay="3.0"
-                        holdangle="-40" holdpos="40,-10" setvalue="true" target="This"
+                        delay="3.0" holdangle="-40" holdpos="40,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                 </Containable>
                 <SubContainer capacity="1" maxstacksize="1">
                     <Containable excludeditems="cuttingequipment,weldingequipment" hide="false"
-                        itempos="39,0"
-                        items="flashlight,taclaser" setactive="true" />
+                        itempos="39,0" items="flashlight,taclaser" setactive="true" />
                 </SubContainer>
             </ItemContainer>
             <Quality>
@@ -1080,8 +1008,7 @@
         </Item>
         <Item Scale="0.30" aliases="tazer, stun gun" cargocontaineridentifier="ek_weapons_case"
             category="Equipment,Weapon" identifier="ek_tazer" impactsoundtag="impact_metal_light"
-            name=""
-            tags="smallitem,weapon,gun,stunner,ek_ammotag_tazer">
+            name="__ek_tazer__" tags="smallitem,weapon,gun,stunner,ek_ammotag_tazer">
             <Price baseprice="280" minleveldifficulty="10" sold="false">
                 <Price multiplier="1.25" storeidentifier="merchantoutpost" />
                 <Price multiplier="1.1" storeidentifier="merchantcity" />
@@ -1116,22 +1043,20 @@
                 slots="Any,RightHand,LeftHand" />
             <!-- barrelpos="40,15" aimpos="80,10" handle1="-9,-11" -->
             <RangedWeapon barrelpos="40,15" combatPriority="55" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="1.5" reloadskillrequirement="30" spread="1" unskilledspread="12">
+                drawhudwhenequipped="true" reload="1.5" reloadskillrequirement="30" spread="1"
+                unskilledspread="12">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
                 <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_tazer1.ogg" range="1000"
-                    selectionmode="random"
-                    type="OnUse" />
+                    selectionmode="random" type="OnUse" />
                 <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_tazer2.ogg" range="1000"
                     type="OnUse" />
                 <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_tazer3.ogg" range="1000"
                     type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="4.0" flames="false" force="1.5" range="140.0"
-                        shockwave="false"
-                        smoke="false" underwaterbubble="false" />
+                        shockwave="false" smoke="false" underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect target="Contained" type="OnUse">
                     <Use />
@@ -1147,14 +1072,13 @@
 
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="80,10" condition="100"
-                        delay="1.2"
-                        holdangle="0" holdpos="0,0" setvalue="true" target="This" type="OnInserted">
+                        delay="1.2" holdangle="0" holdpos="0,0" setvalue="true" target="This"
+                        type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                 </Containable>
@@ -1165,9 +1089,8 @@
             <SkillRequirementHint identifier="weapons" level="30" />
         </Item>
         <Item Scale="0.35" cargocontaineridentifier="ek_weapons_case" category="Equipment"
-            fireproof="true"
-            identifier="ek_flamethrower" impactsoundtag="impact_metal_light" name=""
-            tags="mediumitem,weapon,gun,ek_ammotag_flamerfuel">
+            fireproof="true" identifier="ek_flamethrower" impactsoundtag="impact_metal_light"
+            name="__ek_flamethrower__" tags="mediumitem,weapon,gun,ek_ammotag_flamerfuel">
             <!--<Price
           locationtype="Military" buyprice="250" />
           <Price locationtype="City" buyprice="400" />-->
@@ -1199,40 +1122,34 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="64" width="240" />
             <Holdable aimpos="40,-15" controlpose="true" handle1="-60,-20" handle2="102,-17"
-                holdangle="-40"
-                holdpos="45,-10" msg="ItemMsgPickUpSelect" slots="Any,RightHand+LeftHand" />
+                holdangle="-40" holdpos="45,-10" msg="ItemMsgPickUpSelect"
+                slots="Any,RightHand+LeftHand" />
             <!-- barrelpos="50,4" holdpos="45,-10" aimpos="40,-15" handle1="-50,-20"
             handle2="102,-17"
           holdangle="-40" -->
             <RepairTool barrelpos="50,4" combatpriority="90" firedamage="0.0" fireprobability="0.1"
-                range="500"
-                repairmultiple="true" repairthroughholes="true" repairthroughwalls="false"
-                spread="25"
-                structurefixamount="0.0" unskilledspread="25">
+                range="500" repairmultiple="true" repairthroughholes="true"
+                repairthroughwalls="false" spread="25" structurefixamount="0.0" unskilledspread="25">
                 <!-- the item must contain a flamethrower fuel tank for it to work -->
                 <RequiredItems excludeditems="ek_flamer_incendium" items="ek_flamer_fuel"
                     type="Contained" />
                 <ParticleEmitterHitCharacter anglemax="5" anglemin="-5" particle="fleshsmoke"
-                    particlespersecond="3"
-                    velocitymax="100" velocitymin="10" />
+                    particlespersecond="3" velocitymax="100" velocitymin="10" />
                 <ParticleEmitter anglemax="0" anglemin="0" highqualitycollisiondetection="true"
-                    particle="flamethrower"
-                    particlespersecond="20" velocitymax="1500" velocitymin="1000" />
+                    particle="flamethrower" particlespersecond="20" velocitymax="1500"
+                    velocitymin="1000" />
                 <ParticleEmitter anglemax="0" anglemin="0" particle="flamethrowersmoke"
-                    particlespersecond="20"
-                    velocitymax="1000" velocitymin="500" />
+                    particlespersecond="20" velocitymax="1000" velocitymin="500" />
                 <sound file="Content/Items/Weapons/FlameThrowerLoop.ogg" loop="true" range="500.0"
                     type="OnUse" />
                 <!-- bubbles when usage fails (e.g. in water) -->
                 <StatusEffect target="UseTarget" type="OnFailure">
                     <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true"
-                        particle="bubbles"
-                        particlespersecond="20" scalemax="0.7" scalemin="0.3" velocitymax="100"
-                        velocitymin="5" />
+                        particle="bubbles" particlespersecond="20" scalemax="0.7" scalemin="0.3"
+                        velocitymax="100" velocitymin="5" />
                     <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true"
-                        particle="fleshsmoke"
-                        particlespersecond="10" scalemax="1.5" scalemin="1" velocitymax="200"
-                        velocitymin="5" />
+                        particle="fleshsmoke" particlespersecond="10" scalemax="1.5" scalemin="1"
+                        velocitymax="200" velocitymin="5" />
                 </StatusEffect>
                 <!-- make the item unusable when there's less than 10% oxygen -->
                 <StatusEffect UsableIn="" target="Hull,This" type="Always">
@@ -1270,33 +1187,27 @@
                 </LightComponent>
             </RepairTool>
             <RepairTool barrelpos="50,4" combatpriority="90" firedamage="0.0" fireprobability="0.5"
-                range="500"
-                repairmultiple="true" repairthroughholes="true" repairthroughwalls="false"
-                spread="25"
-                structurefixamount="0.0" unskilledspread="25">
+                range="500" repairmultiple="true" repairthroughholes="true"
+                repairthroughwalls="false" spread="25" structurefixamount="0.0" unskilledspread="25">
                 <!-- the item must contain an incendium flamethrower fuel tank for it to work -->
                 <RequiredItems items="ek_flamer_incendium" type="Contained" />
                 <ParticleEmitterHitCharacter anglemax="5" anglemin="-5" particle="fleshsmoke"
-                    particlespersecond="3"
-                    velocitymax="100" velocitymin="10" />
+                    particlespersecond="3" velocitymax="100" velocitymin="10" />
                 <ParticleEmitter anglemax="0" anglemin="0" highqualitycollisiondetection="true"
-                    particle="flamethrower"
-                    particlespersecond="15" velocitymax="1500" velocitymin="1000" />
+                    particle="flamethrower" particlespersecond="15" velocitymax="1500"
+                    velocitymin="1000" />
                 <ParticleEmitter anglemax="0" anglemin="0" particle="flamethrowersmoke"
-                    particlespersecond="15"
-                    velocitymax="1000" velocitymin="500" />
+                    particlespersecond="15" velocitymax="1000" velocitymin="500" />
                 <sound file="Content/Items/Weapons/FlameThrowerLoop.ogg" loop="true" range="500.0"
                     type="OnUse" />
                 <!-- bubbles when usage fails (e.g. in water) -->
                 <StatusEffect target="UseTarget" type="OnFailure">
                     <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true"
-                        particle="bubbles"
-                        particlespersecond="20" scalemax="0.7" scalemin="0.3" velocitymax="100"
-                        velocitymin="5" />
+                        particle="bubbles" particlespersecond="20" scalemax="0.7" scalemin="0.3"
+                        velocitymax="100" velocitymin="5" />
                     <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true"
-                        particle="fleshsmoke"
-                        particlespersecond="10" scalemax="1.5" scalemin="1" velocitymax="200"
-                        velocitymin="5" />
+                        particle="fleshsmoke" particlespersecond="10" scalemax="1.5" scalemin="1"
+                        velocitymax="200" velocitymin="5" />
                 </StatusEffect>
                 <!-- make the item unusable when there's less than 10% oxygen -->
                 <StatusEffect UsableIn="" target="Hull,This" type="Always">
@@ -1332,18 +1243,15 @@
                 </LightComponent>
             </RepairTool>
             <RepairTool barrelpos="50,4" combatpriority="90" firedamage="0.0" fireprobability="0"
-                range="400"
-                repairmultiple="true" repairthroughholes="true" repairthroughwalls="false"
-                spread="25"
-                structurefixamount="0.0" unskilledspread="25">
+                range="400" repairmultiple="true" repairthroughholes="true"
+                repairthroughwalls="false" spread="25" structurefixamount="0.0" unskilledspread="25">
                 <!-- the item must contain a hypergolic flamethrower fuel tank for it to work -->
                 <RequiredItems items="ek_hypergolic_fuel" type="Contained" />
                 <ParticleEmitterHitCharacter anglemax="5" anglemin="-5" particle="fleshsmoke"
-                    particlespersecond="3"
-                    velocitymax="100" velocitymin="10" />
+                    particlespersecond="3" velocitymax="100" velocitymin="10" />
                 <ParticleEmitter ColorMultiplier="255,255,255,255" ParticleAmount="6"
-                    ScaleMultiplier="1,1"
-                    Velocity="1000" VelocityMax="1250" VelocityMin="1000" particle="hypergolicfx" />
+                    ScaleMultiplier="1,1" Velocity="1000" VelocityMax="1250" VelocityMin="1000"
+                    particle="hypergolicfx" />
                 <sound file="Content/Items/Weapons/FlameThrowerLoop.ogg" loop="true" range="500.0"
                     type="OnUse" />
                 <!-- when using, the contained fuel tank will detoriate (= lose fuel) -->
@@ -1366,22 +1274,20 @@
                 </LightComponent>
             </RepairTool>
             <ItemContainer autofill="False" canbeselected="false" capacity="1" hideitems="false"
-                itempos="10,-10"
-                itemrotation="-90" maxstacksize="1">
+                itempos="10,-10" itemrotation="-90" maxstacksize="1">
                 <ContainedStateIndicator sourcerect="0,157,92,27"
                     texture="Content/UI/ContainerIndicators.png" />
                 <Containable identifier="ek_flamer_tank">
 
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="80,10" condition="100"
-                        delay="2.9"
-                        holdangle="0" holdpos="0,0" setvalue="true" target="This" type="OnInserted">
+                        delay="2.9" holdangle="0" holdpos="0,0" setvalue="true" target="This"
+                        type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                 </Containable>
@@ -1395,14 +1301,12 @@
             </Propulsion>
         </Item>
         <Item Scale="0.35" aliases="alien_rifle, alien rifle" category="Alien"
-            identifier="ek_alienrifle"
-            impactsoundtag="impact_metal_light" name=""
+            identifier="ek_alienrifle" impactsoundtag="impact_metal_light" name="__ek_alienrifle__"
             tags="mediumitem,weapon,gun,alien,ek_ammotag_alienmag">
             <PreferredContainer maxamount="1" minamount="0" primary="aliencontainer"
                 spawnprobability="0.1" />
             <PreferredContainer maxamount="1" minamount="0"
-                primary="wrecksecurearmcab,wreckarmcab,wreckshuttlecrate"
-                spawnprobability="0.001" />
+                primary="wrecksecurearmcab,wreckarmcab,wreckshuttlecrate" spawnprobability="0.001" />
             <Price baseprice="1000" minleveldifficulty="66" soldeverywhere="false">
                 <Price multiplier="1" sold="false" storeidentifier="merchantcity" />
                 <Price multiplier="1.5" sold="false" storeidentifier="merchantresearch" />
@@ -1422,21 +1326,20 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="64" width="240" />
             <Holdable aimpos="50,0" controlpose="true" handle1="-40,-30" handle2="80,-17"
-                holdangle="-40"
-                holdpos="45,-10" msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" />
+                holdangle="-40" holdpos="45,-10" msg="ItemMsgPickUpSelect"
+                slots="RightHand+LeftHand" />
             <Wearable canbepicked="true" canbeselected="false" msg="ItemMsgEquipSelect"
                 pickkey="Select" slots="Bag">
                 <sprite canbehiddenbyotherwearables="false" depth="0.6" inheritlimbdepth="false"
-                    limb="Torso"
-                    name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.35"
+                    limb="Torso" name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.35"
                     sourcerect="448,432,352,128"
                     texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             </Wearable>
             <!-- barrelpos="60,4" holdpos="45,-10" aimpos="40,10" handle1="4,-28" handle2="102,-17"
           holdangle="-40" -->
             <RangedWeapon barrelpos="160,8" combatPriority="70" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="0.2" reloadskillrequirement="55" spread="9" unskilledspread="18">
+                drawhudwhenequipped="true" reload="0.2" reloadskillrequirement="55" spread="9"
+                unskilledspread="18">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -1448,8 +1351,8 @@
                     type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="4.0" flames="false" flash="false" force="0.5"
-                        range="140.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="140.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect target="Contained" type="OnUse">
                     <Use />
@@ -1459,47 +1362,38 @@
                 <RequiredSkill identifier="weapons" level="55" />
             </RangedWeapon>
             <ItemContainer autofill="False" canbeselected="false" capacity="1" hideitems="false"
-                itempos="0,-48"
-                itemrotation="-45" maxstacksize="1">
+                itempos="0,-48" itemrotation="-45" maxstacksize="1">
                 <ContainedStateIndicator sourcerect="0,184,120,32"
                     texture="Content/UI/ContainerIndicators.png" />
                 <Containable identifier="ek_alienrifle_mag">
                     <StatusEffect condition="100" delay="1.8" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted" />
+                        stackable="false" target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="0" type="OnInserted" />
+                        target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/arreload1.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect comparison="or" delay="1.15" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/arreload2.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="50,0" condition="100"
-                        delay="2.9"
-                        holdangle="-40" holdpos="45,-10" setvalue="true" target="This"
+                        delay="2.9" holdangle="-40" holdpos="45,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
@@ -1512,10 +1406,9 @@
         </Item>
         <!-- Works, trust me bro -->
         <Item Scale="0.32" aliases="mini dart gun, dart pistol"
-            cargocontaineridentifier="ek_weapons_case"
-            category="Equipment,Weapon" identifier="ek_micro_dartgun"
-            impactsoundtag="impact_metal_light" name=""
-            tags="smallitem,weapon,gun,ek_ammotag_dart">
+            cargocontaineridentifier="ek_weapons_case" category="Equipment,Weapon"
+            identifier="ek_micro_dartgun" impactsoundtag="impact_metal_light"
+            name="__ek_micro_dartgun__" tags="smallitem,weapon,gun,ek_ammotag_dart">
             <Price baseprice="150" minleveldifficulty="25" sold="false">
                 <Price multiplier="1.25" storeidentifier="merchantoutpost" />
                 <Price multiplier="1.1" storeidentifier="merchantcity" />
@@ -1540,37 +1433,34 @@
                 slots="Any,RightHand,LeftHand" />
             <!-- barrelpos="35,11" aimpos="60,-5" handle1="-9,-12" -->
             <RangedWeapon barrelpos="44,24" combatPriority="40" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="1.25" reloadskillrequirement="40" spread="0.5" unskilledspread="8">
+                drawhudwhenequipped="true" reload="1.25" reloadskillrequirement="40" spread="0.5"
+                unskilledspread="8">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
                 <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_suppressed_handgun.ogg"
-                    range="600"
-                    type="OnUse" />
+                    range="600" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="2.0" flames="false" flash="false" force="2"
-                        range="150.0" shockwave="false"
-                        smoke="false" sparks="false" underwaterbubble="false" />
+                        range="150.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <RequiredItems identifiers="ek_dart" msg="ItemMsgAmmoRequired" type="Contained" />
                 <RequiredSkill identifier="weapons" level="40" />
             </RangedWeapon>
             <ItemContainer autofill="False" canbeselected="false" capacity="1" hideitems="true"
-                iteminterval="0,-4"
-                itempos="27,10" maxstacksize="1">
+                iteminterval="0,-4" itempos="27,10" maxstacksize="1">
                 <Containable identifiers="ek_dart">
 
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="65,0" condition="100"
-                        delay="1.2"
-                        holdangle="0" holdpos="0,0" setvalue="true" target="This" type="OnInserted">
+                        delay="1.2" holdangle="0" holdpos="0,0" setvalue="true" target="This"
+                        type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                 </Containable>
@@ -1587,8 +1477,7 @@
       syringes or try OnImpact effects. -->
         <Item Scale="0.32" aliases="dart_gun, dartgun" cargocontaineridentifier="ek_weapons_case"
             category="Equipment,Weapon" identifier="ek_dartgun" impactsoundtag="impact_metal_light"
-            name=""
-            tags="mediumitem,weapon,gun,ek_ammotag_dart">
+            name="__ek_dartgun__" tags="mediumitem,weapon,gun,ek_ammotag_dart">
             <Price baseprice="200" minleveldifficulty="25" sold="false">
                 <Price multiplier="1.25" storeidentifier="merchantoutpost" />
                 <Price multiplier="1.1" storeidentifier="merchantcity" />
@@ -1617,13 +1506,12 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="60" width="275" />
             <Holdable aimpos="45,0" controlpose="true" handle1="-50,-20" handle2="50,5"
-                holdangle="-40" holdpos="50,-5"
-                msg="ItemMsgPickUpSelect" slots="Any,RightHand+LeftHand" />
+                holdangle="-40" holdpos="50,-5" msg="ItemMsgPickUpSelect"
+                slots="Any,RightHand+LeftHand" />
             <!-- barrelpos="90,9" holdpos="45,-10" aimpos="40,10" handle1="-30,-15" handle2="50,-5"
           holdangle="-40" -->
             <RangedWeapon barrelpos="144,16" combatPriority="50" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="1.25" spread="4" unskilledspread="8">
+                drawhudwhenequipped="true" reload="1.25" spread="4" unskilledspread="8">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -1631,27 +1519,24 @@
                     range="800" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="3.0" flames="false" flash="false" force="2"
-                        range="150.0" shockwave="false"
-                        smoke="false" sparks="false" underwaterbubble="false" />
+                        range="150.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <RequiredItems identifiers="ek_dart" msg="ItemMsgAmmoRequired" type="Contained" />
                 <RequiredSkill identifier="medical" level="45" />
             </RangedWeapon>
             <ItemContainer autofill="False" capacity="4" containedstateindicatorslot="0"
-                hideitems="false"
-                maxstacksize="1">
+                hideitems="false" maxstacksize="1">
                 <Containable hide="true" identifiers="ek_dart">
 
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="45,0" condition="100"
-                        delay="1.2"
-                        holdangle="-40" holdpos="50,-5" setvalue="true" target="This"
+                        delay="1.2" holdangle="-40" holdpos="50,-5" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
@@ -1660,15 +1545,14 @@
                     texture="Content/UI/ContainerIndicators.png" />
                 <SubContainer capacity="1" maxstacksize="1">
                     <Containable excludeditems="cuttingequipment,weldingequipment" hide="false"
-                        itempos="39,0"
-                        items="flashlight,taclaser" setactive="true" />
+                        itempos="39,0" items="flashlight,taclaser" setactive="true" />
                 </SubContainer>
             </ItemContainer>
             <SkillRequirementHint identifier="medical" level="45" />
         </Item>
         <Item Scale="0.35" aliases="mini smg" cargocontaineridentifier="ek_weapons_case"
-            category="Equipment,Weapon"
-            identifier="ek_mini_smg" impactsoundtag="impact_metal_light" name=""
+            category="Equipment,Weapon" identifier="ek_mini_smg" impactsoundtag="impact_metal_light"
+            name="__ek_mini_smg__"
             tags="mediumitem,weapon,gun,ek_ammotag_10mm,gunsmith,mountableweapon">
             <PreferredContainer primary="weaponholder" spawnprobability="0.05" />
             <PreferredContainer maxamount="2" minamount="1" primary="secarmcab"
@@ -1705,11 +1589,11 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="56" width="128" />
             <Holdable aimpos="55,-5" controlpose="true" handle1="-34,-16" handle2="20,0"
-                holdangle="-40"
-                holdpos="45,-10" msg="ItemMsgPickUpSelect" slots="Any,RightHand+LeftHand" />
+                holdangle="-40" holdpos="45,-10" msg="ItemMsgPickUpSelect"
+                slots="Any,RightHand+LeftHand" />
             <RangedWeapon barrelpos="64,15" combatPriority="65" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="0.1" reloadskillrequirement="50" spread="9" unskilledspread="18">
+                drawhudwhenequipped="true" reload="0.1" reloadskillrequirement="50" spread="9"
+                unskilledspread="18">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -1722,8 +1606,8 @@
               range="3000" /> -->
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="4.0" flames="false" flash="false" force="0.5"
-                        range="140.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="140.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect target="Contained" targetslot="0" type="OnUse">
                     <RequiredItem items="ek_mini_smg_mags,9mmammo" type="Contained" />
@@ -1740,16 +1624,14 @@
                   smg,handgun,battlerifle,battlerifle2,pipegun,pipegun_mono,microsmg,microsmg_mono -->
                     <Sound
                         file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_suppressed_microsmg_mono.ogg"
-                        range="800"
-                        type="OnUse" />
+                        range="800" type="OnUse" />
                 </StatusEffect>
                 <StatusEffect forceplaysounds="true" target="Contained,This" targetslot="2"
                     type="OnUse">
                     <RequiredItem items="notsuppressor" targetslot="2" type="Contained" />
                     <!-- GUN SOUNDS GO HERE -->
                     <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_microsmg_mono.ogg"
-                        range="3000"
-                        type="OnUse" />
+                        range="3000" type="OnUse" />
                     <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymax="0"
                         velocitymin="0" />
                 </StatusEffect>
@@ -1773,53 +1655,43 @@
                         identifier="notsuppressor" />
                 </StatusEffect>
                 <StatusEffect condition="5" delay="0.2" setvalue="true" stackable="false"
-                    target="Contained"
-                    targetslot="2" type="Always" />
+                    target="Contained" targetslot="2" type="Always" />
                 <!--END
               (most) MODGUN SUPPRESSOR CODE-->
             </RangedWeapon>
             <ItemContainer autofill="True" canbeselected="false" capacity="1"
-                containedstateindicatorslot="0"
-                hideitems="false" maxstacksize="1">
+                containedstateindicatorslot="0" hideitems="false" maxstacksize="1">
                 <ContainedStateIndicator sourcerect="16,64,120,24"
                     texture="Content/UI/ContainerIndicators.png" />
                 <Containable itempos="4,-15" items="ek_mini_smg_mags,9mmammo">
                     <StatusEffect condition="100" delay="1.45" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted" />
+                        stackable="false" target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="0" type="OnInserted" />
+                        target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/smgreload1.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect comparison="or" delay="0.9" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/smgreload2.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="55,-5" condition="100"
-                        delay="1.8"
-                        holdangle="-40" holdpos="45,-10" setvalue="true" target="This"
+                        delay="1.8" holdangle="-40" holdpos="45,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
@@ -1830,8 +1702,7 @@
                     texture="Content/UI/CampaignUIAtlas2.png" />
                 <SubContainer capacity="1" containedspritedepth="0.5" maxstacksize="1">
                     <Containable excludeditems="cuttingequipment,weldingequipment" hide="false"
-                        itempos="15,0"
-                        items="flashlight,taclaser" setactive="true" />
+                        itempos="15,0" items="flashlight,taclaser" setactive="true" />
                 </SubContainer>
                 <SubContainer capacity="1" containedspritedepth="0.51" maxstacksize="1">
                     <Containable hide="false" itempos="36,5" items="suppressor,muzzle_attachment" />
@@ -1846,8 +1717,8 @@
         <Item Scale="0.38"
             aliases="marine_rocket_launcher,marine_rpg,marine rpg,rocket_launcher,rocketlauncher,rocket launcher,ek rocketlauncher,ek rocket launcher,rpg,ek rpg,bulkyweapon"
             cargocontaineridentifier="ek_weapons_case" category="Equipment,Weapon"
-            identifier="ek_rocketlauncher"
-            impactsoundtag="impact_metal_heavy" name=""
+            identifier="ek_rocketlauncher" impactsoundtag="impact_metal_heavy"
+            name="__ek_rocketlauncher__"
             tags="mediumitem,weapon,gun,ek_ammotag_rocket,mountableweapon">
             <Price baseprice="750" minleveldifficulty="40" sold="false">
                 <Price multiplier="1.25" storeidentifier="merchantoutpost" />
@@ -1879,22 +1750,19 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="40" height="96" width="304" />
             <Holdable aimpos="20,5" controlpose="true" handle1="6,-20" handle2="100,-28"
-                holdangle="-40" holdpos="25,5"
-                msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" />
+                holdangle="-40" holdpos="25,5" msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" />
             <Wearable canbepicked="true" canbeselected="false" msg="ItemMsgEquipSelect"
                 pickkey="Select" slots="Bag">
                 <sprite canbehiddenbyotherwearables="false" depth="0.6" inheritlimbdepth="false"
-                    limb="Torso"
-                    name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.38"
+                    limb="Torso" name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.38"
                     sourcerect="0,704,288,128"
                     texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             </Wearable>
             <!-- barrelpos="100,22" holdpos="30,10" aimpos="30,10" handle1="8,-16" handle2="96,-32"
           holdangle="-40" -->
             <RangedWeapon barrelpos="135,28" combatPriority="75" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="5" reloadnoskill="7.5" reloadskillrequirement="60" spread="1"
-                unskilledspread="15">
+                drawhudwhenequipped="true" reload="5" reloadnoskill="7.5"
+                reloadskillrequirement="60" spread="1" unskilledspread="15">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -1906,8 +1774,8 @@
                     range="3000" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="9.0" flames="false" flash="false" force="1.5"
-                        range="180.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="180.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <RequiredItems identifier="ek_rocketammo" msg="ItemMsgAmmoRequired" type="Contained" />
                 <RequiredSkill identifier="weapons" level="60" />
@@ -1918,14 +1786,12 @@
 
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="20,5" condition="100"
-                        delay="4.0"
-                        holdangle="-40" holdpos="25,5" setvalue="true" target="This"
+                        delay="4.0" holdangle="-40" holdpos="25,5" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
@@ -1937,8 +1803,8 @@
             <SkillRequirementHint identifier="weapons" level="60" />
         </Item>
         <Item Scale="0.30" aliases="coil pistol" cargocontaineridentifier="ek_weapons_case"
-            category="Equipment,Weapon"
-            identifier="ek_gausspistol" impactsoundtag="impact_metal_light" name=""
+            category="Equipment,Weapon" identifier="ek_gausspistol"
+            impactsoundtag="impact_metal_light" name="__ek_gausspistol__"
             tags="smallitem,weapon,gun,ek_ammotag_gausspistol,gunsmith,pistolitem">
             <Price baseprice="800" minleveldifficulty="40" sold="false">
                 <Price multiplier="1.25" storeidentifier="merchantoutpost" />
@@ -1973,25 +1839,21 @@
                 slots="Any,RightHand,LeftHand" />
             <!-- barrelpos="35,7" aimpos="45,-5" handle1="10,-11" -->
             <RangedWeapon barrelpos="85,16" combatPriority="60" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="0.25" reloadskillrequirement="45" spread="4"
+                drawhudwhenequipped="true" reload="0.25" reloadskillrequirement="45" spread="4"
                 unskilledspread="18">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
                 <ParticleEmitter particle="ekmuzzleflamegausspistol" particleamount="1"
-                    velocitymax="0"
-                    velocitymin="0" />
+                    velocitymax="0" velocitymin="0" />
                 <ParticleEmitter particle="ekmuzzlebreakgausspistol" particleamount="1"
-                    velocitymax="0"
-                    velocitymin="0" />
+                    velocitymax="0" velocitymin="0" />
                 <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_gausspistol_mono.ogg"
-                    range="3000"
-                    type="OnUse" />
+                    range="3000" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="4.0" flames="false" flash="false" force="1.5"
-                        range="140.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="140.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect target="Contained" targetslot="0" type="OnUse">
                     <RequiredItem identifiers="ek_gausspistol_mags" targetslot="0" type="Contained" />
@@ -2015,41 +1877,34 @@
                     texture="Content/UI/ContainerIndicators.png" />
                 <Containable hide="true" identifiers="ek_gausspistol_mags">
                     <StatusEffect condition="100" delay="1.05" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted" />
+                        stackable="false" target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="0" type="OnInserted" />
+                        target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/pistolreload1.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect comparison="or" delay="0.65" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/pistolreload2.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="45,-2" condition="100"
-                        delay="1.2"
-                        holdangle="0" holdpos="0,0" setvalue="true" target="This" type="OnInserted">
+                        delay="1.2" holdangle="0" holdpos="0,0" setvalue="true" target="This"
+                        type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                 </Containable>
@@ -2064,8 +1919,7 @@
                 </SubContainer>
                 <SubContainer capacity="1" containedspritedepth="0.5" maxstacksize="1">
                     <Containable excludeditems="cuttingequipment,weldingequipment" hide="false"
-                        itempos="16,2"
-                        items="flashlight,taclaser" setactive="true" />
+                        itempos="16,2" items="flashlight,taclaser" setactive="true" />
                 </SubContainer>
             </ItemContainer>
             <Quality>
@@ -2074,8 +1928,8 @@
             <SkillRequirementHint identifier="weapons" level="45" />
         </Item>
         <Item Scale="0.30" aliases="coil rifle" cargocontaineridentifier="ek_weapons_case"
-            category="Equipment,Weapon"
-            identifier="ek_gaussrifle" impactsoundtag="impact_metal_light" name=""
+            category="Equipment,Weapon" identifier="ek_gaussrifle"
+            impactsoundtag="impact_metal_light" name="__ek_gaussrifle__"
             tags="mediumitem,weapon,loadable,gun,ek_ammotag_gaussrifle,gunsmith,mountableweapon">
             <Price baseprice="1200" minleveldifficulty="50" sold="false">
                 <Price multiplier="1.25" storeidentifier="merchantoutpost" />
@@ -2108,13 +1962,11 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="64" width="176" />
             <Holdable aimpos="50,5" controlpose="true" handle1="-30,-22" handle2="100,-10"
-                holdangle="-40"
-                holdpos="50,-5" msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" />
+                holdangle="-40" holdpos="50,-5" msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" />
             <Wearable canbepicked="true" canbeselected="false" msg="ItemMsgEquipSelect"
                 pickkey="Select" slots="Bag">
                 <sprite canbehiddenbyotherwearables="false" depth="0.6" inheritlimbdepth="false"
-                    limb="Torso"
-                    name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.30"
+                    limb="Torso" name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.30"
                     sourcerect="448,800,320,96"
                     texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             </Wearable>
@@ -2122,23 +1974,21 @@
             handle2="102,-19"
           holdangle="-40" -->
             <RangedWeapon barrelpos="156,8" combatPriority="75" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="0.37" reloadskillrequirement="50" spread="0.5" unskilledspread="18">
+                drawhudwhenequipped="true" reload="0.37" reloadskillrequirement="50" spread="0.5"
+                unskilledspread="18">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
                 <ParticleEmitter particle="ekmuzzleflamegausspistol" particleamount="1"
-                    velocitymax="0"
-                    velocitymin="0" />
+                    velocitymax="0" velocitymin="0" />
                 <ParticleEmitter particle="ekmuzzlebreakgausspistol" particleamount="1"
-                    velocitymax="0"
-                    velocitymin="0" />
+                    velocitymax="0" velocitymin="0" />
                 <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_gaussrifle_mono.ogg"
                     range="3000" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="4.0" flames="false" flash="false" force="1.5"
-                        range="140.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="140.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect target="Contained" targetslot="0" type="OnUse">
                     <RequiredItem identifiers="ek_gaussrifle_mags" targetslot="0" type="Contained" />
@@ -2157,47 +2007,38 @@
                 <RequiredSkill identifier="weapons" level="50" />
             </RangedWeapon>
             <ItemContainer autofill="False" canbeselected="false" capacity="1"
-                containedstateindicatorslot="0"
-                hideitems="false" maxstacksize="1">
+                containedstateindicatorslot="0" hideitems="false" maxstacksize="1">
                 <ContainedStateIndicator sourcerect="16,64,120,24"
                     texture="Content/UI/ContainerIndicators.png" />
                 <Containable identifiers="ek_gaussrifle_mags" itempos="-15,-7">
                     <StatusEffect condition="100" delay="1.8" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted" />
+                        stackable="false" target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="0" type="OnInserted" />
+                        target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/arreload1.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect comparison="or" delay="1.15" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/arreload2.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="50,5" condition="100"
-                        delay="1.8"
-                        holdangle="-40" holdpos="50,-5" setvalue="true" target="This"
+                        delay="1.8" holdangle="-40" holdpos="50,-5" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
@@ -2213,8 +2054,7 @@
                 </SubContainer>
                 <SubContainer capacity="1" containedspritedepth="0.5" maxstacksize="1">
                     <Containable excludeditems="cuttingequipment,weldingequipment" hide="false"
-                        itempos="25,1"
-                        items="flashlight,taclaser" setactive="true" />
+                        itempos="25,1" items="flashlight,taclaser" setactive="true" />
                 </SubContainer>
             </ItemContainer>
             <Quality>
@@ -2223,7 +2063,8 @@
             <SkillRequirementHint identifier="weapons" level="50" />
         </Item>
         <Item Scale="0.35" cargocontaineridentifier="ek_weapons_case" category="Equipment,Weapon"
-            identifier="ek_drumlmg" impactsoundtag="impact_metal_light" name="" showinmenus="false"
+            identifier="ek_drumlmg" impactsoundtag="impact_metal_light" name="__ek_drumlmg__"
+            showinmenus="false"
             tags="mediumitem,weapon,gun,ek_ammotag_556drum,gunsmith,mountableweapon,bulkyweapon">
             <Price baseprice="450" minleveldifficulty="30" sold="false">
                 <Price multiplier="1.25" storeidentifier="merchantoutpost" />
@@ -2254,13 +2095,11 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="64" width="240" />
             <Holdable aimpos="50,-10" controlpose="true" handle1="-30,-15" handle2="80,-5"
-                holdangle="-40"
-                holdpos="45,-5" msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" />
+                holdangle="-40" holdpos="45,-5" msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" />
             <Wearable canbepicked="true" canbeselected="false" msg="ItemMsgEquipSelect"
                 pickkey="Select" slots="Bag">
                 <sprite canbehiddenbyotherwearables="false" depth="0.6" inheritlimbdepth="false"
-                    limb="Torso"
-                    name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.35"
+                    limb="Torso" name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.35"
                     sourcerect="0,896,320,96"
                     texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             </Wearable>
@@ -2268,8 +2107,7 @@
             handle2="102,-14"
           holdangle="-40" -->
             <RangedWeapon barrelpos="160,24" combatPriority="65" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="0.1" reloadskillrequirement="65" spread="10"
+                drawhudwhenequipped="true" reload="0.1" reloadskillrequirement="65" spread="10"
                 unskilledspread="30">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
@@ -2282,8 +2120,8 @@
                     range="4500" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="4.0" flames="false" flash="false" force="0.5"
-                        range="180.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="180.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect target="Contained" targetslot="0" type="OnUse">
                     <RequiredItem items="ek_drumlmg_mags" targetslot="0" type="Contained" />
@@ -2291,16 +2129,13 @@
                 </StatusEffect>
                 <!-- Recoil -->
                 <StatusEffect duration="0.15" setvalue="true" stackable="false" tags="fired"
-                    target="this"
-                    type="OnUse" />
+                    target="this" type="OnUse" />
                 <StatusEffect comparison="and" disabledeltatime="true" setvalue="false" spread="2.0"
-                    stackable="true"
-                    target="this" type="OnUse">
+                    stackable="true" target="this" type="OnUse">
                     <Conditional Spread="lt 50" />
                 </StatusEffect>
                 <StatusEffect comparison="and" disabledeltatime="true" interval="0.1"
-                    setvalue="false" spread="-1.0"
-                    stackable="true" target="this" type="Always">
+                    setvalue="false" spread="-1.0" stackable="true" target="this" type="Always">
                     <Conditional hasstatustag="neq fired" />
                     <Conditional Spread="gt 10" />
                 </StatusEffect>
@@ -2309,45 +2144,36 @@
                 <RequiredSkill identifier="weapons" level="65" />
             </RangedWeapon>
             <ItemContainer autofill="False" canbeselected="false" capacity="1"
-                containedstateindicatorslot="0"
-                hideitems="false" maxstacksize="1">
+                containedstateindicatorslot="0" hideitems="false" maxstacksize="1">
                 <Containable itempos="9,-12" items="ek_drumlmg_mags">
                     <StatusEffect condition="100" delay="5.4" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted" />
+                        stackable="false" target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="0" type="OnInserted" />
+                        target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/mgreload1.ogg"
-                            forceplay="true"
-                            frequencymultiplier="1" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="1" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect comparison="or" delay="3.6" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/mgreload2.ogg"
-                            forceplay="true"
-                            frequencymultiplier="1" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="1" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="50,-10" condition="100"
-                        delay="5.6"
-                        holdangle="-40" holdpos="45,-5" setvalue="true" target="This"
+                        delay="5.6" holdangle="-40" holdpos="45,-5" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
@@ -2358,8 +2184,7 @@
                     texture="Content/UI/StatusMonitorUI.png" />
                 <SubContainer capacity="1" maxstacksize="1">
                     <Containable excludeditems="cuttingequipment,weldingequipment" hide="false"
-                        itempos="30,1"
-                        items="flashlight,taclaser" setactive="true" />
+                        itempos="30,1" items="flashlight,taclaser" setactive="true" />
                 </SubContainer>
             </ItemContainer>
             <Quality>
@@ -2369,8 +2194,8 @@
         </Item>
         <Item Scale="0.32" aliases="marine assault rifle" cargocontaineridentifier="ek_weapons_case"
             category="Equipment,Weapon" identifier="ek_battlerifle"
-            impactsoundtag="impact_metal_light" name=""
-            showinmenus="false" tags="mediumitem,weapon,gun,ek_ammotag_556,gunsmith,mountableweapon">
+            impactsoundtag="impact_metal_light" name="__ek_battlerifle__" showinmenus="false"
+            tags="mediumitem,weapon,gun,ek_ammotag_556,gunsmith,mountableweapon">
             <Price baseprice="550" minleveldifficulty="25" sold="false">
                 <Price multiplier="1.25" storeidentifier="merchantoutpost" />
                 <Price multiplier="1.1" storeidentifier="merchantcity" />
@@ -2403,21 +2228,19 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="64" width="330" />
             <Holdable aimpos="58,5" controlpose="true" handle1="-47.5,-25" handle2="42.5,-5"
-                holdangle="-40"
-                holdpos="65,-5" msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" />
+                holdangle="-40" holdpos="65,-5" msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" />
             <Wearable canbepicked="true" canbeselected="false" msg="ItemMsgEquipSelect"
                 pickkey="Select" slots="Bag">
                 <sprite canbehiddenbyotherwearables="false" depth="0.6" inheritlimbdepth="false"
-                    limb="Torso"
-                    name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.32"
+                    limb="Torso" name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.32"
                     sourcerect="0,1024,336,112"
                     texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             </Wearable>
             <!-- barrelpos="68,5" holdpos="60,-10" aimpos="58,10" handle1="-48,-21" handle2="38,-8"
           holdangle="-40" -->
             <RangedWeapon barrelpos="166,12" combatPriority="85" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="0.12" reloadskillrequirement="50" spread="2" unskilledspread="14">
+                drawhudwhenequipped="true" reload="0.12" reloadskillrequirement="50" spread="2"
+                unskilledspread="14">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -2427,8 +2250,8 @@
                     velocitymin="0" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="4.0" flames="false" flash="false" force="0.3"
-                        range="140.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="140.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect target="Contained" type="OnUse">
                     <Use />
@@ -2438,8 +2261,8 @@
                 <RequiredSkill identifier="weapons" level="50" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="4.0" flames="false" flash="false" force="0.5"
-                        range="140.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="140.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <!--BEGIN
               MODGUN SUPPRESSOR CODE-->
@@ -2449,12 +2272,10 @@
                   smg,handgun,battlerifle,battlerifle2,pipegun,pipegun_mono,microsmg,microsmg_mono -->
                     <Sound
                         file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_suppressed_battlerifle.ogg"
-                        range="1000"
-                        volume="0.75" />
+                        range="1000" volume="0.75" />
                     <Sound
                         file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_suppressed_battlerifle2.ogg"
-                        range="1000"
-                        volume="0.75" />
+                        range="1000" volume="0.75" />
                 </StatusEffect>
                 <StatusEffect forceplaysounds="true" target="Contained,This" targetslot="2"
                     type="OnUse">
@@ -2463,11 +2284,9 @@
                     <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_battlerifle.ogg"
                         range="5500" type="OnUse" />
                     <ParticleEmitter colormultiplier="255,200,200,200" particle="impactfirearm"
-                        particleamount="1"
-                        scalemultiplier="10,3" velocitymax="0" velocitymin="0" />
+                        particleamount="1" scalemultiplier="10,3" velocitymax="0" velocitymin="0" />
                     <ParticleEmitter colormultiplier="255,200,200,200" particle="impactfirearm"
-                        particleamount="1"
-                        scalemultiplier="3,7" velocitymax="0" velocitymin="0" />
+                        particleamount="1" scalemultiplier="3,7" velocitymax="0" velocitymin="0" />
                 </StatusEffect>
                 <!--Stat
               adjustments WITH suppressor (TWEAK PER GUN)-->
@@ -2489,62 +2308,51 @@
                         identifier="notsuppressor" />
                 </StatusEffect>
                 <StatusEffect condition="5" delay="0.2" setvalue="true" stackable="false"
-                    target="Contained"
-                    targetslot="2" type="Always" />
+                    target="Contained" targetslot="2" type="Always" />
                 <!--END
               (most) MODGUN SUPPRESSOR CODE-->
             </RangedWeapon>
             <ItemContainer autofill="True" canbeselected="false" capacity="1"
-                containedstateindicatorslot="0"
-                hideitems="false" maxstacksize="1">
+                containedstateindicatorslot="0" hideitems="false" maxstacksize="1">
                 <ContainedStateIndicator sourcerect="16,64,120,24"
                     texture="Content/UI/ContainerIndicators.png" />
                 <Containable containedspritedepth="0.56" itempos="3,-10"
                     items="ek_battlerifle_mags,556ammo">
                     <StatusEffect condition="100" delay="2.5" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted" />
+                        stackable="false" target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="0" type="OnInserted" />
+                        target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/arreload1.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.7" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.7" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect comparison="or" delay="1.6" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/arreload2.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.7" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.7" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="58,5" condition="100"
-                        delay="1.8"
-                        holdangle="-40" holdpos="65,-5" setvalue="true" target="This"
+                        delay="1.8" holdangle="-40" holdpos="65,-5" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                 </Containable>
                 <SubContainer capacity="1" containedspritedepth="0.54" maxstacksize="1">
                     <Containable excludeditems="cuttingequipment,weldingequipment" hide="false"
-                        itempos="20,0"
-                        items="flashlight,taclaser" setactive="true" />
+                        itempos="20,0" items="flashlight,taclaser" setactive="true" />
                 </SubContainer>
                 <SubContainer capacity="1" containedspritedepth="0.54" maxstacksize="1">
                     <Containable hide="false" itempos="65,4" items="suppressor,muzzle_attachment" />
@@ -2558,8 +2366,7 @@
         </Item>
         <Item Scale="0.32" aliases="beast ssl,ssl,beast,ek beast,beast autocannon"
             cargocontaineridentifier="ek_weapons_case" category="Equipment,Weapon"
-            identifier="ek_beast_ssl"
-            impactsoundtag="impact_metal_light" name=""
+            identifier="ek_beast_ssl" impactsoundtag="impact_metal_light" name="__ek_beast_ssl__"
             tags="mediumitem,weapon,gun,ek_ammotag_30mmfc,gunsmith,mountableweapon,bulkyweapon">
             <Price baseprice="500" minleveldifficulty="30" sold="false">
                 <Price multiplier="1.25" storeidentifier="merchantoutpost" />
@@ -2591,21 +2398,19 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="100" width="336" />
             <Holdable aimpos="55,-35" controlpose="true" handle1="-152,24" handle2="0,56"
-                holdangle="50"
-                holdpos="40,-45" msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" />
+                holdangle="50" holdpos="40,-45" msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" />
             <Wearable canbepicked="true" canbeselected="false" msg="ItemMsgEquipSelect"
                 pickkey="Select" slots="Bag">
                 <sprite canbehiddenbyotherwearables="false" depth="0.6" inheritlimbdepth="false"
-                    limb="Torso"
-                    name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.32"
+                    limb="Torso" name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.32"
                     sourcerect="528,896,368,144"
                     texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             </Wearable>
             <!-- barrelpos="70,-2" holdpos="40,-45" aimpos="55,-35" handle1="-152,24" handle2="0,56"
           holdangle="50" -->
             <RangedWeapon barrelpos="136,-18" combatPriority="80" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="0.4" reloadskillrequirement="75" spread="5" unskilledspread="35">
+                drawhudwhenequipped="true" reload="0.4" reloadskillrequirement="75" spread="5"
+                unskilledspread="35">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -2617,8 +2422,8 @@
                     type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="8.0" flames="false" flash="false" force="1"
-                        range="100.0" shockwave="false"
-                        smoke="false" sparks="false" underwaterbubble="false" />
+                        range="100.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect target="Contained" type="OnUse">
                     <Use />
@@ -2628,45 +2433,36 @@
                 <RequiredSkill identifier="weapons" level="75" />
             </RangedWeapon>
             <ItemContainer autofill="False" canbeselected="false" capacity="1"
-                containedstateindicatorslot="0"
-                hideitems="false" maxstacksize="1">
+                containedstateindicatorslot="0" hideitems="false" maxstacksize="1">
                 <Containable hide="true" identifier="ek_ssl_mags">
                     <StatusEffect condition="100" delay="6" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted" />
+                        stackable="false" target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="0" type="OnInserted" />
+                        target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/mgreload1.ogg"
-                            forceplay="true"
-                            frequencymultiplier="1" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="1" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect comparison="or" delay="3.4" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/mgreload2.ogg"
-                            forceplay="true"
-                            frequencymultiplier="1" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="1" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="55,-35" condition="100"
-                        delay="6.0"
-                        holdangle="50" holdpos="40,-45" setvalue="true" target="This"
+                        delay="6.0" holdangle="50" holdpos="40,-45" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
@@ -2677,16 +2473,15 @@
                     texture="Content/UI/StatusMonitorUI.png" />
                 <SubContainer capacity="1" maxstacksize="1">
                     <Containable excludeditems="cuttingequipment,weldingequipment" hide="false"
-                        itempos="30,1"
-                        items="flashlight,taclaser" setactive="true" />
+                        itempos="30,1" items="flashlight,taclaser" setactive="true" />
                 </SubContainer>
             </ItemContainer>
             <SkillRequirementHint identifier="weapons" level="75" />
         </Item>
         <Item Scale="0.30" aliases="laserpistol,ek laser pistol"
-            cargocontaineridentifier="ek_weapons_case"
-            category="Equipment,Weapon" identifier="ek_laserpistol"
-            impactsoundtag="impact_metal_light" name=""
+            cargocontaineridentifier="ek_weapons_case" category="Equipment,Weapon"
+            identifier="ek_laserpistol" impactsoundtag="impact_metal_light"
+            name="__ek_laserpistol__"
             tags="smallitem,weapon,gun,ek_ammotag_laserpistol,gunsmith,pistolitem">
             <Price baseprice="800" minleveldifficulty="33" sold="false">
                 <Price multiplier="1.25" storeidentifier="merchantoutpost" />
@@ -2722,24 +2517,21 @@
                 slots="Any,RightHand,LeftHand" />
             <!-- barrelpos="25,7" aimpos="63,0" handle1="-14,-11" -->
             <RangedWeapon barrelpos="60,12" combatPriority="45" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="0.5" reloadskillrequirement="40" spread="0.5" unskilledspread="14">
+                drawhudwhenequipped="true" reload="0.5" reloadskillrequirement="40" spread="0.5"
+                unskilledspread="14">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
                 <ParticleEmitter particle="ekmuzzleflamelaserpistol" particleamount="1"
-                    velocitymax="0"
-                    velocitymin="0" />
+                    velocitymax="0" velocitymin="0" />
                 <ParticleEmitter particle="ekmuzzlebreaklaserpistol" particleamount="1"
-                    velocitymax="0"
-                    velocitymin="0" />
+                    velocitymax="0" velocitymin="0" />
                 <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_laserpistol_mono.ogg"
-                    range="3000"
-                    type="OnUse" />
+                    range="3000" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="2.0" flames="false" flash="false" force="0.3"
-                        range="140.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="140.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect target="Contained" targetslot="0" type="OnUse">
                     <RequiredItem identifiers="ek_laserpistol_mags" targetslot="0" type="Contained" />
@@ -2751,47 +2543,39 @@
                 <StatusEffect condition="100" setvalue="true" target="This" type="Always" />
             </RangedWeapon>
             <ItemContainer ContainedStateIndicatorslot="0" allowuioverlap="true" autofill="False"
-                canbeselected="false"
-                capacity="1" hideitems="false" maxstacksize="1">
+                canbeselected="false" capacity="1" hideitems="false" maxstacksize="1">
                 <ContainedStateIndicator sourcerect="0,184,120,32"
                     texture="Content/UI/ContainerIndicators.png" />
                 <Containable hide="true" identifiers="ek_laserpistol_mags">
                     <StatusEffect condition="100" delay="1.05" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted" />
+                        stackable="false" target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="0" type="OnInserted" />
+                        target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/pistolreload1.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect comparison="or" delay="0.65" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/pistolreload2.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="63,0" condition="100"
-                        delay="1.2"
-                        holdangle="0" holdpos="0,0" setvalue="true" target="This" type="OnInserted">
+                        delay="1.2" holdangle="0" holdpos="0,0" setvalue="true" target="This"
+                        type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                 </Containable>
@@ -2799,8 +2583,7 @@
                     texture="Content/UI/CampaignUIAtlas2.png" />
                 <SubContainer capacity="1" containedspritedepth="0.5" maxstacksize="1">
                     <Containable excludeditems="cuttingequipment,weldingequipment" hide="false"
-                        itempos="16,2"
-                        items="flashlight,taclaser" setactive="true" />
+                        itempos="16,2" items="flashlight,taclaser" setactive="true" />
                 </SubContainer>
             </ItemContainer>
             <Quality>
@@ -2809,8 +2592,8 @@
             <SkillRequirementHint identifier="weapons" level="40" />
         </Item>
         <Item Scale="0.30" aliases="coil rifle" cargocontaineridentifier="ek_weapons_case"
-            category="Equipment,Weapon"
-            identifier="ek_laserrifle" impactsoundtag="impact_metal_light" name=""
+            category="Equipment,Weapon" identifier="ek_laserrifle"
+            impactsoundtag="impact_metal_light" name="__ek_laserrifle__"
             tags="mediumitem,weapon,gun,ek_ammotag_laserrifle,gunsmith,mountableweapon">
             <Price baseprice="1200" minleveldifficulty="33" sold="false">
                 <Price multiplier="1.25" storeidentifier="merchantoutpost" />
@@ -2844,13 +2627,12 @@
                 texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="64" width="176" />
             <Holdable aimpos="50,5" controlpose="true" handle1="-30,-25" handle2="105,-15"
-                holdangle="-40"
-                holdpos="45,-10" msg="ItemMsgPickUpSelect" slots="RightHand+LeftHand" />
+                holdangle="-40" holdpos="45,-10" msg="ItemMsgPickUpSelect"
+                slots="RightHand+LeftHand" />
             <Wearable canbepicked="true" canbeselected="false" msg="ItemMsgEquipSelect"
                 pickkey="Select" slots="Bag">
                 <sprite canbehiddenbyotherwearables="false" depth="0.6" inheritlimbdepth="false"
-                    limb="Torso"
-                    name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.30"
+                    limb="Torso" name="Gun Worn" origin="0.5,0.85" rotation="90" scale="0.30"
                     sourcerect="512,1136,320,96"
                     texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             </Wearable>
@@ -2858,8 +2640,8 @@
             handle2="102,-19"
           holdangle="-40" -->
             <RangedWeapon barrelpos="154,10" combatPriority="55" crosshairscale="0.2"
-                drawhudwhenequipped="true"
-                reload="0.37" reloadskillrequirement="45" spread="0.5" unskilledspread="18">
+                drawhudwhenequipped="true" reload="0.37" reloadskillrequirement="45" spread="0.5"
+                unskilledspread="18">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -2871,8 +2653,8 @@
                     range="3000" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="4.0" flames="false" flash="false" force="0.3"
-                        range="140.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="140.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect target="Contained" targetslot="0" type="OnUse">
                     <RequiredItem identifiers="ek_laserrifle_mags" targetslot="0" type="Contained" />
@@ -2883,47 +2665,38 @@
                 <RequiredSkill identifier="weapons" level="45" />
             </RangedWeapon>
             <ItemContainer autofill="False" canbeselected="false" capacity="1"
-                containedstateindicatorslot="0"
-                hideitems="false" itempos="46,-28" maxstacksize="1">
+                containedstateindicatorslot="0" hideitems="false" itempos="46,-28" maxstacksize="1">
                 <ContainedStateIndicator sourcerect="0,184,120,32"
                     texture="Content/UI/ContainerIndicators.png" />
                 <Containable identifiers="ek_laserrifle_mags">
                     <StatusEffect condition="100" delay="1.8" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted" />
+                        stackable="false" target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="0" type="OnInserted" />
+                        target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/arreload1.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect comparison="or" delay="1.15" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/arreload2.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="50,5" condition="100"
-                        delay="1.8"
-                        holdangle="-40" holdpos="45,-10" setvalue="true" target="This"
+                        delay="1.8" holdangle="-40" holdpos="45,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
@@ -2932,8 +2705,7 @@
                     texture="Content/UI/CampaignUIAtlas2.png" />
                 <SubContainer capacity="1" containedspritedepth="0.5" maxstacksize="1">
                     <Containable excludeditems="cuttingequipment,weldingequipment" hide="false"
-                        itempos="25,1"
-                        items="flashlight,taclaser" setactive="true" />
+                        itempos="25,1" items="flashlight,taclaser" setactive="true" />
                 </SubContainer>
             </ItemContainer>
             <Quality>
@@ -2942,9 +2714,8 @@
             <SkillRequirementHint identifier="Weapons" level="45" />
         </Item>
         <Item Scale="0.34" aliases="ek revolver" cargocontaineridentifier="ek_weapons_case"
-            category="Equipment,Weapon"
-            identifier="ek_revolver" impactsoundtag="impact_metal_light" name=""
-            tags="smallitem,weapon,gun,ek_ammotag_357,gunsmith,pistolitem">
+            category="Equipment,Weapon" identifier="ek_revolver" impactsoundtag="impact_metal_light"
+            name="__ek_revolver__" tags="smallitem,weapon,gun,ek_ammotag_357,gunsmith,pistolitem">
             <Price baseprice="100" minleveldifficulty="10" sold="false">
                 <Price multiplier="1.25" storeidentifier="merchantoutpost" />
                 <Price multiplier="1.1" storeidentifier="merchantcity" />
@@ -2977,10 +2748,9 @@
                 slots="Any,RightHand,LeftHand" />
             <!-- barrelpos="30,5" aimpos="80,10" handle1="-13,-11" -->
             <RangedWeapon DualWieldAccuracyPenalty="10" DualWieldReloadTimePenaltyMultiplier="1.75"
-                barrelpos="64,19"
-                combatPriority="75" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.5"
-                reloadskillrequirement="50" spread="1" unskilledspread="12"
-                weapondamagemodifier="1.1">
+                barrelpos="64,19" combatPriority="75" crosshairscale="0.2"
+                drawhudwhenequipped="true" reload="0.5" reloadskillrequirement="50" spread="1"
+                unskilledspread="12" weapondamagemodifier="1.1">
                 <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
                 <CrosshairPointer sourcerect="256,256,256,256"
                     texture="Content/Items/Weapons/Crosshairs.png" />
@@ -2992,15 +2762,14 @@
                     range="3000" type="OnUse" />
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="4.0" flames="false" flash="false" force="1.5"
-                        range="140.0"
-                        shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+                        range="140.0" shockwave="false" smoke="false" sparks="false"
+                        underwaterbubble="false" />
                 </StatusEffect>
                 <RequiredItems identifier="ek_revolverammo,ek_ammotag357,revolverammo,scp_357ammo"
                     msg="ItemMsgAmmoRequired" type="Contained" />
                 <RequiredSkill identifier="weapons" level="50" />
                 <StatusEffect delay="0.02" disabledeltatime="true" stackable="false"
-                    target="Contained"
-                    targetidentifiers="ek_revolverloader" type="OnContaining">
+                    target="Contained" targetidentifiers="ek_revolverloader" type="OnContaining">
                     <RequiredItem identifier="ek_revolverloader" type="Contained" />
                     <Use />
                 </StatusEffect>
@@ -3012,69 +2781,58 @@
                 <Containable
                     identifiers="ek_revolverammo,ek_revolverloader,ek_ammotag357,revolverammo,scp_357ammo">
                     <StatusEffect condition="100" delay="2.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted" />
+                        stackable="false" target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect condition="-100" disabledeltatime="true" stackable="false"
-                        target="This"
-                        targetslot="0" type="OnInserted" />
+                        target="This" targetslot="0" type="OnInserted" />
                     <StatusEffect comparison="or" delay="0.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/revolverreload1.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect comparison="or" delay="2.1" disabledeltatime="true"
-                        stackable="false" target="This"
-                        targetslot="0" type="OnInserted">
+                        stackable="false" target="This" targetslot="0" type="OnInserted">
                         <Conditional EntityType="eq character" TargetContainer="True" />
                         <Conditional EntityType="eq null" TargetContainer="True" />
                         <sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/revolverreload2.ogg"
-                            forceplay="true"
-                            frequencymultiplier="0.9" loop="false" range="900.0" type="OnUse"
-                            volume="1" />
+                            forceplay="true" frequencymultiplier="0.9" loop="false" range="900.0"
+                            type="OnUse" volume="1" />
                     </StatusEffect>
                     <StatusEffect delay="0.1" disabledeltatime="true" stackable="false"
-                        target="Contained"
-                        targetidentifiers="ek_revolverloader" type="OnInserted">
+                        target="Contained" targetidentifiers="ek_revolverloader" type="OnInserted">
                         <RequiredItem identifier="ek_revolverloader" type="Contained" />
                         <Use />
                     </StatusEffect>
                     <StatusEffect delay="0.15" disabledeltatime="true" stackable="false"
-                        target="Contained,This"
-                        type="OnInserted">
+                        target="Contained,This" type="OnInserted">
                         <RequiredItem identifier="ek_revolverspeedloader" type="Contained" />
                         <SpawnItem count="6" identifiers="ek_revolverammo"
                             spawnposition="ThisInventory" />
                     </StatusEffect>
                     <StatusEffect delay="0.15" disabledeltatime="true" stackable="false"
-                        target="Contained,This"
-                        type="OnInserted">
+                        target="Contained,This" type="OnInserted">
                         <RequiredItem identifier="ek_revolverspeedloader_physicorium"
                             type="Contained" />
                         <SpawnItem count="6" identifiers="ek_revolverammo_physicorium"
                             spawnposition="ThisInventory" />
                     </StatusEffect>
                     <StatusEffect delay="0.15" disabledeltatime="true" stackable="false"
-                        target="Contained,This"
-                        type="OnInserted">
+                        target="Contained,This" type="OnInserted">
                         <RequiredItem identifier="ek_revolverspeedloader_riot" type="Contained" />
                         <SpawnItem count="6" identifiers="ek_revolverammo_riot"
                             spawnposition="ThisInventory" />
                     </StatusEffect>
                     <!-- here is the code for delayed reloading -->
                     <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0"
-                        delay="0.01"
-                        holdangle="45" holdpos="35,-10" setvalue="true" target="This"
+                        delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This"
                         type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                     <StatusEffect AllowAccess="true" aimangle="0" aimpos="80,5" condition="100"
-                        delay="2.5"
-                        holdangle="0" holdpos="0,0" setvalue="true" target="This" type="OnInserted">
+                        delay="2.5" holdangle="0" holdpos="0,0" setvalue="true" target="This"
+                        type="OnInserted">
                         <Conditional isplayer="true" targetcontainer="true" />
                     </StatusEffect>
                 </Containable>
@@ -3085,8 +2843,8 @@
             <SkillRequirementHint identifier="weapons" level="50" />
         </Item>
         <Item category="Misc" hideinmenus="true" identifier="ek_handgun_round"
-            impactsoundtag="impact_metal_light" interactthroughwalls="true" name="" scale="0.32"
-            tags="smallitem,round,pistolammoitem">
+            impactsoundtag="impact_metal_light" interactthroughwalls="true"
+            name="__ek_handgun_round__" scale="0.32" tags="smallitem,round,pistolammoitem">
             <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64"
                 texture="Content/Items/InventoryIconAtlas.png" />
             <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11"
@@ -3095,8 +2853,7 @@
             <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
             <Projectile characterusable="false" hitscan="true" removeonhit="true">
                 <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm"
-                    particleamount="1"
-                    scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+                    particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
                 <Attack itemdamage="0.1" severlimbsprobability="0.05" structuredamage="3.2"
                     targetforce="1.5">
                     <Affliction identifier="bleeding" strength="10" />
@@ -3111,9 +2868,8 @@
                     <Conditional entitytype="eq Structure" />
                     <Conditional hastag="eq door" />
                     <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true"
-                        particle="spark"
-                        particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-200"
-                        velocitymin="-10" />
+                        particle="spark" particleamount="5" scalemax="1" scalemin="0.5"
+                        velocitymax="-200" velocitymin="-10" />
                 </StatusEffect>
                 <StatusEffect delay="2" stackable="false" target="This" type="OnNotContained">
                     <Remove />
@@ -3122,8 +2878,8 @@
         </Item>
         <Item category="Misc" hideinmenus="true" identifier="ek_handgun_alienround"
             impactsoundtag="impact_metal_light" interactthroughwalls="true"
-            inventoryiconcolor="255,210,125,255" name="" scale="0.32" spritecolor="255,210,125,255"
-            tags="smallitem,round,pistolammoitem">
+            inventoryiconcolor="255,210,125,255" name="__ek_handgun_alienround__" scale="0.32"
+            spritecolor="255,210,125,255" tags="smallitem,round,pistolammoitem">
             <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64"
                 texture="Content/Items/InventoryIconAtlas.png" />
             <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11"
@@ -3132,11 +2888,9 @@
             <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
             <Projectile characterusable="false" hitscan="true" removeonhit="true">
                 <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm"
-                    particleamount="1"
-                    scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+                    particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
                 <Attack itemdamage="0.1" penetration="0.15" severlimbsprobability="0.05"
-                    structuredamage="5.2"
-                    targetforce="1.5">
+                    structuredamage="5.2" targetforce="1.5">
                     <Affliction identifier="bleeding" strength="10" />
                     <Affliction identifier="gunshotwound" strength="16.25" />
                     <Affliction identifier="stun" probability="0.10" strength="0.26" />
@@ -3147,8 +2901,7 @@
                 </StatusEffect>
                 <StatusEffect target="This" type="OnUse">
                     <Explosion camerashake="6" flames="false" force="0" range="100.0"
-                        shockwave="false"
-                        smoke="false" underwaterbubble="false" />
+                        shockwave="false" smoke="false" underwaterbubble="false" />
                 </StatusEffect>
                 <StatusEffect delay="2" stackable="false" target="This" type="OnNotContained">
                     <Remove />
@@ -3157,8 +2910,8 @@
         </Item>
         <Item category="Misc" hideinmenus="true" identifier="ek_handgun_riot_round"
             impactsoundtag="impact_metal_light" interactthroughwalls="true"
-            inventoryiconcolor="220,150,116,255" name="" scale="0.32" spritecolor="220,150,116,255"
-            tags="smallitem,round,pistolammoitem,9mmpistolammo">
+            inventoryiconcolor="220,150,116,255" name="__ek_handgun_riot_round__" scale="0.32"
+            spritecolor="220,150,116,255" tags="smallitem,round,pistolammoitem,9mmpistolammo">
             <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64"
                 texture="Content/Items/InventoryIconAtlas.png" />
             <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11"
@@ -3167,8 +2920,7 @@
             <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
             <Projectile characterusable="false" hitscan="true" removeonhit="true">
                 <ParticleEmitter colormultiplier="255,150,125,100" particle="tracerfirearm"
-                    particleamount="1"
-                    scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+                    particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
                 <Attack structuredamage="0" targetforce="4">
                     <Affliction identifier="blunttrauma" strength="5" />
                     <!-- Mag holds 10 rounds, incstun goes down by 5 per second, handgun fires 1-3
@@ -3192,8 +2944,8 @@
         <Item aliases="compact smg mag, mini smg mag, mini_smg_mag, 10mm mag, 10mm_magazine"
             cargocontaineridentifier="ek_ammocrate_9mm" category="Equipment,Weapon"
             identifier="ek_mini_smg_mag" impactsoundtag="impact_metal_light" maxstacksize="2"
-            name=""
-            scale="0.27" tags="smallitem, ek_mini_smg_mags, magazine,ammo,smallarmsammo,9mmammo">
+            name="__ek_mini_smg_mag__" scale="0.27"
+            tags="smallitem, ek_mini_smg_mags, magazine,ammo,smallarmsammo,9mmammo">
             <PreferredContainer primary="ek_ammotag_10mm" />
             <PreferredContainer maxamount="5" minamount="0" primary="secarmcab"
                 spawnprobability="0.25" />
@@ -3234,12 +2986,11 @@
                 sourcerect="464,576,64,96" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="80" width="48" />
             <Holdable aimable="false" canBeCombined="true" handle1="0,0" holdangle="-10"
-                holdpos="0,0"
-                msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
+                holdpos="0,0" msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
             <ItemContainer ShowConditionInContainedStateIndicator="true"
-                SpawnWithId="ek_handgun_round"
-                autofill="False" canbeselected="false" capacity="1" drawinventory="false"
-                hideitems="true" maxstacksize="1" removecontaineditemsondeconstruct="true">
+                SpawnWithId="ek_handgun_round" autofill="False" canbeselected="false" capacity="1"
+                drawinventory="false" hideitems="true" maxstacksize="1"
+                removecontaineditemsondeconstruct="true">
                 <Containable identifiers="ek_handgun_round" />
                 <ContainedStateIndicator sourcerect="16,64,120,24"
                     texture="Content/UI/ContainerIndicators.png" />
@@ -3253,7 +3004,7 @@
             aliases="compact smg alien mag, mini smg alien mag, mini_smg_alien_mag, 10mm alien mag, 10mm_magazine_physicorium"
             cargocontaineridentifier="ek_ammocrate_physicorium" category="Equipment,Weapon"
             identifier="ek_mini_smg_alienmag" impactsoundtag="impact_metal_light" maxstacksize="2"
-            name="" scale="0.27"
+            name="__ek_mini_smg_alienmag__" scale="0.27"
             tags="smallitem, ek_mini_smg_mags, magazine,ammo,smallarmsammo,9mmammo">
             <PreferredContainer primary="ek_ammotag_10mm" />
             <PreferredContainer maxamount="3" minamount="0" primary="wrecksecarmcab"
@@ -3294,12 +3045,10 @@
                 sourcerect="800,464,64,96" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="80" width="48" />
             <Holdable aimable="false" canBeCombined="true" handle1="0,0" holdangle="-10"
-                holdpos="0,0"
-                msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
+                holdpos="0,0" msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
             <ItemContainer ShowConditionInContainedStateIndicator="true"
                 SpawnWithId="ek_handgun_alienround" autofill="False" canbeselected="false"
-                capacity="1"
-                drawinventory="false" hideitems="true" maxstacksize="1"
+                capacity="1" drawinventory="false" hideitems="true" maxstacksize="1"
                 removecontaineditemsondeconstruct="true">
                 <Containable identifiers="ek_handgun_alienround" />
                 <ContainedStateIndicator sourcerect="16,64,120,24"
@@ -3314,7 +3063,7 @@
             aliases="compact smg riot mag, mini smg riot mag, mini_smg_riot_mag, 10mm mag riot, 10mm_magazine_riot"
             cargocontaineridentifier="ek_ammocrate_9mm" category="Equipment,Weapon"
             identifier="ek_mini_smg_riot_mag" impactsoundtag="impact_metal_light" maxstacksize="2"
-            name="" scale="0.27"
+            name="__ek_mini_smg_riot_mag__" scale="0.27"
             tags="smallitem,ek_mini_smg_mags,magazine,ammo,smallarmsammo,9mmammo">
             <PreferredContainer primary="ek_ammotag_10mm" />
             <Price baseprice="75" minleveldifficulty="10" sold="false">
@@ -3354,12 +3103,10 @@
                 sourcerect="800,368,64,96" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="80" width="48" />
             <Holdable aimable="false" canBeCombined="true" handle1="0,0" holdangle="-10"
-                holdpos="0,0"
-                msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
+                holdpos="0,0" msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
             <ItemContainer ShowConditionInContainedStateIndicator="true"
                 SpawnWithId="ek_handgun_riot_round" autofill="False" canbeselected="false"
-                capacity="1"
-                drawinventory="false" hideitems="true" maxstacksize="1"
+                capacity="1" drawinventory="false" hideitems="true" maxstacksize="1"
                 removecontaineditemsondeconstruct="true">
                 <Containable identifiers="ek_handgun_riot_round" />
                 <ContainedStateIndicator sourcerect="16,64,120,24"

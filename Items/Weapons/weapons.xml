@@ -1,52 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Items>
   <Override>
-    <Item identifier="hmgmagazine" maxstacksize="4" maxstacksizecharacterinventory="1" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,hmgammo,handheldammo" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="hmg" minamount="1" maxamount="1" spawnprobability="1" />
+    <Item cargocontaineridentifier="metalcrate" category="Weapon" identifier="hmgmagazine"
+      impactsoundtag="impact_metal_light" linkable="true" maxstacksize="4"
+      maxstacksizecharacterinventory="1" name="__hmgmagazine__" scale="0.5"
+      tags="smallitem,hmgammo,handheldammo">
+      <PreferredContainer maxamount="1" minamount="1" primary="hmg" spawnprobability="1" />
       <PreferredContainer primary="armcab" secondary="secarmcab" />
-      <Price baseprice="330" sold="true" minleveldifficulty="65" displaynonempty="true">
-        <Price storeidentifier="merchantoutpost" multiplier="1.4" />
-        <Price storeidentifier="merchantcity" multiplier="1.25" />
-        <Price storeidentifier="merchantresearch" multiplier="1.25" />
-        <Price storeidentifier="merchantmilitary" sold="true" multiplier="0.9" minavailable="0" maxavailable="4" />
-        <Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" minavailable="0" maxavailable="4" />
-        <Price storeidentifier="merchantmine" multiplier="1.25" />
+      <Price baseprice="330" displaynonempty="true" minleveldifficulty="65" sold="true">
+        <Price multiplier="1.4" storeidentifier="merchantoutpost" />
+        <Price multiplier="1.25" storeidentifier="merchantcity" />
+        <Price multiplier="1.25" storeidentifier="merchantresearch" />
+        <Price maxavailable="4" minavailable="0" multiplier="0.9" sold="true"
+          storeidentifier="merchantmilitary" />
+        <Price maxavailable="4" minavailable="0" multiplier="0.9" sold="true"
+          storeidentifier="merchantarmory" />
+        <Price multiplier="1.25" storeidentifier="merchantmine" />
       </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="35" requiresrecipe="true">
+      <Fabricate requiredtime="35" requiresrecipe="true" suitablefabricators="fabricator">
         <RequiredSkill identifier="weapons" level="40" />
         <RequiredItem identifier="magnesium" />
         <RequiredItem identifier="titaniumaluminiumalloy" />
-        <RequiredItem tag="advmunition_core" description="fabricationdescription.advmunition_core" />
-        <RequiredItem tag="advmunition_jacket" description="fabricationdescription.advmunition_jacket" />
+        <RequiredItem description="fabricationdescription.advmunition_core" tag="advmunition_core" />
+        <RequiredItem description="fabricationdescription.advmunition_jacket"
+          tag="advmunition_jacket" />
         <RequiredItem identifier="steel" />
       </Fabricate>
-      <Fabricate suitablefabricators="fabricator" requiredtime="35" displayname="recycleitem" requiresrecipe="true">
+      <Fabricate displayname="recycleitem" requiredtime="35" requiresrecipe="true"
+        suitablefabricators="fabricator">
         <RequiredSkill identifier="weapons" level="40" />
         <RequiredItem identifier="magnesium" />
         <RequiredItem identifier="titaniumaluminiumalloy" />
-        <RequiredItem tag="advmunition_core" description="fabricationdescription.advmunition_core" />
-        <RequiredItem tag="advmunition_jacket" description="fabricationdescription.advmunition_jacket" />
-        <RequiredItem identifier="hmgmagazine" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+        <RequiredItem description="fabricationdescription.advmunition_core" tag="advmunition_core" />
+        <RequiredItem description="fabricationdescription.advmunition_jacket"
+          tag="advmunition_jacket" />
+        <RequiredItem identifier="hmgmagazine" maxcondition="0.1" mincondition="0.0"
+          usecondition="false" />
       </Fabricate>
       <Deconstruct time="15">
         <Item identifier="steel" />
       </Deconstruct>
-      <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="208,88,29,37" depth="0.55" origin="0.5,0.5" />
-      <Body width="29" height="37" density="25" />
-      <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true" SpawnWithId="assaultrifleround" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet">
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="208,88,29,37"
+        texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="25" height="37" width="29" />
+      <ItemContainer ShowConditionInContainedStateIndicator="true" SpawnWithId="assaultrifleround"
+        canbeselected="false" capacity="1" containedstateindicatorstyle="bullet"
+        drawinventory="false" hideitems="true" removecontaineditemsondeconstruct="true">
         <Containable items="assaultrifleround" />
-        <StatusEffect type="OnUse" target="This" condition="-1" disabledeltatime="true">
+        <StatusEffect condition="-1" disabledeltatime="true" target="This" type="OnUse">
           <SpawnItem identifiers="assaultrifleround" spawnposition="ThisInventory" />
         </StatusEffect>
       </ItemContainer>
-      <Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+      <Holdable canBeCombined="true" handle1="0,0" msg="ItemMsgPickUpSelect"
+        slots="Any,RightHand,LeftHand" />
     </Item>
-    <Item Scale="0.5" allowasextracargo="true" cargocontaineridentifier="metalcrate" category="Weapon" identifier="nucleargun" impactsoundtag="impact_metal_heavy" name="" tags="mediumitem,weapon,gun,mountableweapon,provocativetohumanai">
+    <Item Scale="0.5" allowasextracargo="true" cargocontaineridentifier="metalcrate"
+      category="Weapon" identifier="nucleargun" impactsoundtag="impact_metal_heavy"
+      name="__nucleargun__" tags="mediumitem,weapon,gun,mountableweapon,provocativetohumanai">
       <PreferredContainer primary="secarmcab" secondary="weaponholder,armcab" />
       <Price baseprice="900" sold="false">
         <Price multiplier="1.5" storeidentifier="merchantoutpost" />
         <Price multiplier="1.25" storeidentifier="merchantcity" />
-        <Price maxavailable="2" minavailable="1" multiplier="1" sold="true" storeidentifier="merchantresearch">
+        <Price maxavailable="2" minavailable="1" multiplier="1" sold="true"
+          storeidentifier="merchantresearch">
           <Reputation faction="coalition" min="90" />
           <Reputation faction="separatist" min="90" />
         </Price>
@@ -67,25 +83,44 @@
         <RequiredItem amount="2" identifier="titaniumaluminiumalloy" />
         <RequiredItem amount="2" identifier="fulgurium" />
       </Fabricate>
-      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="271,127,240,66" texture="Content/Items/JobGear/TalentGear.png" />
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="271,127,240,66"
+        texture="Content/Items/JobGear/TalentGear.png" />
       <Body density="25" height="63" width="238" />
-      <Holdable aimpos="70,4" controlpose="true" handle1="-50,-10" handle2="10,-3" holdangle="-25" holdpos="60,-15" slots="RightHand+LeftHand" />
-      <Wearable canbepicked="true" canbeselected="false" msg="ItemMsgEquipSelect" pickkey="Select" slots="Bag">
-        <sprite canbehiddenbyotherwearables="false" depth="0.6" depthlimb="LeftArm" limb="Torso" name="Nuclear Gun Worn" origin="0.5,0.8" rotation="90" scale="0.5" sourcerect="270,127,240,66" texture="Content/Items/JobGear/TalentGear.png" />
+      <Holdable aimpos="70,4" controlpose="true" handle1="-50,-10" handle2="10,-3" holdangle="-25"
+        holdpos="60,-15" slots="RightHand+LeftHand" />
+      <Wearable canbepicked="true" canbeselected="false" msg="ItemMsgEquipSelect" pickkey="Select"
+        slots="Bag">
+        <sprite canbehiddenbyotherwearables="false" depth="0.6" depthlimb="LeftArm" limb="Torso"
+          name="Nuclear Gun Worn" origin="0.5,0.8" rotation="90" scale="0.5"
+          sourcerect="270,127,240,66" texture="Content/Items/JobGear/TalentGear.png" />
       </Wearable>
-      <RangedWeapon ChargeSoundWindupPitchSlide="0.5,1.5" barrelpos="118,14" combatPriority="80" crosshairscale="0.2" drawhudwhenequipped="true" holdtrigger="true" maxchargetime="0.75" reload="0.5" spread="0" unskilledspread="10">
+      <RangedWeapon ChargeSoundWindupPitchSlide="0.5,1.5" barrelpos="118,14" combatPriority="80"
+        crosshairscale="0.2" drawhudwhenequipped="true" holdtrigger="true" maxchargetime="0.75"
+        reload="0.5" spread="0" unskilledspread="10">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
-        <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
-        <ParticleEmitter anglemax="360" anglemin="0" particle="FlareBubbles" particleamount="14" scalemax="1.8" scalemin="1.4" velocitymax="50" velocitymin="0" />
-        <ParticleEmitter anglemax="360" anglemin="0" colormultiplier="10,235,195,255" particle="GlowDot" particleamount="20" scalemax="4.0" scalemin="4.0" velocitymax="0" velocitymin="0" />
-        <ParticleEmitterCharge anglemax="360" particle="chargenucleargun" particlespersecond="60" scalemax="1.0" scalemin="1.0" scalemultiplier="0.75,0.75" />
-        <Sound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAccelerator.ogg" range="3000" selectionmode="Random" type="OnUse" />
-        <Sound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAccelerator2.ogg" range="3000" type="OnUse" />
-        <Sound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAccelerator3.ogg" range="3000" type="OnUse" />
-        <Sound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAccelerator4.ogg" range="3000" type="OnUse" />
-        <ChargeSound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAcceleratorStartLoop.ogg" range="1000" />
+        <CrosshairPointer sourcerect="256,256,256,256"
+          texture="Content/Items/Weapons/Crosshairs.png" />
+        <ParticleEmitter anglemax="360" anglemin="0" particle="FlareBubbles" particleamount="14"
+          scalemax="1.8" scalemin="1.4" velocitymax="50" velocitymin="0" />
+        <ParticleEmitter anglemax="360" anglemin="0" colormultiplier="10,235,195,255"
+          particle="GlowDot" particleamount="20" scalemax="4.0" scalemin="4.0" velocitymax="0"
+          velocitymin="0" />
+        <ParticleEmitterCharge anglemax="360" particle="chargenucleargun" particlespersecond="60"
+          scalemax="1.0" scalemin="1.0" scalemultiplier="0.75,0.75" />
+        <Sound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAccelerator.ogg"
+          range="3000" selectionmode="Random" type="OnUse" />
+        <Sound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAccelerator2.ogg"
+          range="3000" type="OnUse" />
+        <Sound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAccelerator3.ogg"
+          range="3000" type="OnUse" />
+        <Sound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAccelerator4.ogg"
+          range="3000" type="OnUse" />
+        <ChargeSound
+          file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAcceleratorStartLoop.ogg"
+          range="1000" />
         <StatusEffect target="This" type="OnUse">
-          <Explosion camerashake="6.0" flames="false" flash="true" force="3" range="150.0" shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+          <Explosion camerashake="6.0" flames="false" flash="true" force="3" range="150.0"
+            shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
         </StatusEffect>
         <StatusEffect target="Contained" type="OnUse">
           <Use />
@@ -94,17 +129,23 @@
         <RequiredSkill identifier="weapons" level="25" />
         <RequiredSkill identifier="electrical" level="45" />
       </RangedWeapon>
-      <ItemContainer capacity="1" containedspritedepths="0.562,0.561" containedstateindicatorslot="0" containedstateindicatorstyle="default" hideitems="false" itempos="10,-5" maxstacksize="1">
+      <ItemContainer capacity="1" containedspritedepths="0.562,0.561"
+        containedstateindicatorslot="0" containedstateindicatorstyle="default" hideitems="false"
+        itempos="10,-5" maxstacksize="1">
         <Containable items="reactorfuel" rotation="90">
-          <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0" delay="0.01" holdangle="45" holdpos="35,-10" setvalue="true" target="This" type="OnInserted">
+          <StatusEffect AllowAccess="false" aimangle="45" aimpos="35,10" condition="0" delay="0.01"
+            holdangle="45" holdpos="35,-10" setvalue="true" target="This" type="OnInserted">
             <Conditional isplayer="true" targetcontainer="true" />
           </StatusEffect>
-          <StatusEffect AllowAccess="true" aimangle="0" aimpos="70,4" condition="100" delay="1.2" holdangle="-25" holdpos="60,-15" setvalue="true" target="This" type="OnInserted">
+          <StatusEffect AllowAccess="true" aimangle="0" aimpos="70,4" condition="100" delay="1.2"
+            holdangle="-25" holdpos="60,-15" setvalue="true" target="This" type="OnInserted">
             <Conditional isplayer="true" targetcontainer="true" />
           </StatusEffect>
         </Containable>
-        <SlotIcon origin="0.5,0.5" slotindex="0" sourcerect="192,448,64,64" texture="Content/UI/StatusMonitorUI.png" />
-        <SlotIcon origin="0.5,0.5" slotindex="1" sourcerect="320,448,64,64" texture="Content/UI/StatusMonitorUI.png" />
+        <SlotIcon origin="0.5,0.5" slotindex="0" sourcerect="192,448,64,64"
+          texture="Content/UI/StatusMonitorUI.png" />
+        <SlotIcon origin="0.5,0.5" slotindex="1" sourcerect="320,448,64,64"
+          texture="Content/UI/StatusMonitorUI.png" />
         <SubContainer capacity="1" maxstacksize="1">
           <Containable hide="false" itempos="25,0" items="flashlight" setactive="true" />
         </SubContainer>
