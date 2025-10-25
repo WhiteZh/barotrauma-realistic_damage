@@ -199,7 +199,8 @@ submarineweapon:
         penetration: 0.40
         structdamage: 25
   flakcannon:
-    # reload: 1.45
+    projectiles:
+      action: double the shrapel for all (except gravity)
   pulselaser:
     projectiles:
       regular:
