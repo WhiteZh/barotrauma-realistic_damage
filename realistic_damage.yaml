@@ -157,7 +157,7 @@ submarineweapon:
         penetration: 0.40
         structdamage: 25
   flakcannon:
-    reload: 1.45
+    # reload: 1.45
   pulselaser:
     projectiles:
       regular:
