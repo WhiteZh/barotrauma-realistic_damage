@@ -1969,7 +1969,7 @@
       <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
         <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
-        <Attack itemdamage="0.1" severlimbsprobability="0.05" structuredamage="3.2" targetforce="1.5">
+        <Attack itemdamage="3.2" severlimbsprobability="0.05" structuredamage="3.2" targetforce="1.5">
           <Affliction identifier="bleeding" strength="10" />
           <Affliction identifier="gunshotwound" strength="10" />
           <Affliction identifier="stun" probability="0.10" strength="0.16" />
@@ -1994,7 +1994,7 @@
       <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
         <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
-        <Attack itemdamage="0.1" penetration="0.15" severlimbsprobability="0.05" structuredamage="5.2" targetforce="1.5">
+        <Attack itemdamage="5.2" penetration="0.15" severlimbsprobability="0.05" structuredamage="5.2" targetforce="1.5">
           <Affliction identifier="bleeding" strength="10" />
           <Affliction identifier="gunshotwound" strength="16.25" />
           <Affliction identifier="stun" probability="0.10" strength="0.26" />
