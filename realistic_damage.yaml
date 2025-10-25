@@ -230,3 +230,7 @@ submarineweapon:
             stun: 1.125
       ek_pulselaserplasmabolt:
         action: exactly same as regular
+  railgun:
+    projectiles:
+      canister:
+        action: double the shrapels
