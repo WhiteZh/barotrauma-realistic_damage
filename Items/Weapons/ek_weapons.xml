@@ -1115,7 +1115,7 @@
       <ContainedSprite allowedcontainertags="weapons_cabinet" depth="0.83" name="Depth Fix" sourcerect="304,576,128,80" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
       <Body density="50" height="56" width="128" />
       <Holdable aimpos="55,-5" controlpose="true" handle1="-34,-16" handle2="20,0" holdangle="-40" holdpos="45,-10" msg="ItemMsgPickUpSelect" slots="Any,RightHand+LeftHand" />
-      <RangedWeapon barrelpos="64,15" combatPriority="65" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.1" reloadskillrequirement="50" spread="9" unskilledspread="18">
+      <RangedWeapon barrelpos="64,15" combatPriority="65" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.1" reloadskillrequirement="0" spread="9" unskilledspread="18">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflamepistol" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -1123,9 +1123,11 @@
         <!-- <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_microsmg_mono.ogg"
                 type="OnUse"
               range="3000" /> -->
-        <StatusEffect target="This" type="OnUse">
-          <Explosion camerashake="4.0" flames="false" flash="false" force="0.5" range="140.0" shockwave="false" smoke="false" sparks="false" underwaterbubble="false" />
+        <StatusEffect type="OnUse" target="This">
+          <ParticleEmitter particle="casingfirearm" particleamount="1" anglemin="90" anglemax="150" velocitymin="50" velocitymax="250" CopyEntityAngle="true" />
+          <Explosion range="150.0" force="1.0" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="8.0" />
         </StatusEffect>
+        <!--<StatusEffect target="This" type="OnUse"><Explosion camerashake="4.0" flames="false" flash="false" force="0.5" range="140.0" shockwave="false" smoke="false" sparks="false" underwaterbubble="false" /></StatusEffect>-->
         <StatusEffect target="Contained" targetslot="0" type="OnUse">
           <RequiredItem items="ek_mini_smg_mags,9mmammo" type="Contained" />
           <Use />
