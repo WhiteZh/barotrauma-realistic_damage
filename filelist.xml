@@ -6,6 +6,7 @@
   <Item file="%ModDir%/Items/Weapons/pulselaser.xml" />
   <Item file="%ModDir%/Items/Weapons/weapons.xml" />
   <Item file="%ModDir%/Items/Weapons/ek_weapons.xml" />
+  <Item file="%ModDir%/Items/Weapons/ekgunnery_ammunition.xml" />
   <Item file="%ModDir%/Items/Jobgear/Engineer/engineer_talent_items.xml" />
   <Character file="%ModDir%/Characters/Human/Human.xml" />
   <Afflictions file="%ModDir%/Afflictions.xml" />

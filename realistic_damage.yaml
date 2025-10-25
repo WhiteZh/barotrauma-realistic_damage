@@ -83,6 +83,28 @@ submarineweapon:
     #   single: 0.45
     #   double: 0.20
     projectiles:
+      ek_coilgunboltheavy:
+        action: exactly same as explosive coilgun bolt
+      # i have absolutely no idea how to balance hybrid coilgun bolts
+      # so they are mostly useless now since their damages are uncomparable to adjusted "normal" bolts
+      ek_coilgunbolthighvelocity:
+        update:
+          # i also did something that should theoretically allow more penetrating walls
+          afflictions:
+            lacerations: 20
+            bleeding: 80
+            stun: 0.05
+          penetration: 0.6
+          structdamage: 20
+          itemdamage: 10
+      ek_coilgunbolt_laser:
+        update:
+          afflictions:
+            burn: 40
+          penetration: 0.10
+          structdamage: 12
+          itemdamage: 12
+          stun: 0.1
       regular:
         afflictions:
           lacerations: 35
@@ -135,6 +157,26 @@ submarineweapon:
         structdamage: 35
   chaingun:
     projectiles:
+      ek_chaingunboltexplosive:
+        action: fix sprite texture position
+        update:
+          afflictions:
+            explosiondamage: 12
+            bleeding: 8
+            stun: 0.56
+          penetration: 0.10
+          structdamage: 10
+          itemdamage: 10
+          explosion:
+            range: 300
+            structdamage: 6
+            itemdamage: 250
+            afflictions:
+              explosiondamage: 24
+              bleeding: 16
+              stun: 1.12
+      ek_chaingunboltheavy:
+        action: exactly same as ek_chaingunboltexplosive
       regular:
         afflictions:
           gunshotwound: 35
@@ -185,3 +227,5 @@ submarineweapon:
           afflictions:
             burn: 112.5
             stun: 1.125
+      ek_pulselaserplasmabolt:
+        action: exactly same as regular

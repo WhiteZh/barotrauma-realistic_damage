@@ -2979,11 +2979,11 @@
                 <RequiredItem identifier="ek_loadingkit" mincondition="0.1" usecondition="true" />
                 <RequiredItem amount="2" tag="munition_core" />
             </Fabricate>
-            <InventoryIcon sourcerect="320,256,64,64" texture="%ModDir%/Items/InventoryIcons.png" />
+            <InventoryIcon sourcerect="320,256,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
             <Sprite depth="0.56" origin="0.5,0.5" sourcerect="464,576,64,96"
-                texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+                texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <ContainedSprite allowedcontainertags="weapon" depth="0.56" name="Compact Smg Magazine"
-                sourcerect="464,576,64,96" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+                sourcerect="464,576,64,96" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="80" width="48" />
             <Holdable aimable="false" canBeCombined="true" handle1="0,0" holdangle="-10"
                 holdpos="0,0" msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
@@ -3038,11 +3038,11 @@
                 <RequiredItem identifier="ek_loadingkit" mincondition="0.1" usecondition="true" />
                 <RequiredItem identifier="physicorium" />
             </Fabricate>
-            <InventoryIcon sourcerect="320,320,64,64" texture="%ModDir%/Items/InventoryIcons.png" />
+            <InventoryIcon sourcerect="320,320,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
             <Sprite depth="0.56" origin="0.5,0.5" sourcerect="800,464,64,96"
-                texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+                texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <ContainedSprite allowedcontainertags="weapon" depth="0.56" name="Compact Smg Magazine"
-                sourcerect="800,464,64,96" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+                sourcerect="800,464,64,96" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="80" width="48" />
             <Holdable aimable="false" canBeCombined="true" handle1="0,0" holdangle="-10"
                 holdpos="0,0" msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
@@ -3096,11 +3096,11 @@
                 <RequiredItem identifier="ek_loadingkit" mincondition="0.1" usecondition="true" />
                 <RequiredItem identifier="rubber" />
             </Fabricate>
-            <InventoryIcon sourcerect="320,384,64,64" texture="%ModDir%/Items/InventoryIcons.png" />
+            <InventoryIcon sourcerect="320,384,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
             <Sprite depth="0.56" origin="0.5,0.5" sourcerect="800,368,64,96"
-                texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+                texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <ContainedSprite allowedcontainertags="weapon" depth="0.56" name="Compact Smg Magazine"
-                sourcerect="800,368,64,96" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+                sourcerect="800,368,64,96" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
             <Body density="50" height="80" width="48" />
             <Holdable aimable="false" canBeCombined="true" handle1="0,0" holdangle="-10"
                 holdpos="0,0" msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
