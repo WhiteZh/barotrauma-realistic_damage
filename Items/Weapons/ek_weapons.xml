@@ -1597,7 +1597,7 @@
       <Body density="50" height="64" width="176" />
       <Holdable aimpos="63,0" controlpose="true" handle1="-26,-11" msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
       <!-- barrelpos="25,7" aimpos="63,0" handle1="-14,-11" -->
-      <RangedWeapon barrelpos="60,12" combatPriority="45" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.5" reloadskillrequirement="40" spread="0.5" unskilledspread="14">
+      <RangedWeapon barrelpos="60,12" combatPriority="45" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.3" reloadskillrequirement="40" spread="0.5" unskilledspread="14">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflamelaserpistol" particleamount="1" velocitymax="0" velocitymin="0" />

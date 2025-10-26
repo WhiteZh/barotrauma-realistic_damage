@@ -39,6 +39,7 @@ personalweapon:
         penetration: 0.4
         structdamage: 10
   ek_laserpistol:
+    reload: 0.3
     projectiles:
       regular:
         stun: 0.05
