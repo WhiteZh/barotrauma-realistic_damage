@@ -2274,5 +2274,119 @@
       </Projectile>
     </Item>
     <!--<Item category="Misc" hideinmenus="true" identifier="ek_smg_riot_round" impactsoundtag="impact_metal_light" interactthroughwalls="true" inventoryiconcolor="220,150,116,255" name="__ek_smg_riot_round__" scale="0.2" spritecolor="220,150,116,255" tags="smallitem, round"><InventoryIcon sourcerect="384,384,64,64" texture="%ModDir%/Items/InventoryIcons.png" /><Sprite depth="0.55" sourcerect="336,688,48,16" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" /><Body density="40" height="14" width="40" /><Pickable msg="ItemMsgPickUpSelect" slots="Any" /><Projectile characterusable="false" hitscan="true" removeonhit="true"><ParticleEmitter colormultiplier="255,150,125,100" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" /><Attack structuredamage="0" stun="0.2" targetforce="4"><Affliction identifier="blunttrauma" strength="1" /><Affliction identifier="incrementalstun" strength="5.5" /></Attack><StatusEffect disabledeltatime="true" target="This" type="OnUse"><sound file="Content/Sounds/Impact/SoftImpact1.ogg" range="800" selectionmode="random" /><sound file="Content/Sounds/Impact/SoftImpact2.ogg" range="800" /><sound file="Content/Sounds/Impact/SoftImpact3.ogg" range="800" /></StatusEffect><StatusEffect delay="2" stackable="false" target="This" type="OnNotContained"><Remove /></StatusEffect></Projectile></Item>-->
+    <Item Scale="0.32" cargocontaineridentifier="metalcrate" category="Equipment,Weapon" identifier="ek_revolverammo" impactsoundtag="impact_metal_light" interactthroughwalls="true" maxstacksize="12" name="__ek_revolverammo__" tags="smallitem,ek_revolverammo,ek_ammotag357,ammo,smallarmsammo,pistolammoitem,scp_357ammo">
+      <PreferredContainer primary="ek_ammotag_357" />
+      <Price baseprice="20" minleveldifficulty="10" sold="false">
+        <Price minavailable="18" multiplier="1.25" sold="true" storeidentifier="merchantoutpost" />
+        <Price minavailable="18" multiplier="1.1" sold="true" storeidentifier="merchantcity" />
+        <Price multiplier="1.25" storeidentifier="merchantresearch" />
+        <Price minavailable="24" multiplier="0.9" sold="true" storeidentifier="merchantmilitary" />
+        <Price minavailable="12" multiplier="1.25" sold="true" storeidentifier="merchantmine" />
+        <Price minavailable="12" multiplier="1.2" sold="true" storeidentifier="merchantarmory" />
+      </Price>
+      <Deconstruct time="1" />
+      <Fabricate amount="6" requiredtime="12" suitablefabricators="modfabricator,fabricator,coalitionshop">
+        <RequiredSkill identifier="weapons" level="25" />
+        <RequiredItem identifier="ek_loadingkit" mincondition="0.1" usecondition="true" />
+        <RequiredItem tag="munition_core" />
+        <RequiredItem tag="munition_jacket" />
+      </Fabricate>
+      <InventoryIcon origin="0.5,0.5" sourcerect="576,384,64,64" texture="%ModDir%/Items/InventoryIcons.png" />
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="448,1200,32,16" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+      <Body density="40" height="10" width="29" />
+      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
+      <Projectile characterusable="false" hitscan="true" removeonhit="true">
+        <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+        <Attack itemdamage="10" penetration="0.1" severlimbsprobability="0.05" structuredamage="10" targetforce="10">
+          <Affliction identifier="bleeding" strength="10" />
+          <Affliction identifier="gunshotwound" strength="25" />
+          <Affliction identifier="stun" strength="0.1" />
+        </Attack>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
+        </StatusEffect>
+        <StatusEffect disabledeltatime="true" target="Limb" type="OnUse">
+          <Affliction amount="2000" identifier="ek_piercing_shotgunslug_effect" />
+        </StatusEffect>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true" particle="spark" particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-200" velocitymin="-10" />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+    <Item Scale="0.32" cargocontaineridentifier="metalcrate" category="Equipment,Weapon" identifier="ek_revolverammo_physicorium" impactsoundtag="impact_metal_light" interactthroughwalls="true" maxstacksize="12" name="__ek_revolverammo_physicorium__" tags="smallitem,ek_revolverammo,ek_ammotag357,ammo,smallarmsammo,pistolammoitem,scp_357ammo">
+      <PreferredContainer primary="ek_ammotag_357" />
+      <Price baseprice="50" minleveldifficulty="20" sold="false">
+        <Price multiplier="1.25" storeidentifier="merchantoutpost" />
+        <Price multiplier="1.1" storeidentifier="merchantcity" />
+        <Price minavailable="24" multiplier="0.9" sold="true" storeidentifier="merchantresearch" />
+        <Price multiplier="1.25" storeidentifier="merchantmilitary" />
+        <Price multiplier="1.25" storeidentifier="merchantmine" />
+        <Price minavailable="12" multiplier="1.2" sold="true" storeidentifier="merchantarmory" />
+      </Price>
+      <Deconstruct time="1" />
+      <Fabricate amount="6" requiredtime="12" suitablefabricators="modfabricator,fabricator,coalitionshop">
+        <RequiredSkill identifier="weapons" level="25" />
+        <RequiredItem identifier="ek_loadingkit" mincondition="0.1" usecondition="true" />
+        <RequiredItem identifier="physicorium" />
+        <RequiredItem tag="munition_jacket" />
+      </Fabricate>
+      <InventoryIcon origin="0.5,0.5" sourcerect="576,512,64,64" texture="%ModDir%/Items/InventoryIcons.png" />
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="480,1200,32,16" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+      <Body density="40" height="10" width="29" />
+      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
+      <Projectile characterusable="false" hitscan="true" removeonhit="true">
+        <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+        <Attack itemdamage="10" penetration="0.25" severlimbsprobability="0.05" structuredamage="10" targetforce="2.5">
+          <Affliction identifier="bleeding" strength="15" />
+          <Affliction identifier="gunshotwound" strength="30" />
+          <Affliction identifier="stun" strength="0.1" />
+        </Attack>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
+        </StatusEffect>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true" particle="spark" particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-200" velocitymin="-10" />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+    <Item Scale="0.32" cargocontaineridentifier="metalcrate" category="Equipment,Weapon" identifier="ek_revolverammo_riot" impactsoundtag="impact_metal_light" interactthroughwalls="true" maxstacksize="12" name="__ek_revolverammo_riot__" tags="smallitem,ek_revolverammo,ek_ammotag357,ammo,smallarmsammo,pistolammoitem,scp_357ammo">
+      <PreferredContainer primary="ek_ammotag_357" />
+      <Price baseprice="16" minleveldifficulty="5" sold="false">
+        <Price minavailable="18" multiplier="1.25" sold="true" storeidentifier="merchantoutpost" />
+        <Price minavailable="18" multiplier="1.1" sold="true" storeidentifier="merchantcity" />
+        <Price multiplier="1.25" storeidentifier="merchantresearch" />
+        <Price minavailable="24" multiplier="0.9" sold="true" storeidentifier="merchantmilitary" />
+        <Price minavailable="12" multiplier="1.25" sold="true" storeidentifier="merchantmine" />
+        <Price minavailable="12" multiplier="1.2" sold="true" storeidentifier="merchantarmory" />
+      </Price>
+      <Deconstruct time="1" />
+      <Fabricate amount="8" requiredtime="1" suitablefabricators="modfabricator,fabricator,coalitionshop">
+        <RequiredSkill identifier="weapons" level="25" />
+        <RequiredItem identifier="ek_loadingkit" mincondition="0.1" usecondition="true" />
+        <RequiredItem identifier="rubber" />
+        <RequiredItem identifier="plastic" />
+      </Fabricate>
+      <InventoryIcon origin="0.5,0.5" sourcerect="576,448,64,64" texture="%ModDir%/Items/InventoryIcons.png" />
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="128,1248,32,16" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+      <Body density="40" height="10" width="29" />
+      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
+      <Projectile characterusable="false" hitscan="true" removeonhit="true">
+        <ParticleEmitter colormultiplier="255,150,125,100" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+        <Attack itemdamage="0" structuredamage="0" stun="0.15" targetforce="7.5">
+          <Affliction identifier="blunttrauma" strength="3" />
+          <Affliction identifier="incrementalstun" strength="25" />
+          <Affliction identifier="stun" strength="0.1" />
+        </Attack>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true" particle="spark" particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-200" velocitymin="-10" />
+        </StatusEffect>
+      </Projectile>
+    </Item>
   </Override>
 </Items>

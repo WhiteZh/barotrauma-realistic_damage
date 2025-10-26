@@ -1,4 +1,16 @@
 personalweapon:
+  ek_revolver:
+    projectiles:
+      regular:
+        update:
+          itemdamage: 10
+          structdamage: 10
+      physicorium:
+        update:
+          itemdamage: 10
+          structdamage: 10
+      riot:
+        action: added stun
   ek_smg:
     projectiles:
       regular:
