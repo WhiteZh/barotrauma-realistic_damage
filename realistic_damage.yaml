@@ -43,13 +43,21 @@ personalweapon:
   ek_laserpistol:
     projectiles:
       regular:
+        stun: 0.05
         afflictions:
           burn: 20
+        penetration: 0
+        structdamage: 5
+        itemdamage: 5
   ek_laserrifle:
     projectiles:
       regular:
+        stun: 0.16
         afflictions:
           burn: 40
+        penetration: 0
+        structdamage: 10
+        itemdamage: 10
   beast_ssl:
     projectiles:
       regular:

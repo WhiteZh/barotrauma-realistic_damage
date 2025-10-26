@@ -2017,7 +2017,7 @@
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
       <Projectile characterusable="false" hitscan="true" launchimpulse="80.0" removeonhit="true">
         <ParticleEmitter colormultiplier="255,255,255,125" particle="eklaserrifletracer" particleamount="1" scalemultiplier="1,1" velocitymax="0" velocitymin="0" />
-        <Attack itemdamage="10" severlimbsprobability="0.05" structuredamage="2" stun="0.16" targetforce="10">
+        <Attack itemdamage="10" severlimbsprobability="0.05" structuredamage="10" stun="0.16" targetforce="10">
           <Affliction identifier="burn" strength="40" />
         </Attack>
         <StatusEffect delay="2.5" stackable="false" target="This" type="OnNotContained">
@@ -2050,7 +2050,7 @@
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
       <Projectile characterusable="false" hitscan="true" launchimpulse="80.0" removeonhit="true">
         <ParticleEmitter colormultiplier="255,255,255,125" particle="eklaserpistoltracer" particleamount="1" scalemultiplier="1,1" velocitymax="0" velocitymin="0" />
-        <Attack itemdamage="18" structuredamage="1" stun="0.05" targetforce="5">
+        <Attack itemdamage="5" structuredamage="5" stun="0.05" targetforce="5">
           <Affliction identifier="burn" strength="20" />
         </Attack>
         <StatusEffect delay="2.5" stackable="false" target="This" type="OnNotContained">
@@ -2121,7 +2121,7 @@
       <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
         <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
-        <Attack itemdamage="0.5" penetration="0.25" severlimbsprobability="0.05" structuredamage="5" targetforce="0.25">
+        <Attack itemdamage="5" penetration="0.25" severlimbsprobability="0.05" structuredamage="5" targetforce="0.25">
           <Affliction identifier="bleeding" strength="12" />
           <Affliction identifier="gunshotwound" strength="18" />
           <Affliction identifier="stun" probability="1" strength="0.15" />
@@ -2146,7 +2146,7 @@
       <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
         <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
-        <Attack itemdamage="0.5" penetration="0.4" severlimbsprobability="0.05" structuredamage="10" targetforce="0.25">
+        <Attack itemdamage="10" penetration="0.4" severlimbsprobability="0.05" structuredamage="10" targetforce="0.25">
           <Affliction identifier="bleeding" strength="18" />
           <Affliction identifier="gunshotwound" strength="24" />
           <Affliction identifier="stun" probability="1" strength="0.25" />
