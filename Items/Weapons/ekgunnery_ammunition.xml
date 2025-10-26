@@ -3387,48 +3387,7 @@
         </StatusEffect>
       </MotionSensor>
     </Item>
-    <Item category="Misc,Weapon" hideinmenus="true" identifier="ekgunnery_vortexringpellet" name="ekgunnery_vortexringpellet" scale="1" sonarsize="2.5">
-      <Sprite depth="0.55" sourcerect="0,0,1,1" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_vortexringcannon.png" />
-      <Body density="75" radius="160" />
-      <AiTarget fadeouttime="2" maxsoundrange="500" minsoundrange="0" sightrange="0.0" sonardisruption="0.25" />
-      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
-      <Projectile characterusable="false" launchimpulse="75.0" maxtargetstohit="4" spread="30">
-        <Attack itemdamage="15" penetration="0.5" severlimbsprobability="1.0" structuredamage="0">
-          <Affliction identifier="explosiondamage" strength="5" />
-        </Attack>
-        <StatusEffect condition="-50" target="This" type="OnActive">
-          <ParticleEmitter anglemax="360" anglemin="0" distancemax="400" distancemin="0" particle="ekgunnery_newvortexringtrail" particleamount="1" scalemax="4" scalemin="2" velocitymax="100" velocitymin="0" />
-        </StatusEffect>
-        <StatusEffect condition="-1" disabledeltatime="true" stackable="false" target="This" type="OnActive">
-          <Conditional condition="gt 99" />
-          <Use />
-        </StatusEffect>
-        <StatusEffect checkconditionalalways="true" delay="0.2" disabledeltatime="true" stackable="false" target="This" type="OnActive">
-          <Conditional Condition="gt 70" />
-          <Use />
-        </StatusEffect>
-        <StatusEffect delay="1.75" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-        <StatusEffect condition="-30" disabledeltatime="true" target="This" type="OnImpact">
-          <Explosion applyfireeffects="false" flames="false" flash="false" force="12.5" onlyoutside="true" range="300.0" severlimbsprobability="0.1" shockwave="false" smoke="false" sparks="false" stun="0.25" underwaterbubble="false">
-            <Affliction identifier="bleeding" strength="3.75" />
-            <Affliction identifier="internaldamage" strength="5" />
-            <Affliction identifier="organdamage" strength="5" />
-            <Affliction identifier="nausea" strength="7.5" />
-            <Affliction identifier="explosiondamage" strength="5" />
-          </Explosion>
-        </StatusEffect>
-        <!-- Break immedeately if hit structure -->
-        <StatusEffect condition="-100" disabledeltatime="true" target="UseTarget,This" type="OnImpact">
-          <Conditional entitytype="eq Structure" />
-          <Conditional hastag="eq door" />
-        </StatusEffect>
-        <StatusEffect target="This" type="OnBroken">
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-    </Item>
+    <!--<Item category="Misc,Weapon" hideinmenus="true" identifier="ekgunnery_vortexringpellet" name="ekgunnery_vortexringpellet" scale="1" sonarsize="2.5"><Sprite depth="0.55" sourcerect="0,0,1,1" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_vortexringcannon.png" /><Body density="75" radius="160" /><AiTarget fadeouttime="2" maxsoundrange="500" minsoundrange="0" sightrange="0.0" sonardisruption="0.25" /><Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" /><Projectile characterusable="false" launchimpulse="75.0" maxtargetstohit="4" spread="30"><Attack itemdamage="15" penetration="0.5" severlimbsprobability="1.0" structuredamage="0"><Affliction identifier="explosiondamage" strength="5" /></Attack><StatusEffect condition="-50" target="This" type="OnActive"><ParticleEmitter anglemax="360" anglemin="0" distancemax="400" distancemin="0" particle="ekgunnery_newvortexringtrail" particleamount="1" scalemax="4" scalemin="2" velocitymax="100" velocitymin="0" /></StatusEffect><StatusEffect condition="-1" disabledeltatime="true" stackable="false" target="This" type="OnActive"><Conditional condition="gt 99" /><Use /></StatusEffect><StatusEffect checkconditionalalways="true" delay="0.2" disabledeltatime="true" stackable="false" target="This" type="OnActive"><Conditional Condition="gt 70" /><Use /></StatusEffect><StatusEffect delay="1.75" stackable="false" target="This" type="OnNotContained"><Remove /></StatusEffect><StatusEffect condition="-30" disabledeltatime="true" target="This" type="OnImpact"><Explosion applyfireeffects="false" flames="false" flash="false" force="12.5" onlyoutside="true" range="300.0" severlimbsprobability="0.1" shockwave="false" smoke="false" sparks="false" stun="0.25" underwaterbubble="false"><Affliction identifier="bleeding" strength="3.75" /><Affliction identifier="internaldamage" strength="5" /><Affliction identifier="organdamage" strength="5" /><Affliction identifier="nausea" strength="7.5" /><Affliction identifier="explosiondamage" strength="5" /></Explosion></StatusEffect>/* Break immedeately if hit structure */<StatusEffect condition="-100" disabledeltatime="true" target="UseTarget,This" type="OnImpact"><Conditional entitytype="eq Structure" /><Conditional hastag="eq door" /></StatusEffect><StatusEffect target="This" type="OnBroken"><Remove /></StatusEffect></Projectile></Item>-->
     <Item category="Weapon" hideinmenus="true" identifier="ek_coilgunboltheavy" name="__ek_coilgunboltheavy__" scale="0.5" sonarsize="2">
       <Sprite depth="0.55" sourcerect="144,436,112,9" texture="Content/Items/Weapons/weapons_new.png" />
       <Body density="20" height="10" width="160" />
