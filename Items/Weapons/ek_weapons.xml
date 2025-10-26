@@ -1,158 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Items>
   <Override>
-    <Item category="Misc" hideinmenus="true" identifier="ek_drumlmg_round" impactsoundtag="impact_metal_light" interactthroughwalls="true" name="__ek_drumlmg_round__" scale="0.2" tags="smallitem, round">
-      <InventoryIcon sourcerect="384,384,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
-      <Sprite depth="0.55" sourcerect="336,688,48,16" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
-      <Body density="40" height="14" width="40" />
-      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
-      <Projectile characterusable="false" hitscan="true" removeonhit="true">
-        <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
-        <Attack itemdamage="0.5" penetration="0.25" severlimbsprobability="0.05" structuredamage="5" targetforce="0.25">
-          <Affliction identifier="bleeding" strength="12" />
-          <Affliction identifier="gunshotwound" strength="18" />
-          <Affliction identifier="stun" probability="1" strength="0.15" />
-        </Attack>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
-        </StatusEffect>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <Conditional entitytype="eq Structure" />
-          <Conditional hastag="eq door" />
-          <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true" particle="spark" particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-200" velocitymin="-10" />
-        </StatusEffect>
-        <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-    </Item>
-    <Item category="Misc" hideinmenus="true" identifier="ek_drumlmg_alienround" impactsoundtag="impact_metal_light" interactthroughwalls="true" inventoryiconcolor="255,210,125,255" name="__ek_drumlmg_alienround__" scale="0.2" spritecolor="255,210,125,255" tags="smallitem, round">
-      <InventoryIcon sourcerect="384,384,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
-      <Sprite depth="0.55" sourcerect="336,688,48,16" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
-      <Body density="40" height="14" width="40" />
-      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
-      <Projectile characterusable="false" hitscan="true" removeonhit="true">
-        <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
-        <Attack itemdamage="0.5" penetration="0.4" severlimbsprobability="0.05" structuredamage="10" targetforce="0.25">
-          <Affliction identifier="bleeding" strength="18" />
-          <Affliction identifier="gunshotwound" strength="24" />
-          <Affliction identifier="stun" probability="1" strength="0.25" />
-        </Attack>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
-        </StatusEffect>
-        <StatusEffect target="This" type="OnUse">
-          <Explosion camerashake="6" flames="false" force="0" range="100.0" shockwave="false" smoke="false" underwaterbubble="false" />
-        </StatusEffect>
-        <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-    </Item>
-    <Item category="Misc" hideinmenus="true" identifier="ek_ssl_round" name="__ek_ssl_round__" scale="0.32" sonarsize="2">
-      <Sprite depth="0.55" sourcerect="368,784,128,32" texture="%ModDir:EK Forked%/Items/Containers/containers_ek.png" />
-      <Body density="20" height="10" width="160" />
-      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
-      <Projectile characterusable="false" launchimpulse="45.0">
-        <Attack itemdamage="25" penetration="0.15" severlimbsprobability="0.5" structuredamage="14.3" structuresoundtype="StructureSlash">
-          <Affliction identifier="gunshotwound" strength="50" />
-          <Affliction identifier="bleeding" strength="35" />
-          <Affliction amount="1.0" identifier="stun" probability="1" />
-        </Attack>
-        <StatusEffect Condition="-5.0" disabledeltatime="true" target="This" type="OnActive">
-          <Conditional Condition="gt 96" />
-          <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_rocketspear.ogg" range="3000" type="OnUse" />
-          <Use />
-        </StatusEffect>
-        <StatusEffect Condition="-26.0" Stuck="-30.0" target="UseTarget" targetidentifiers="door,windoweddoor,hatch,ductblock" type="OnUse" />
-        <StatusEffect Condition="-15.0" Stuck="-20.0" target="UseTarget" targetidentifiers="aliendoor,alienhatch" type="OnUse" />
-        <StatusEffect target="This" type="OnActive">
-          <ParticleEmitter anglemax="5" anglemin="-5" copyentityangle="true" particle="ammotrailwater" particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
-        </StatusEffect>
-        <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-        <StatusEffect target="This" type="OnImpact">
-          <Explosion flames="true" force="1.0" itemdamage="5" range="125.0" severlimbsprobability="0.1" smoke="false" sparks="true" structuredamage="3" underwaterbubble="true">
-            <Affliction identifier="bleeding" strength="5" />
-            <Affliction identifier="explosiondamage" strength="20" />
-          </Explosion>
-          <Remove />
-        </StatusEffect>
-        <StatusEffect target="This" type="OnBroken">
-          <Remove />
-        </StatusEffect>
-        <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-    </Item>
-    <Item category="Misc" hideinmenus="true" identifier="ek_laserpistol_round" inventoryiconcolor="150,140,120,255" name="__ek_laserpistol_round__" scale="0.32" spritecolor="150,140,120,255" tags="pistolammoitem">
-      <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64" texture="Content/Items/InventoryIconAtlas.png" />
-      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11" texture="Content/Items/Weapons/weapons_new.png" />
-      <Body density="20" height="10" width="160" />
-      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
-      <Projectile characterusable="false" hitscan="true" launchimpulse="80.0" removeonhit="true">
-        <ParticleEmitter colormultiplier="255,255,255,125" particle="eklaserpistoltracer" particleamount="1" scalemultiplier="1,1" velocitymax="0" velocitymin="0" />
-        <Attack itemdamage="18" structuredamage="1" stun="0.05" targetforce="5">
-          <Affliction identifier="burn" strength="20" />
-        </Attack>
-        <StatusEffect delay="2.5" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <Conditional entitytype="eq Structure" />
-          <Conditional hastag="eq door" />
-          <ParticleEmitter anglemax="90" anglemin="-90" copyentityangle="true" particle="eklaserspark" particleamount="4" velocitymax="-750" velocitymin="-250" />
-        </StatusEffect>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <ParticleEmitter anglemax="45" anglemin="-45" copyentityangle="true" particle="eklasersmoke" particleamount="1" velocitymax="-25" velocitymin="-5" />
-          <ParticleEmitter particle="eklaserflare" particleamount="1" />
-        </StatusEffect>
-        <StatusEffect target="This" type="OnBroken">
-          <Remove />
-        </StatusEffect>
-        <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-      <Quality>
-        <QualityStat stattype="Condition" value="0.1" />
-      </Quality>
-    </Item>
-    <Item category="Misc" hideinmenus="true" identifier="ek_laserrifle_round" inventoryiconcolor="150,140,120,255" name="__ek_laserrifle_round__" scale="0.32" spritecolor="150,140,120,255">
-      <InventoryIcon sourcerect="384,384,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
-      <Sprite depth="0.55" sourcerect="336,688,48,16" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
-      <Body density="40" height="14" width="40" />
-      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
-      <Projectile characterusable="false" hitscan="true" launchimpulse="80.0" removeonhit="true">
-        <ParticleEmitter colormultiplier="255,255,255,125" particle="eklaserrifletracer" particleamount="1" scalemultiplier="1,1" velocitymax="0" velocitymin="0" />
-        <Attack itemdamage="10" severlimbsprobability="0.05" structuredamage="2" stun="0.16" targetforce="10">
-          <Affliction identifier="burn" strength="40" />
-        </Attack>
-        <StatusEffect delay="2.5" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <Conditional entitytype="eq Structure" />
-          <Conditional hastag="eq door" />
-          <ParticleEmitter anglemax="90" anglemin="-90" copyentityangle="true" particle="eklaserspark" particleamount="4" velocitymax="-750" velocitymin="-250" />
-        </StatusEffect>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <ParticleEmitter anglemax="45" anglemin="-45" copyentityangle="true" particle="eklasersmoke" particleamount="1" velocitymax="-25" velocitymin="-5" />
-          <ParticleEmitter particle="eklaserrifleflare" particleamount="1" />
-        </StatusEffect>
-        <StatusEffect target="This" type="OnBroken">
-          <Remove />
-        </StatusEffect>
-        <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-      <Quality>
-        <QualityStat stattype="Condition" value="0.1" />
-      </Quality>
-    </Item>
+    <!--weapons-->
     <Item Scale="0.32" aliases="pipe_rifle, pipegun, pipe_gun, pipe gun" category="Equipment,Weapon" identifier="ek_piperifle" impactsoundtag="impact_metal_light" name="__ek_piperifle__" tags="mediumitem,weapon,ek_ammotag_piperound,gunsmith,mountableweapon">
       <Deconstruct time="10">
         <Item amount="2" identifier="steel" />
@@ -1964,80 +1813,7 @@
       </Quality>
       <SkillRequirementHint identifier="weapons" level="50" />
     </Item>
-    <Item category="Misc" hideinmenus="true" identifier="ek_handgun_round" impactsoundtag="impact_metal_light" interactthroughwalls="true" name="__ek_handgun_round__" scale="0.32" tags="smallitem,round,pistolammoitem">
-      <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64" texture="Content/Items/InventoryIconAtlas.png" />
-      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11" texture="Content/Items/Weapons/weapons_new.png" />
-      <Body density="40" height="10" width="29" />
-      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
-      <Projectile characterusable="false" hitscan="true" removeonhit="true">
-        <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
-        <Attack itemdamage="3.2" severlimbsprobability="0.05" structuredamage="3.2" targetforce="1.5">
-          <Affliction identifier="bleeding" strength="10" />
-          <Affliction identifier="gunshotwound" strength="10" />
-          <Affliction identifier="stun" probability="0.10" strength="0.16" />
-        </Attack>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
-        </StatusEffect>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <Conditional entitytype="eq Structure" />
-          <Conditional hastag="eq door" />
-          <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true" particle="spark" particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-200" velocitymin="-10" />
-        </StatusEffect>
-        <StatusEffect delay="2" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-    </Item>
-    <Item category="Misc" hideinmenus="true" identifier="ek_handgun_alienround" impactsoundtag="impact_metal_light" interactthroughwalls="true" inventoryiconcolor="255,210,125,255" name="__ek_handgun_alienround__" scale="0.32" spritecolor="255,210,125,255" tags="smallitem,round,pistolammoitem">
-      <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64" texture="Content/Items/InventoryIconAtlas.png" />
-      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11" texture="Content/Items/Weapons/weapons_new.png" />
-      <Body density="40" height="10" width="29" />
-      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
-      <Projectile characterusable="false" hitscan="true" removeonhit="true">
-        <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
-        <Attack itemdamage="5.2" penetration="0.15" severlimbsprobability="0.05" structuredamage="5.2" targetforce="1.5">
-          <Affliction identifier="bleeding" strength="10" />
-          <Affliction identifier="gunshotwound" strength="16.25" />
-          <Affliction identifier="stun" probability="0.10" strength="0.26" />
-        </Attack>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
-        </StatusEffect>
-        <StatusEffect target="This" type="OnUse">
-          <Explosion camerashake="6" flames="false" force="0" range="100.0" shockwave="false" smoke="false" underwaterbubble="false" />
-        </StatusEffect>
-        <StatusEffect delay="2" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-    </Item>
-    <Item category="Misc" hideinmenus="true" identifier="ek_handgun_riot_round" impactsoundtag="impact_metal_light" interactthroughwalls="true" inventoryiconcolor="220,150,116,255" name="__ek_handgun_riot_round__" scale="0.32" spritecolor="220,150,116,255" tags="smallitem,round,pistolammoitem,9mmpistolammo">
-      <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64" texture="Content/Items/InventoryIconAtlas.png" />
-      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11" texture="Content/Items/Weapons/weapons_new.png" />
-      <Body density="40" height="10" width="29" />
-      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
-      <Projectile characterusable="false" hitscan="true" removeonhit="true">
-        <ParticleEmitter colormultiplier="255,150,125,100" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
-        <Attack structuredamage="0" targetforce="4">
-          <Affliction identifier="blunttrauma" strength="5" />
-          <!-- Mag holds 10 rounds, incstun goes down by 5 per second, handgun fires 1-3
-                    rounds per
-        second. 17.5 incstun here = 15-45 incstun per second. A single mag likely won't be enough to
-        stun an attacker unless you have talents. -->
-          <Affliction identifier="incrementalstun" strength="20" />
-          <Affliction identifier="stun" probability="0.25" strength="0.1" />
-        </Attack>
-        <StatusEffect disabledeltatime="true" target="This" type="OnUse">
-          <sound file="Content/Sounds/Impact/SoftImpact1.ogg" range="800" selectionmode="random" />
-          <sound file="Content/Sounds/Impact/SoftImpact2.ogg" range="800" />
-          <sound file="Content/Sounds/Impact/SoftImpact3.ogg" range="800" />
-        </StatusEffect>
-        <StatusEffect delay="2" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-    </Item>
+    <!--magazines-->
     <Item aliases="compact smg mag, mini smg mag, mini_smg_mag, 10mm mag, 10mm_magazine" cargocontaineridentifier="ek_ammocrate_9mm" category="Equipment,Weapon" identifier="ek_mini_smg_mag" impactsoundtag="impact_metal_light" maxstacksize="2" name="__ek_mini_smg_mag__" scale="0.27" tags="smallitem, ek_mini_smg_mags, magazine,ammo,smallarmsammo,9mmammo">
       <PreferredContainer primary="ek_ammotag_10mm" />
       <PreferredContainer maxamount="5" minamount="0" primary="secarmcab" spawnprobability="0.25" />
@@ -2158,6 +1934,233 @@
           <SpawnItem identifiers="ek_handgun_riot_round" spawnposition="ThisInventory" />
         </StatusEffect>
       </ItemContainer>
+    </Item>
+    <!--projectiles-->
+    <Item category="Misc" hideinmenus="true" identifier="ek_handgun_riot_round" impactsoundtag="impact_metal_light" interactthroughwalls="true" inventoryiconcolor="220,150,116,255" name="__ek_handgun_riot_round__" scale="0.32" spritecolor="220,150,116,255" tags="smallitem,round,pistolammoitem,9mmpistolammo">
+      <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64" texture="Content/Items/InventoryIconAtlas.png" />
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11" texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="40" height="10" width="29" />
+      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
+      <Projectile characterusable="false" hitscan="true" removeonhit="true">
+        <ParticleEmitter colormultiplier="255,150,125,100" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+        <Attack structuredamage="0" targetforce="4">
+          <Affliction identifier="blunttrauma" strength="5" />
+          <!-- Mag holds 10 rounds, incstun goes down by 5 per second, handgun fires 1-3
+                    rounds per
+        second. 17.5 incstun here = 15-45 incstun per second. A single mag likely won't be enough to
+        stun an attacker unless you have talents. -->
+          <Affliction identifier="incrementalstun" strength="20" />
+          <Affliction identifier="stun" probability="0.25" strength="0.1" />
+        </Attack>
+        <StatusEffect disabledeltatime="true" target="This" type="OnUse">
+          <sound file="Content/Sounds/Impact/SoftImpact1.ogg" range="800" selectionmode="random" />
+          <sound file="Content/Sounds/Impact/SoftImpact2.ogg" range="800" />
+          <sound file="Content/Sounds/Impact/SoftImpact3.ogg" range="800" />
+        </StatusEffect>
+        <StatusEffect delay="2" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+    <Item category="Misc" hideinmenus="true" identifier="ek_handgun_alienround" impactsoundtag="impact_metal_light" interactthroughwalls="true" inventoryiconcolor="255,210,125,255" name="__ek_handgun_alienround__" scale="0.32" spritecolor="255,210,125,255" tags="smallitem,round,pistolammoitem">
+      <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64" texture="Content/Items/InventoryIconAtlas.png" />
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11" texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="40" height="10" width="29" />
+      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
+      <Projectile characterusable="false" hitscan="true" removeonhit="true">
+        <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+        <Attack itemdamage="5.2" penetration="0.15" severlimbsprobability="0.05" structuredamage="5.2" targetforce="1.5">
+          <Affliction identifier="bleeding" strength="10" />
+          <Affliction identifier="gunshotwound" strength="16.25" />
+          <Affliction identifier="stun" probability="0.10" strength="0.26" />
+        </Attack>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnUse">
+          <Explosion camerashake="6" flames="false" force="0" range="100.0" shockwave="false" smoke="false" underwaterbubble="false" />
+        </StatusEffect>
+        <StatusEffect delay="2" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+    <Item category="Misc" hideinmenus="true" identifier="ek_handgun_round" impactsoundtag="impact_metal_light" interactthroughwalls="true" name="__ek_handgun_round__" scale="0.32" tags="smallitem,round,pistolammoitem">
+      <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64" texture="Content/Items/InventoryIconAtlas.png" />
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11" texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="40" height="10" width="29" />
+      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
+      <Projectile characterusable="false" hitscan="true" removeonhit="true">
+        <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+        <Attack itemdamage="3.2" severlimbsprobability="0.05" structuredamage="3.2" targetforce="1.5">
+          <Affliction identifier="bleeding" strength="10" />
+          <Affliction identifier="gunshotwound" strength="10" />
+          <Affliction identifier="stun" probability="0.10" strength="0.16" />
+        </Attack>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
+        </StatusEffect>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true" particle="spark" particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-200" velocitymin="-10" />
+        </StatusEffect>
+        <StatusEffect delay="2" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+    <Item category="Misc" hideinmenus="true" identifier="ek_laserrifle_round" inventoryiconcolor="150,140,120,255" name="__ek_laserrifle_round__" scale="0.32" spritecolor="150,140,120,255">
+      <InventoryIcon sourcerect="384,384,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
+      <Sprite depth="0.55" sourcerect="336,688,48,16" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
+      <Body density="40" height="14" width="40" />
+      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
+      <Projectile characterusable="false" hitscan="true" launchimpulse="80.0" removeonhit="true">
+        <ParticleEmitter colormultiplier="255,255,255,125" particle="eklaserrifletracer" particleamount="1" scalemultiplier="1,1" velocitymax="0" velocitymin="0" />
+        <Attack itemdamage="10" severlimbsprobability="0.05" structuredamage="2" stun="0.16" targetforce="10">
+          <Affliction identifier="burn" strength="40" />
+        </Attack>
+        <StatusEffect delay="2.5" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter anglemax="90" anglemin="-90" copyentityangle="true" particle="eklaserspark" particleamount="4" velocitymax="-750" velocitymin="-250" />
+        </StatusEffect>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <ParticleEmitter anglemax="45" anglemin="-45" copyentityangle="true" particle="eklasersmoke" particleamount="1" velocitymax="-25" velocitymin="-5" />
+          <ParticleEmitter particle="eklaserrifleflare" particleamount="1" />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnBroken">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+      <Quality>
+        <QualityStat stattype="Condition" value="0.1" />
+      </Quality>
+    </Item>
+    <Item category="Misc" hideinmenus="true" identifier="ek_laserpistol_round" inventoryiconcolor="150,140,120,255" name="__ek_laserpistol_round__" scale="0.32" spritecolor="150,140,120,255" tags="pistolammoitem">
+      <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64" texture="Content/Items/InventoryIconAtlas.png" />
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11" texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="20" height="10" width="160" />
+      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
+      <Projectile characterusable="false" hitscan="true" launchimpulse="80.0" removeonhit="true">
+        <ParticleEmitter colormultiplier="255,255,255,125" particle="eklaserpistoltracer" particleamount="1" scalemultiplier="1,1" velocitymax="0" velocitymin="0" />
+        <Attack itemdamage="18" structuredamage="1" stun="0.05" targetforce="5">
+          <Affliction identifier="burn" strength="20" />
+        </Attack>
+        <StatusEffect delay="2.5" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter anglemax="90" anglemin="-90" copyentityangle="true" particle="eklaserspark" particleamount="4" velocitymax="-750" velocitymin="-250" />
+        </StatusEffect>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <ParticleEmitter anglemax="45" anglemin="-45" copyentityangle="true" particle="eklasersmoke" particleamount="1" velocitymax="-25" velocitymin="-5" />
+          <ParticleEmitter particle="eklaserflare" particleamount="1" />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnBroken">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+      <Quality>
+        <QualityStat stattype="Condition" value="0.1" />
+      </Quality>
+    </Item>
+    <Item category="Misc" hideinmenus="true" identifier="ek_ssl_round" name="__ek_ssl_round__" scale="0.32" sonarsize="2">
+      <Sprite depth="0.55" sourcerect="368,784,128,32" texture="%ModDir:EK Forked%/Items/Containers/containers_ek.png" />
+      <Body density="20" height="10" width="160" />
+      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
+      <Projectile characterusable="false" launchimpulse="45.0">
+        <Attack itemdamage="25" penetration="0.15" severlimbsprobability="0.5" structuredamage="14.3" structuresoundtype="StructureSlash">
+          <Affliction identifier="gunshotwound" strength="50" />
+          <Affliction identifier="bleeding" strength="35" />
+          <Affliction amount="1.0" identifier="stun" probability="1" />
+        </Attack>
+        <StatusEffect Condition="-5.0" disabledeltatime="true" target="This" type="OnActive">
+          <Conditional Condition="gt 96" />
+          <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_rocketspear.ogg" range="3000" type="OnUse" />
+          <Use />
+        </StatusEffect>
+        <StatusEffect Condition="-26.0" Stuck="-30.0" target="UseTarget" targetidentifiers="door,windoweddoor,hatch,ductblock" type="OnUse" />
+        <StatusEffect Condition="-15.0" Stuck="-20.0" target="UseTarget" targetidentifiers="aliendoor,alienhatch" type="OnUse" />
+        <StatusEffect target="This" type="OnActive">
+          <ParticleEmitter anglemax="5" anglemin="-5" copyentityangle="true" particle="ammotrailwater" particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
+        </StatusEffect>
+        <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnImpact">
+          <Explosion flames="true" force="1.0" itemdamage="5" range="125.0" severlimbsprobability="0.1" smoke="false" sparks="true" structuredamage="3" underwaterbubble="true">
+            <Affliction identifier="bleeding" strength="5" />
+            <Affliction identifier="explosiondamage" strength="20" />
+          </Explosion>
+          <Remove />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnBroken">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+    <Item category="Misc" hideinmenus="true" identifier="ek_drumlmg_round" impactsoundtag="impact_metal_light" interactthroughwalls="true" name="__ek_drumlmg_round__" scale="0.2" tags="smallitem, round">
+      <InventoryIcon sourcerect="384,384,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
+      <Sprite depth="0.55" sourcerect="336,688,48,16" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
+      <Body density="40" height="14" width="40" />
+      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
+      <Projectile characterusable="false" hitscan="true" removeonhit="true">
+        <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+        <Attack itemdamage="0.5" penetration="0.25" severlimbsprobability="0.05" structuredamage="5" targetforce="0.25">
+          <Affliction identifier="bleeding" strength="12" />
+          <Affliction identifier="gunshotwound" strength="18" />
+          <Affliction identifier="stun" probability="1" strength="0.15" />
+        </Attack>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
+        </StatusEffect>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true" particle="spark" particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-200" velocitymin="-10" />
+        </StatusEffect>
+        <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+    <Item category="Misc" hideinmenus="true" identifier="ek_drumlmg_alienround" impactsoundtag="impact_metal_light" interactthroughwalls="true" inventoryiconcolor="255,210,125,255" name="__ek_drumlmg_alienround__" scale="0.2" spritecolor="255,210,125,255" tags="smallitem, round">
+      <InventoryIcon sourcerect="384,384,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
+      <Sprite depth="0.55" sourcerect="336,688,48,16" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
+      <Body density="40" height="14" width="40" />
+      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
+      <Projectile characterusable="false" hitscan="true" removeonhit="true">
+        <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+        <Attack itemdamage="0.5" penetration="0.4" severlimbsprobability="0.05" structuredamage="10" targetforce="0.25">
+          <Affliction identifier="bleeding" strength="18" />
+          <Affliction identifier="gunshotwound" strength="24" />
+          <Affliction identifier="stun" probability="1" strength="0.25" />
+        </Attack>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnUse">
+          <Explosion camerashake="6" flames="false" force="0" range="100.0" shockwave="false" smoke="false" underwaterbubble="false" />
+        </StatusEffect>
+        <StatusEffect delay="5" stackable="false" target="This" type="OnNotContained">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
     </Item>
   </Override>
 </Items>
