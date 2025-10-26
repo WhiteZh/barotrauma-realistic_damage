@@ -1,4 +1,8 @@
 personalweapon:
+  45-cal:
+    projectiles:
+      regular:
+        action: guaranteed stun
   ek_handgun:
     projectiles:
       riot:
