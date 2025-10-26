@@ -1,4 +1,14 @@
 personalweapon:
+  ek_smg:
+    projectiles:
+      regular:
+        update:
+          structdamage: 5
+          itemdamage: 5
+      physicorium:
+        update:
+          structdamage: 5
+          itemdamage: 5
   piperrifle:
     projectiles:
       regular:
