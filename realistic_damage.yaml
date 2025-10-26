@@ -1,4 +1,14 @@
 personalweapon:
+  piperrifle:
+    projectiles:
+      regular:
+        update:
+          structdamage: 10
+          itemdamage: 10
+      physicorium:
+        update:
+          structdamage: 15
+          itemdamage: 15
   45-cal:
     projectiles:
       regular:

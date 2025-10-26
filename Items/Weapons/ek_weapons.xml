@@ -2162,5 +2162,68 @@
         </StatusEffect>
       </Projectile>
     </Item>
+    <Item aliases="pipe_rifle_round, pipe round, pipe_round, piperound" cargocontaineridentifier="metalcrate" category="Equipment,Weapon" identifier="ek_piperound" impactsoundtag="impact_metal_light" interactthroughwalls="true" inventoryiconcolor="175,155,135,255" maxstacksize="12" name="__ek_piperound__" scale="0.32" spritecolor="175,155,135,255" tags="smallitem,round,ammo,smallarmsammo,revolverround,revolverammo,ek_piperound,riflemanbonus">
+      <PreferredContainer primary="ek_ammotag_piperound" />
+      <Deconstruct time="2" />
+      <Fabricate amount="8" requiredtime="15" suitablefabricators="modfabricator,fabricator,renegadeshop">
+        <RequiredSkill identifier="weapons" level="15" />
+        <RequiredItem tag="munition_core" />
+        <RequiredItem tag="munition_propulsion" />
+      </Fabricate>
+      <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64" texture="Content/Items/InventoryIconAtlas.png" />
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11" texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="40" height="10" width="29" />
+      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
+      <Projectile characterusable="false" hitscan="true" removeonhit="true">
+        <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+        <Attack itemdamage="10" penetration="0.1" structuredamage="10" targetforce="30">
+          <Affliction identifier="bleeding" strength="15" />
+          <Affliction identifier="gunshotwound" strength="35" />
+          <Affliction identifier="stun" probability="0.5" strength="0.25" />
+          <StatusEffect target="Limb" targetLimbs="Head" type="OnUse">
+            <Affliction identifier="gunshotwound" strength="10" />
+            <Affliction identifier="stun" strength="0.5" />
+          </StatusEffect>
+        </Attack>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
+        </StatusEffect>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter anglemax="10" anglemin="-10" copyentityangle="true" particle="spark" particleamount="5" scalemax="1" scalemin="0.5" velocitymax="-200" velocitymin="-10" />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+    <Item aliases="pipe_rifle_alien_round, pipe rifle alien round, pipe alien round, pipe_alien_round, alien pipe round, alien piperound, pipe round alien, piperound alien" cargocontaineridentifier="metalcrate" category="Equipment,Weapon" identifier="ek_piperound_alien" impactsoundtag="impact_metal_light" interactthroughwalls="true" inventoryiconcolor="255,210,125,255" maxstacksize="12" name="__ek_piperound_alien__" scale="0.32" spritecolor="255,210,125,255" tags="smallitem,round,ammo,smallarmsammo,revolverround,revolverammo,ek_piperound,riflemanbonus">
+      <Deconstruct time="2" />
+      <Fabricate amount="8" requiredtime="15" suitablefabricators="modfabricator,fabricator,renegadeshop">
+        <RequiredSkill identifier="weapons" level="30" />
+        <RequiredItem identifier="physicorium" />
+        <RequiredItem tag="munition_propulsion" />
+      </Fabricate>
+      <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64" texture="Content/Items/InventoryIconAtlas.png" />
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11" texture="Content/Items/Weapons/weapons_new.png" />
+      <Body density="40" height="10" width="29" />
+      <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
+      <Projectile characterusable="false" hitscan="true" removeonhit="true">
+        <ParticleEmitter colormultiplier="255,255,115,175" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" />
+        <Attack itemdamage="15" penetration="0.25" structuredamage="15" targetforce="30">
+          <Affliction identifier="bleeding" strength="20" />
+          <Affliction identifier="gunshotwound" strength="40" />
+          <Affliction identifier="stun" probability="0.5" strength="0.25" />
+          <StatusEffect target="Limb" targetLimbs="Head" type="OnUse">
+            <Affliction identifier="gunshotwound" strength="10" />
+            <Affliction identifier="stun" strength="0.5" />
+          </StatusEffect>
+        </Attack>
+        <StatusEffect target="UseTarget" type="OnImpact">
+          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
+        </StatusEffect>
+        <StatusEffect target="This" type="OnUse">
+          <Explosion camerashake="6" flames="false" force="0" range="100.0" shockwave="false" smoke="false" underwaterbubble="false" />
+        </StatusEffect>
+      </Projectile>
+    </Item>
   </Override>
 </Items>
