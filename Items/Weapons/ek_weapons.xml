@@ -129,7 +129,7 @@
       <Body density="50" height="64" width="90" />
       <Holdable aimpos="80,10" controlpose="true" handle1="-30,-12" msg="ItemMsgPickUpSelect" slots="Any,RightHand+LeftHand" />
       <!-- barrelpos="20,5" aimpos="80,10" handle1="-9,-11" -->
-      <RangedWeapon barrelpos="55,25" combatPriority="55" crosshairscale="0.2" damagemodifier="1.25" drawhudwhenequipped="true" reload="0.28" reloadskillrequirement="30" spread="4" unskilledspread="12">
+      <RangedWeapon barrelpos="55,25" combatPriority="55" crosshairscale="0.2" damagemodifier="1.25" drawhudwhenequipped="true" reload="0.28" spread="4" unskilledspread="12">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflamepistol" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -511,7 +511,7 @@
       <Holdable aimpos="35,-5" controlpose="true" handle1="-25,-18" handle2="100,-6" holdangle="-40" holdpos="40,-10" msg="ItemMsgPickUpSelect" slots="Any,RightHand+LeftHand" />
       <!-- barrelpos="56,8" holdpos="45,-10" aimpos="30,5" handle1="-2,-18" handle2="100,-16"
           holdangle="-40" -->
-      <RangedWeapon barrelpos="136,16" combatPriority="85" crosshairscale="0.2" drawhudwhenequipped="true" reload="1.1" reloadskillrequirement="40" spread="0" unskilledspread="8">
+      <RangedWeapon barrelpos="136,16" combatPriority="85" crosshairscale="0.2" drawhudwhenequipped="true" reload="1.1" spread="0" unskilledspread="8">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflameshotgun" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -582,7 +582,7 @@
       <Body density="50" height="64" width="88" />
       <Holdable aimpos="80,10" controlpose="true" handle1="-20,-5" msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
       <!-- barrelpos="40,15" aimpos="80,10" handle1="-9,-11" -->
-      <RangedWeapon barrelpos="40,15" combatPriority="55" crosshairscale="0.2" drawhudwhenequipped="true" reload="1.5" reloadskillrequirement="30" spread="1" unskilledspread="12">
+      <RangedWeapon barrelpos="40,15" combatPriority="55" crosshairscale="0.2" drawhudwhenequipped="true" reload="1.5" spread="1" unskilledspread="12">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ek_tazer1.ogg" range="1000" selectionmode="random" type="OnUse" />
@@ -793,7 +793,7 @@
       </Wearable>
       <!-- barrelpos="60,4" holdpos="45,-10" aimpos="40,10" handle1="4,-28" handle2="102,-17"
           holdangle="-40" -->
-      <RangedWeapon barrelpos="160,8" combatPriority="70" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.2" reloadskillrequirement="55" spread="9" unskilledspread="18">
+      <RangedWeapon barrelpos="160,8" combatPriority="70" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.2" spread="9" unskilledspread="18">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflamealien" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -964,7 +964,7 @@
       <ContainedSprite allowedcontainertags="weapons_cabinet" depth="0.83" name="Depth Fix" sourcerect="304,576,128,80" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
       <Body density="50" height="56" width="128" />
       <Holdable aimpos="55,-5" controlpose="true" handle1="-34,-16" handle2="20,0" holdangle="-40" holdpos="45,-10" msg="ItemMsgPickUpSelect" slots="Any,RightHand+LeftHand" />
-      <RangedWeapon barrelpos="64,15" combatPriority="65" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.1" reloadskillrequirement="0" spread="9" unskilledspread="18">
+      <RangedWeapon barrelpos="64,15" combatPriority="65" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.1" spread="9" unskilledspread="18">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflamepistol" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -1083,7 +1083,7 @@
       </Wearable>
       <!-- barrelpos="100,22" holdpos="30,10" aimpos="30,10" handle1="8,-16" handle2="96,-32"
           holdangle="-40" -->
-      <RangedWeapon barrelpos="135,28" combatPriority="75" crosshairscale="0.2" drawhudwhenequipped="true" reload="5" reloadnoskill="7.5" reloadskillrequirement="60" spread="1" unskilledspread="15">
+      <RangedWeapon barrelpos="135,28" combatPriority="75" crosshairscale="0.2" drawhudwhenequipped="true" reload="5" reloadnoskill="7.5" spread="1" unskilledspread="15">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflamelauncher" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -1136,7 +1136,7 @@
       <Body density="50" height="64" width="176" />
       <Holdable aimpos="45,-2" controlpose="true" handle1="0,-11" msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
       <!-- barrelpos="35,7" aimpos="45,-5" handle1="10,-11" -->
-      <RangedWeapon barrelpos="85,16" combatPriority="60" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.25" reloadskillrequirement="45" spread="4" unskilledspread="18">
+      <RangedWeapon barrelpos="85,16" combatPriority="60" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.25" spread="4" unskilledspread="18">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflamegausspistol" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -1226,7 +1226,7 @@
       <!-- barrelpos="48,2" holdpos="45,-10" aimpos="50,10" handle1="-18,-21"
             handle2="102,-19"
           holdangle="-40" -->
-      <RangedWeapon barrelpos="156,8" combatPriority="75" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.37" reloadskillrequirement="50" spread="0.5" unskilledspread="18">
+      <RangedWeapon barrelpos="156,8" combatPriority="75" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.37" spread="0.5" unskilledspread="18">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflamegausspistol" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -1317,7 +1317,7 @@
       <!-- barrelpos="64,7" holdpos="45,-10" aimpos="45,-10" handle1="-10,-21"
             handle2="102,-14"
           holdangle="-40" -->
-      <RangedWeapon barrelpos="160,24" combatPriority="65" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.1" reloadskillrequirement="65" spread="10" unskilledspread="30">
+      <RangedWeapon barrelpos="160,24" combatPriority="65" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.1" spread="10" unskilledspread="30">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflamerifle" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -1408,7 +1408,7 @@
       </Wearable>
       <!-- barrelpos="68,5" holdpos="60,-10" aimpos="58,10" handle1="-48,-21" handle2="38,-8"
           holdangle="-40" -->
-      <RangedWeapon barrelpos="166,12" combatPriority="85" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.12" reloadskillrequirement="50" spread="2" unskilledspread="14">
+      <RangedWeapon barrelpos="166,12" combatPriority="85" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.12" spread="2" unskilledspread="14">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflamerifle" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -1526,7 +1526,7 @@
       </Wearable>
       <!-- barrelpos="70,-2" holdpos="40,-45" aimpos="55,-35" handle1="-152,24" handle2="0,56"
           holdangle="50" -->
-      <RangedWeapon barrelpos="136,-18" combatPriority="80" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.4" reloadskillrequirement="75" spread="5" unskilledspread="35">
+      <RangedWeapon barrelpos="136,-18" combatPriority="80" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.4" spread="5" unskilledspread="35">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflamelauncher" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -1597,7 +1597,7 @@
       <Body density="50" height="64" width="176" />
       <Holdable aimpos="63,0" controlpose="true" handle1="-26,-11" msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
       <!-- barrelpos="25,7" aimpos="63,0" handle1="-14,-11" -->
-      <RangedWeapon barrelpos="60,12" combatPriority="45" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.3" reloadskillrequirement="40" spread="0.5" unskilledspread="14">
+      <RangedWeapon barrelpos="60,12" combatPriority="45" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.3" spread="0.5" unskilledspread="14">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflamelaserpistol" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -1679,7 +1679,7 @@
       <!-- barrelpos="48,2" holdpos="45,-10" aimpos="50,10" handle1="-18,-21"
             handle2="102,-19"
           holdangle="-40" -->
-      <RangedWeapon barrelpos="154,10" combatPriority="55" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.37" reloadskillrequirement="45" spread="0.5" unskilledspread="18">
+      <RangedWeapon barrelpos="154,10" combatPriority="55" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.37" spread="0.5" unskilledspread="18">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflamelaserrifle" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -1752,7 +1752,7 @@
       <Body density="50" height="64" width="128" />
       <Holdable aimpos="80,5" controlpose="true" handle1="-35,-11" msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" />
       <!-- barrelpos="30,5" aimpos="80,10" handle1="-13,-11" -->
-      <RangedWeapon DualWieldAccuracyPenalty="10" DualWieldReloadTimePenaltyMultiplier="1.75" barrelpos="64,19" combatPriority="75" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.5" reloadskillrequirement="50" spread="1" unskilledspread="12" weapondamagemodifier="1.1">
+      <RangedWeapon DualWieldAccuracyPenalty="10" DualWieldReloadTimePenaltyMultiplier="1.75" barrelpos="64,19" combatPriority="75" crosshairscale="0.2" drawhudwhenequipped="true" reload="0.5" spread="1" unskilledspread="12" weapondamagemodifier="1.1">
         <Crosshair sourcerect="0,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <CrosshairPointer sourcerect="256,256,256,256" texture="Content/Items/Weapons/Crosshairs.png" />
         <ParticleEmitter particle="ekmuzzleflameshotgun" particleamount="1" velocitymax="0" velocitymin="0" />
