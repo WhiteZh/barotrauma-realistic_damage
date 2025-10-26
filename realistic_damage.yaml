@@ -234,3 +234,57 @@ submarineweapon:
     projectiles:
       canister:
         action: double the shrapels
+      gravity:
+        action: double the final explosion damage
+      harpoon:
+        afflictions:
+          lacerations: 200
+          bleeding: 200
+          stun: 3
+        penetration: 0
+        structdamage: 300
+        itemdamage: 50
+      regular:
+        afflictions:
+          explosiondamage: 300
+          bleeding: 30
+          stun: 9
+        penetration: 0.5
+        structdamage: 150
+        itemdamage: 100
+        explosion:
+          action: keep the same
+      regular_reducedmg:
+        afflictions:
+          explosiondamage: 150
+          bleeding: 30
+          stun: 6
+        penetration: 0.4
+        structdamage: 100
+        itemdamage: 100
+        explosion:
+          action: keep the same
+      nuclear:
+        update:
+          explosion:
+            action: double the explosion damage and radiation
+      physicorium:
+        afflictions:
+          explosiondamage: 450
+          bleeding: 45
+          stun: 15
+        penetration: 0.6
+        structdamage: 150
+        itemdamage: 150
+        explosion:
+          action: keep the same
+      physicorium_reducedmg:
+        afflictions:
+          explosiondamage: 240
+          bleeding: 45
+          stun: 12
+        penetration: 0.5
+        structdamage: 100
+        itemdamage: 100
+        explosion:
+          action: keep the same
