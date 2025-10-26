@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Items>
   <Override>
-    <!--weapons-->
+    <!--=== WEAPONS===-->
     <Item Scale="0.32" aliases="pipe_rifle, pipegun, pipe_gun, pipe gun" category="Equipment,Weapon" identifier="ek_piperifle" impactsoundtag="impact_metal_light" name="__ek_piperifle__" tags="mediumitem,weapon,ek_ammotag_piperound,gunsmith,mountableweapon">
       <Deconstruct time="10">
         <Item amount="2" identifier="steel" />
@@ -1813,7 +1813,7 @@
       </Quality>
       <SkillRequirementHint identifier="weapons" level="50" />
     </Item>
-    <!--magazines-->
+    <!--=== MAGAZINES ===-->
     <Item aliases="compact smg mag, mini smg mag, mini_smg_mag, 10mm mag, 10mm_magazine" cargocontaineridentifier="ek_ammocrate_9mm" category="Equipment,Weapon" identifier="ek_mini_smg_mag" impactsoundtag="impact_metal_light" maxstacksize="2" name="__ek_mini_smg_mag__" scale="0.27" tags="smallitem, ek_mini_smg_mags, magazine,ammo,smallarmsammo,9mmammo">
       <PreferredContainer primary="ek_ammotag_10mm" />
       <PreferredContainer maxamount="5" minamount="0" primary="secarmcab" spawnprobability="0.25" />
@@ -1935,7 +1935,7 @@
         </StatusEffect>
       </ItemContainer>
     </Item>
-    <!--projectiles-->
+    <!--=== PROJECTILES ===-->
     <Item category="Misc" hideinmenus="true" identifier="ek_handgun_riot_round" impactsoundtag="impact_metal_light" interactthroughwalls="true" inventoryiconcolor="220,150,116,255" name="__ek_handgun_riot_round__" scale="0.32" spritecolor="220,150,116,255" tags="smallitem,round,pistolammoitem,9mmpistolammo">
       <InventoryIcon origin="0.5,0.5" sourcerect="704,384,64,64" texture="Content/Items/InventoryIconAtlas.png" />
       <Sprite depth="0.55" origin="0.5,0.5" sourcerect="238,6,29,11" texture="Content/Items/Weapons/weapons_new.png" />
