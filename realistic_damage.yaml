@@ -1,14 +1,14 @@
 personalweapon:
   ek_handgun:
     projectiles:
+      riot:
+        action: 100% chance stun
       regular:
         update:
           afflictions:
             bleeding: 10
             gunshotwound: 10
-            stun: 
-              value: 0.16
-              probability: 0.10
+            stun: 0.05
           penetration: 0
           structdamage: 3.2
       physicorium:
@@ -16,9 +16,7 @@ personalweapon:
           afflictions:
             bleeding: 10
             gunshotwound: 16.25
-            stun: 
-              value: 0.26
-              probability: 0.10
+            stun: 0.10
           penetration: 0.15
           structdamage: 5.2
   ek_mini_smg:

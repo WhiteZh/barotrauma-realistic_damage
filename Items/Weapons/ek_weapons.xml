@@ -1950,7 +1950,7 @@
         second. 17.5 incstun here = 15-45 incstun per second. A single mag likely won't be enough to
         stun an attacker unless you have talents. -->
           <Affliction identifier="incrementalstun" strength="20" />
-          <Affliction identifier="stun" probability="0.25" strength="0.1" />
+          <Affliction identifier="stun" strength="0.1" />
         </Attack>
         <StatusEffect disabledeltatime="true" target="This" type="OnUse">
           <sound file="Content/Sounds/Impact/SoftImpact1.ogg" range="800" selectionmode="random" />
@@ -1972,7 +1972,7 @@
         <Attack itemdamage="5.2" penetration="0.15" severlimbsprobability="0.05" structuredamage="5.2" targetforce="1.5">
           <Affliction identifier="bleeding" strength="10" />
           <Affliction identifier="gunshotwound" strength="16.25" />
-          <Affliction identifier="stun" probability="0.10" strength="0.26" />
+          <Affliction identifier="stun" strength="0.10" />
         </Attack>
         <StatusEffect target="UseTarget" type="OnImpact">
           <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -1995,7 +1995,7 @@
         <Attack itemdamage="3.2" severlimbsprobability="0.05" structuredamage="3.2" targetforce="1.5">
           <Affliction identifier="bleeding" strength="10" />
           <Affliction identifier="gunshotwound" strength="10" />
-          <Affliction identifier="stun" probability="0.10" strength="0.16" />
+          <Affliction identifier="stun" strength="0.05" />
         </Attack>
         <StatusEffect target="UseTarget" type="OnImpact">
           <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
