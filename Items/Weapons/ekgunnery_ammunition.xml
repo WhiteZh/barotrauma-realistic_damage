@@ -2027,9 +2027,10 @@
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true" spread="4">
         <ParticleEmitter colormultiplier="255,200,50,175" particle="ekgunnery_tracerfirearm" particleamount="1" scalemultiplier="1,0.5" velocitymax="0" velocitymin="0" />
-        <Attack severlimbsprobability="0.35" structuredamage="2.5" targetforce="7">
-          <Affliction identifier="gunshotwound" strength="9" />
-          <Affliction identifier="bleeding" strength="1.5" />
+        <Attack severlimbsprobability="0.35" structuredamage="10" targetforce="7" itemdamage="10">
+          <Affliction identifier="gunshotwound" strength="18" />
+          <Affliction identifier="bleeding" strength="3" />
+          <Affliction identifier="stun" strength="0.3" />
         </Attack>
         <StatusEffect target="UseTarget" type="OnImpact">
           <ParticleEmitter particle="ekgunnery_impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -2053,9 +2054,10 @@
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true" spread="4">
         <ParticleEmitter colormultiplier="255,200,50,175" particle="ekgunnery_tracerfirearm" particleamount="1" penetration="0.3" scalemultiplier="1,0.5" velocitymax="0" velocitymin="0" />
-        <Attack severlimbsprobability="0.35" structuredamage="4" targetforce="7">
-          <Affliction identifier="gunshotwound" strength="12" />
-          <Affliction identifier="bleeding" strength="2" />
+        <Attack severlimbsprobability="0.35" structuredamage="15" targetforce="7" itemdamage="15">
+          <Affliction identifier="gunshotwound" strength="24" />
+          <Affliction identifier="bleeding" strength="4" />
+          <Affliction identifier="stun" strength="0.3" />
         </Attack>
         <StatusEffect target="UseTarget" type="OnImpact">
           <ParticleEmitter particle="ekgunnery_impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -2079,9 +2081,10 @@
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true" spread="4">
         <ParticleEmitter colormultiplier="255,150,50,175" particle="ekgunnery_tracerfirearm" particleamount="1" penetration="0.6" scalemultiplier="1,0.5" velocitymax="0" velocitymin="0" />
-        <Attack severlimbsprobability="0.35" structuredamage="6" targetforce="7">
-          <Affliction identifier="gunshotwound" strength="15" />
-          <Affliction identifier="bleeding" strength="3" />
+        <Attack severlimbsprobability="0.35" structuredamage="20" targetforce="7" itemdamage="20">
+          <Affliction identifier="gunshotwound" strength="30" />
+          <Affliction identifier="bleeding" strength="6" />
+          <Affliction identifier="stun" strength="0.3" />
         </Attack>
         <StatusEffect target="UseTarget" type="OnImpact">
           <ParticleEmitter particle="ekgunnery_impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
@@ -2105,19 +2108,20 @@
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true" spread="4">
         <ParticleEmitter colormultiplier="255,150,50,175" particle="ekgunnery_tracerfirearm" particleamount="1" penetration="0.6" scalemultiplier="1,0.5" velocitymax="0" velocitymin="0" />
-        <Attack severlimbsprobability="0.35" structuredamage="4" targetforce="7">
-          <Affliction identifier="gunshotwound" strength="12" />
-          <Affliction identifier="explosiondamage" strength="8" />
-          <Affliction identifier="bleeding" strength="4" />
+        <Attack severlimbsprobability="0.35" structuredamage="10" targetforce="7" itemdamage="10">
+          <Affliction identifier="gunshotwound" strength="24" />
+          <Affliction identifier="explosiondamage" strength="16" />
+          <Affliction identifier="bleeding" strength="8" />
+          <Affliction identifier="stun" strength="0.3" />
         </Attack>
         <StatusEffect target="UseTarget" type="OnImpact">
           <ParticleEmitter colormultiplier="255,220,175,255" particle="ekgunnery_hdimpactmedium" particleamount="1" scalemax="1" scalemin="0.5" velocitymax="0" velocitymin="0" />
           <ParticleEmitter anglemax="360" anglemin="0" distancemax="50" distancemin="25" particle="ekgunnery_newautocannonsmoke" particleamount="1" scalemax="4.5" scalemin="3" velocitymax="25" velocitymin="0" />
-          <Explosion camerashake="0" flames="false" flash="false" force="5.0" playtinnitus="false" range="150.0" severlimbsprobability="0.25" shockwave="false" smoke="false" sparks="false" structuredamage="4" stun="0" underwaterbubble="false">
-            <Affliction identifier="lacerations" strength="4" />
-            <Affliction identifier="explosiondamage" strength="2" />
-            <Affliction identifier="burn" strength="4" />
-            <Affliction identifier="bleeding" strength="1" />
+          <Explosion camerashake="0" flames="false" flash="false" force="5.0" playtinnitus="false" range="150.0" severlimbsprobability="0.25" shockwave="false" smoke="false" sparks="false" structuredamage="10" stun="0.3" underwaterbubble="false" itemdamage="10">
+            <Affliction identifier="lacerations" strength="8" />
+            <Affliction identifier="explosiondamage" strength="4" />
+            <Affliction identifier="burn" strength="8" />
+            <Affliction identifier="bleeding" strength="2" />
           </Explosion>
         </StatusEffect>
         <StatusEffect target="This" type="OnImpact">

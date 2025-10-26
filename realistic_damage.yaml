@@ -121,6 +121,9 @@ personalweapon:
           # rest unchanged
         # rest unchanged
 submarineweapon:
+  ek_chaingun:
+    projectiles:
+      action: double all damage and add 0.3 stun and better struct/item damage
   coilgun:
     # reload:
     #   single: 0.45
