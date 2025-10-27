@@ -2226,8 +2226,8 @@
       </Projectile>
     </Item>
     <Item category="Misc" hideinmenus="true" identifier="ek_smg_round" impactsoundtag="impact_metal_light" interactthroughwalls="true" name="__ek_smg_round__" scale="0.2" tags="smallitem, round">
-      <InventoryIcon sourcerect="384,384,64,64" texture="%ModDir%/Items/InventoryIcons.png" />
-      <Sprite depth="0.55" sourcerect="336,688,48,16" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+      <InventoryIcon sourcerect="384,384,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
+      <Sprite depth="0.55" sourcerect="336,688,48,16" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
       <Body density="40" height="14" width="40" />
       <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
@@ -2251,8 +2251,8 @@
       </Projectile>
     </Item>
     <Item category="Misc" hideinmenus="true" identifier="ek_smg_alienround" impactsoundtag="impact_metal_light" interactthroughwalls="true" inventoryiconcolor="255,210,125,255" name="__ek_smg_alienround__" scale="0.2" spritecolor="255,210,125,255" tags="smallitem, round">
-      <InventoryIcon sourcerect="384,384,64,64" texture="%ModDir%/Items/InventoryIcons.png" />
-      <Sprite depth="0.55" sourcerect="336,688,48,16" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+      <InventoryIcon sourcerect="384,384,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
+      <Sprite depth="0.55" sourcerect="336,688,48,16" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
       <Body density="40" height="14" width="40" />
       <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
@@ -2273,7 +2273,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <!--<Item category="Misc" hideinmenus="true" identifier="ek_smg_riot_round" impactsoundtag="impact_metal_light" interactthroughwalls="true" inventoryiconcolor="220,150,116,255" name="__ek_smg_riot_round__" scale="0.2" spritecolor="220,150,116,255" tags="smallitem, round"><InventoryIcon sourcerect="384,384,64,64" texture="%ModDir%/Items/InventoryIcons.png" /><Sprite depth="0.55" sourcerect="336,688,48,16" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" /><Body density="40" height="14" width="40" /><Pickable msg="ItemMsgPickUpSelect" slots="Any" /><Projectile characterusable="false" hitscan="true" removeonhit="true"><ParticleEmitter colormultiplier="255,150,125,100" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" /><Attack structuredamage="0" stun="0.2" targetforce="4"><Affliction identifier="blunttrauma" strength="1" /><Affliction identifier="incrementalstun" strength="5.5" /></Attack><StatusEffect disabledeltatime="true" target="This" type="OnUse"><sound file="Content/Sounds/Impact/SoftImpact1.ogg" range="800" selectionmode="random" /><sound file="Content/Sounds/Impact/SoftImpact2.ogg" range="800" /><sound file="Content/Sounds/Impact/SoftImpact3.ogg" range="800" /></StatusEffect><StatusEffect delay="2" stackable="false" target="This" type="OnNotContained"><Remove /></StatusEffect></Projectile></Item>-->
+    <!--<Item category="Misc" hideinmenus="true" identifier="ek_smg_riot_round" impactsoundtag="impact_metal_light" interactthroughwalls="true" inventoryiconcolor="220,150,116,255" name="__ek_smg_riot_round__" scale="0.2" spritecolor="220,150,116,255" tags="smallitem, round"><InventoryIcon sourcerect="384,384,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" /><Sprite depth="0.55" sourcerect="336,688,48,16" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" /><Body density="40" height="14" width="40" /><Pickable msg="ItemMsgPickUpSelect" slots="Any" /><Projectile characterusable="false" hitscan="true" removeonhit="true"><ParticleEmitter colormultiplier="255,150,125,100" particle="tracerfirearm" particleamount="1" scalemultiplier="1,0.6" velocitymax="0" velocitymin="0" /><Attack structuredamage="0" stun="0.2" targetforce="4"><Affliction identifier="blunttrauma" strength="1" /><Affliction identifier="incrementalstun" strength="5.5" /></Attack><StatusEffect disabledeltatime="true" target="This" type="OnUse"><sound file="Content/Sounds/Impact/SoftImpact1.ogg" range="800" selectionmode="random" /><sound file="Content/Sounds/Impact/SoftImpact2.ogg" range="800" /><sound file="Content/Sounds/Impact/SoftImpact3.ogg" range="800" /></StatusEffect><StatusEffect delay="2" stackable="false" target="This" type="OnNotContained"><Remove /></StatusEffect></Projectile></Item>-->
     <Item Scale="0.32" cargocontaineridentifier="metalcrate" category="Equipment,Weapon" identifier="ek_revolverammo" impactsoundtag="impact_metal_light" interactthroughwalls="true" maxstacksize="12" name="__ek_revolverammo__" tags="smallitem,ek_revolverammo,ek_ammotag357,ammo,smallarmsammo,pistolammoitem,scp_357ammo">
       <PreferredContainer primary="ek_ammotag_357" />
       <Price baseprice="20" minleveldifficulty="10" sold="false">
@@ -2291,8 +2291,8 @@
         <RequiredItem tag="munition_core" />
         <RequiredItem tag="munition_jacket" />
       </Fabricate>
-      <InventoryIcon origin="0.5,0.5" sourcerect="576,384,64,64" texture="%ModDir%/Items/InventoryIcons.png" />
-      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="448,1200,32,16" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+      <InventoryIcon origin="0.5,0.5" sourcerect="576,384,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="448,1200,32,16" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
       <Body density="40" height="10" width="29" />
       <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
@@ -2332,8 +2332,8 @@
         <RequiredItem identifier="physicorium" />
         <RequiredItem tag="munition_jacket" />
       </Fabricate>
-      <InventoryIcon origin="0.5,0.5" sourcerect="576,512,64,64" texture="%ModDir%/Items/InventoryIcons.png" />
-      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="480,1200,32,16" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+      <InventoryIcon origin="0.5,0.5" sourcerect="576,512,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="480,1200,32,16" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
       <Body density="40" height="10" width="29" />
       <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
@@ -2370,8 +2370,8 @@
         <RequiredItem identifier="rubber" />
         <RequiredItem identifier="plastic" />
       </Fabricate>
-      <InventoryIcon origin="0.5,0.5" sourcerect="576,448,64,64" texture="%ModDir%/Items/InventoryIcons.png" />
-      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="128,1248,32,16" texture="%ModDir%/Items/Weapons/Images/weapons_ek.png" />
+      <InventoryIcon origin="0.5,0.5" sourcerect="576,448,64,64" texture="%ModDir:EK Forked%/Items/InventoryIcons.png" />
+      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="128,1248,32,16" texture="%ModDir:EK Forked%/Items/Weapons/Images/weapons_ek.png" />
       <Body density="40" height="10" width="29" />
       <Pickable msg="ItemMsgPickUpSelect" slots="Any" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
