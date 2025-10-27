@@ -121,6 +121,68 @@ personalweapon:
           # rest unchanged
         # rest unchanged
 submarineweapon:
+  ek_autocannon:
+    projectiles:
+      regular:
+        penetration: 0.4
+        structdamage: 20
+        itemdamage: 20
+        afflictions:
+          gunshotwound: 75
+          bleeding: 50
+          stun: 1.5
+      explosive:
+        penetration: 0.2
+        structdamage: 15
+        itemdamage: 15
+        afflictions:
+          explosiondamage: 40
+          bleeding: 40
+          stun: 1.5
+        explosion:
+          range: 400
+          structdamage: 10
+          itemdamage: 10
+          afflictions:
+            explosiondamage: 40
+            stun: 1.0
+      piercing:
+        penetration: 0.6
+        structdamage: 30
+        itemdamage: 30
+        afflictions:
+          gunshotwound: 60
+          bleeding: 60
+          stun: 1.0
+      flechetee:
+        action: double pellets
+      flak(/smartfuse):
+        action: duplicated both explosions and attack (let's see what'll happen)
+      physicorium:
+        penetration: 0.6
+        structdamage: 35
+        itemdamage: 35
+        afflictions:
+          lacerations: 25
+          gunshotwound: 75
+          bleeding: 50
+          stun: 1.5
+      armorpiercing:
+        penetration: 0.8
+        structdamage: 35
+        itemdamage: 35
+        afflictions:
+          explosiondamage: 40
+          gunshotwound: 60
+          bleeding: 60
+          stun: 1.5
+        explosion:
+          range: 150
+          structdamage: 25
+          itemdamage: 25
+          afflictions:
+            explosiondamage: 40
+            stun: 1.0
   ek_chaingun:
     projectiles:
       action: double all damage and add 0.3 stun and better struct/item damage
