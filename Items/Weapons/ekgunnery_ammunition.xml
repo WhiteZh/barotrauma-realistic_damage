@@ -2980,10 +2980,11 @@
       <Body density="30" height="30" width="215" />
       <Holdable aimable="false" handle1="0,0" holdpos="0,-50" msg="ItemMsgPickUpSelect" slots="RightHand,LeftHand" />
       <Projectile characterusable="false" launchimpulse="80.0">
-        <Attack maxtargetstohit="2" severlimbsprobability="1.0" structuredamage="30">
+        <Attack maxtargetstohit="2" severlimbsprobability="1.0" structuredamage="75" itemdamage="75">
           <Affliction identifier="lacerations" strength="40" />
-          <Affliction identifier="bleeding" strength="6" />
-          <Affliction identifier="stun" strength="0.5" />
+          <Affliction identifier="blunttrauma" strength="60" />
+          <Affliction identifier="bleeding" strength="20" />
+          <Affliction identifier="stun" strength="1.5" />
         </Attack>
         <!-- velocity jumping fix -->
         <StatusEffect condition="-1" disabledeltatime="true" stackable="false" target="This" type="OnActive">
@@ -3022,11 +3023,11 @@
           <ParticleEmitter anglemax="360" anglemin="0" copyentityangle="true" particle="ekgunneryunderwaterexplosionfix" particleamount="1" scalemax="3.0" scalemin="3.0" />
           <ParticleEmitter particle="ekgunnery_hdimpactlarge" particleamount="1" scalemax="5" scalemin="4" velocitymax="0" velocitymin="0" />
           <ParticleEmitter anglemax="360" anglemin="0" copyentityangle="true" particle="shrapnel" particleamount="50" scalemax="1.0" scalemin="1.0" velocitymax="2000" velocitymin="100" />
-          <Explosion decal="explosion" decalsize="0.5" force="25.0" itemdamage="400" range="350.0" severlimbsprobability="0.5" structuredamage="30" stun="0.5">
+          <Explosion decal="explosion" decalsize="0.5" force="25.0" itemdamage="400" range="350.0" severlimbsprobability="0.5" structuredamage="75" structuredamage1="75" stun="1.0">
             <Affliction identifier="bleeding" strength="30" />
             <Affliction identifier="burn" strength="50" />
             <Affliction identifier="lacerations" strength="80" />
-            <Affliction identifier="explosiondamage" strength="20" />
+            <Affliction identifier="explosiondamage" strength="80" />
           </Explosion>
           <Remove />
         </StatusEffect>
@@ -3068,7 +3069,7 @@
       <Body density="30" height="30" width="215" />
       <Holdable aimable="false" handle1="0,0" holdpos="0,-50" msg="ItemMsgPickUpSelect" slots="RightHand,LeftHand" />
       <Projectile characterusable="false" launchimpulse="80.0">
-        <Attack maxtargetstohit="2" penetration="0.8" severlimbsprobability="1.5" structuredamage="75">
+        <Attack maxtargetstohit="2" penetration="0.8" severlimbsprobability="1.5" structuredamage="75" itemdamage="75">
           <Affliction identifier="burn" strength="50" />
           <Affliction identifier="gunshotwound" strength="125" />
           <Affliction identifier="lacerations" strength="175" />
@@ -3103,11 +3104,11 @@
           <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_autocannon_aphe6.ogg" range="8000" selectionmode="Random" />
           <ParticleEmitter anglemax="360" anglemin="0" copyentityangle="true" particle="ekgunneryunderwaterexplosionfix" particleamount="1" scalemax="1.5" scalemin="1.5" />
           <ParticleEmitter particle="ekgunnery_hdimpactlarge" particleamount="2" scalemax="4" scalemin="3" velocitymax="0" velocitymin="0" />
-          <Explosion decal="explosion" decalsize="0.5" force="25.0" itemdamage="400" range="225.0" severlimbsprobability="0.5" structuredamage="50" stun="0.5" underwaterbubble="false">
+          <Explosion decal="explosion" decalsize="0.5" force="25.0" itemdamage="100" range="225.0" severlimbsprobability="0.5" structuredamage="100" stun="1.5" underwaterbubble="false">
             <Affliction identifier="bleeding" strength="30" />
             <Affliction identifier="burn" strength="40" />
             <Affliction identifier="lacerations" strength="80" />
-            <Affliction identifier="explosiondamage" strength="50" />
+            <Affliction identifier="explosiondamage" strength="160" />
           </Explosion>
         </StatusEffect>
         <StatusEffect condition="-100" delay="4.5" disabledeltatime="true" stackable="false" target="This" type="OnActive" />
@@ -3127,200 +3128,8 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <Item cargocontaineridentifier="ekgunnery_mediumsslrocket_cargocontainer" category="Misc,Weapon" identifier="ekgunnery_mediumsslrocket_flak" impactsoundtag="impact_metal_heavy" name="__ekgunnery_mediumsslrocket_flak__" scale="0.4" sonarsize="5" tags="ekgunnery_mediumsslammo,ekgunnery_tagsmallshell">
-      <PreferredContainer primary="ekgunnery_mediumsslammosource,railgunammocontainer" />
-      <Price baseprice="75" minleveldifficulty="20" sold="false">
-        <Price multiplier="1.3" storeidentifier="merchantoutpost" />
-        <Price multiplier="1.2" storeidentifier="merchantcity" />
-        <Price multiplier="1.3" storeidentifier="merchantresearch" />
-        <Price minavailable="8" multiplier="0.9" sold="true" storeidentifier="merchantmilitary" />
-        <Price multiplier="1.25" storeidentifier="merchantmine" />
-        <Price minavailable="4" multiplier="1.2" sold="true" storeidentifier="merchantarmory" />
-      </Price>
-      <Deconstruct time="10">
-        <Item identifier="steel" outcondition="0.5" />
-        <Item identifier="c4block" outcondition="0.5" />
-        <Item identifier="copper" outcondition="0.5" />
-        <Item identifier="fpgacircuit" outcondition="0.5" />
-      </Deconstruct>
-      <Fabricate amount="2" requiredtime="35" suitablefabricators="modfabricator,fabricator">
-        <RequiredSkill identifier="mechanical" level="40" />
-        <RequiredItem identifier="steel" />
-        <RequiredItem identifier="c4block" />
-        <RequiredItem identifier="copper" />
-      </Fabricate>
-      <Fabricate requiredtime="20" suitablefabricators="modfabricator,fabricator">
-        <RequiredSkill identifier="mechanical" level="40" />
-        <RequiredItem identifier="steel" mincondition="0.5" usecondition="true" />
-        <RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" />
-        <RequiredItem identifier="copper" mincondition="0.5" usecondition="true" />
-      </Fabricate>
-      <InventoryIcon sourcerect="272,96,32,32" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_launcherammo.png" />
-      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="0,96,224,32" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_launcherammo.png" />
-      <ContainedSprite allowedcontainertags="mediumsslcontainer_compact" depth="0.54" origin="0.5,0.5" sourcerect="224,96,48,32" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_launcherammo.png" />
-      <Body density="30" height="30" width="215" />
-      <Holdable aimable="false" handle1="0,0" holdpos="0,-50" msg="ItemMsgPickUpSelect" slots="RightHand,LeftHand" />
-      <Projectile characterusable="false" impulsespread="0.3" launchimpulse="80.0">
-        <Attack maxtargetstohit="2" severlimbsprobability="1.0" structuredamage="30">
-          <Affliction identifier="lacerations" strength="40" />
-          <Affliction identifier="bleeding" strength="6" />
-          <Affliction identifier="stun" strength="0.5" />
-        </Attack>
-        <!-- velocity jumping fix -->
-        <StatusEffect condition="-1" disabledeltatime="true" stackable="false" target="This" type="OnActive">
-          <Conditional condition="eq 100" />
-          <Use />
-        </StatusEffect>
-        <StatusEffect checkconditionalalways="true" delay="0.25" disabledeltatime="true" stackable="false" target="This" type="OnActive">
-          <Conditional Condition="gt 70" />
-          <Use />
-        </StatusEffect>
-        <StatusEffect condition="-90" target="This" type="OnActive">
-          <ParticleEmitter anglemax="360" anglemin="0" colormultiplier="255,125,100,255" copyentityangle="true" particle="ekgunneryrockettrailmedium" particlespersecond="60" scalemax="1.1" scalemin="0.5" velocitymax="400" velocitymin="0" />
-          <ParticleEmitter colormultiplier="255,175,125,150" particle="ekgunnery_hdimpactsmall" particlespersecond="60" scalemax="6" scalemin="4" velocitymax="0" velocitymin="0" />
-          <ParticleEmitter anglemax="360" anglemin="0" particle="ekgunnerybubblesshort" particlespersecond="30" scalemax="2" scalemin="1" velocitychangewater="0,0.5" velocitymax="50" velocitymin="0" />
-        </StatusEffect>
-        <StatusEffect condition="-100" delay="0.02" disabledeltatime="true" stackable="false" target="This" type="OnImpact" />
-        <StatusEffect condition="-100" delay="4.5" disabledeltatime="true" stackable="false" target="This" type="OnActive" />
-        <!-- Prevent deflection -->
-        <StatusEffect condition="-45" disabledeltatime="true" target="This" type="OnImpact">
-          <Conditional Condition="gt 60" />
-        </StatusEffect>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <Conditional entitytype="eq Structure" />
-          <Conditional hastag="eq door" />
-          <ParticleEmitter anglemax="15" anglemin="-15" copyentityangle="true" particle="spark" particleamount="4" scalemax="2" scalemin="1.5" velocitymax="-200" velocitymin="-10" />
-          <ParticleEmitter anglemax="30" anglemin="-30" copyentityangle="true" particle="spark" particleamount="3" scalemax="2" scalemin="1.5" velocitymax="300" velocitymin="10" />
-          <ParticleEmitter anglemax="20" anglemin="-20" copyentityangle="true" particle="shrapnel" particleamount="3" scalemax="2" scalemin="1" velocitymax="300" velocitymin="50" />
-        </StatusEffect>
-        <StatusEffect target="This" type="OnBroken">
-          <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode1.ogg" range="7500" selectionmode="Random" volume="0.75" />
-          <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode2.ogg" range="7500" selectionmode="Random" volume="0.75" />
-          <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode3.ogg" range="7500" selectionmode="Random" volume="0.75" />
-          <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode4.ogg" range="7500" selectionmode="Random" volume="0.75" />
-          <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode5.ogg" range="7500" selectionmode="Random" volume="0.75" />
-          <ParticleEmitter particle="ekgunneryunderwaterexplosionfix" particleamount="1" scalemax="3.0" scalemin="2.5" />
-          <ParticleEmitter particle="ekgunneryflakburstmedium" particleamount="1" scalemax="4.5" scalemin="4" startdelaymax="0.35" startdelaymin="0.3" />
-          <Explosion force="10.0" itemdamage="80" onlyoutside="true" range="1750.0" severlimbsprobability="0.1" structuredamage="10" stun="2" underwaterbubble="false">
-            <Affliction identifier="burn" strength="35" />
-            <Affliction identifier="lacerations" strength="40" />
-            <Affliction identifier="explosiondamage" strength="45" />
-            <Affliction identifier="bleeding" strength="25" />
-          </Explosion>
-          <!-- Short range fragmentation if shell penetrates hull -->
-          <Explosion flames="false" force="10.0" itemdamage="60" onlyinside="true" range="300.0" severlimbsprobability="0.1" structuredamage="10" stun="2" underwaterbubble="false">
-            <Affliction identifier="burn" strength="17.5" />
-            <Affliction identifier="explosiondamage" strength="15" />
-            <Affliction identifier="lacerations" strength="15" />
-            <Affliction identifier="bleeding" strength="12.5" />
-          </Explosion>
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-    </Item>
-    <Item cargocontaineridentifier="ekgunnery_mediumsslrocket_cargocontainer" category="Misc,Weapon" identifier="ekgunnery_mediumsslrocket_flak_smartfuse" impactsoundtag="impact_metal_heavy" name="__ekgunnery_mediumsslrocket_flak_smartfuse__" scale="0.4" sonarsize="5" tags="ekgunnery_mediumsslammo,ekgunnery_tagsmallshell">
-      <PreferredContainer primary="ekgunnery_mediumsslammosource,railgunammocontainer" />
-      <Price baseprice="105" minleveldifficulty="20" sold="false">
-        <Price multiplier="1.3" storeidentifier="merchantoutpost" />
-        <Price multiplier="1.2" storeidentifier="merchantcity" />
-        <Price multiplier="1.3" storeidentifier="merchantresearch" />
-        <Price minavailable="4" multiplier="0.9" sold="true" storeidentifier="merchantmilitary" />
-        <Price multiplier="1.25" storeidentifier="merchantmine" />
-        <Price minavailable="2" multiplier="1.2" sold="true" storeidentifier="merchantarmory" />
-      </Price>
-      <Deconstruct time="10">
-        <Item identifier="steel" outcondition="0.5" />
-        <Item identifier="c4block" outcondition="0.5" />
-        <Item identifier="aluminium" outcondition="0.5" />
-        <Item identifier="fpgacircuit" outcondition="0.5" />
-      </Deconstruct>
-      <Fabricate amount="2" requiredtime="35" suitablefabricators="modfabricator,fabricator">
-        <RequiredSkill identifier="mechanical" level="40" />
-        <RequiredItem identifier="steel" />
-        <RequiredItem identifier="c4block" />
-        <RequiredItem identifier="copper" />
-        <RequiredItem identifier="fpgacircuit" />
-      </Fabricate>
-      <Fabricate requiredtime="20" suitablefabricators="modfabricator,fabricator">
-        <RequiredSkill identifier="mechanical" level="40" />
-        <RequiredItem identifier="steel" mincondition="0.5" usecondition="true" />
-        <RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" />
-        <RequiredItem identifier="copper" mincondition="0.5" usecondition="true" />
-        <RequiredItem identifier="fpgacircuit" mincondition="0.5" usecondition="true" />
-      </Fabricate>
-      <InventoryIcon sourcerect="272,144,32,32" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_launcherammo.png" />
-      <Sprite depth="0.55" origin="0.5,0.5" sourcerect="0,144,224,32" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_launcherammo.png" />
-      <ContainedSprite allowedcontainertags="mediumsslcontainer_compact" depth="0.54" origin="0.5,0.5" sourcerect="224,144,48,32" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_launcherammo.png" />
-      <Body density="30" height="30" width="215" />
-      <Holdable aimable="false" handle1="0,0" holdpos="0,-50" msg="ItemMsgPickUpSelect" slots="RightHand,LeftHand" />
-      <Projectile characterusable="false" impulsespread="0.3" launchimpulse="80.0">
-        <Attack maxtargetstohit="2" severlimbsprobability="1.0" structuredamage="30">
-          <Affliction identifier="lacerations" strength="40" />
-          <Affliction identifier="bleeding" strength="6" />
-          <Affliction identifier="stun" strength="0.5" />
-        </Attack>
-        <!-- velocity jumping fix -->
-        <StatusEffect condition="-1" disabledeltatime="true" stackable="false" target="This" type="OnActive">
-          <Conditional condition="eq 100" />
-          <Use />
-        </StatusEffect>
-        <StatusEffect checkconditionalalways="true" delay="0.25" disabledeltatime="true" stackable="false" target="This" type="OnActive">
-          <Conditional Condition="gt 70" />
-          <Use />
-        </StatusEffect>
-        <StatusEffect condition="-10" target="This" type="OnActive">
-          <ParticleEmitter anglemax="360" anglemin="0" colormultiplier="255,125,100,255" copyentityangle="true" particle="ekgunneryrockettrailmedium" particlespersecond="60" scalemax="1.1" scalemin="0.5" velocitymax="400" velocitymin="0" />
-          <ParticleEmitter colormultiplier="255,175,125,150" particle="ekgunnery_hdimpactsmall" particlespersecond="60" scalemax="6" scalemin="4" velocitymax="0" velocitymin="0" />
-          <Conditional Condition="gt 70" />
-        </StatusEffect>
-        <StatusEffect condition="-20" target="This" type="OnActive">
-          <ParticleEmitter anglemax="360" anglemin="0" particle="ekgunnerybubblesshort" particlespersecond="30" scalemax="2" scalemin="1" velocitychangewater="0,0.5" velocitymax="50" velocitymin="0" />
-        </StatusEffect>
-        <StatusEffect condition="-100" delay="0.02" disabledeltatime="true" stackable="false" target="This" type="OnImpact" />
-        <StatusEffect condition="-100" delay="4.5" disabledeltatime="true" stackable="false" target="This" type="OnActive" />
-        <!-- Prevent deflection -->
-        <StatusEffect condition="-45" disabledeltatime="true" target="This" type="OnImpact">
-          <Conditional Condition="gt 60" />
-        </StatusEffect>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <Conditional entitytype="eq Structure" />
-          <Conditional hastag="eq door" />
-          <ParticleEmitter anglemax="15" anglemin="-15" copyentityangle="true" particle="spark" particleamount="4" scalemax="2" scalemin="1.5" velocitymax="-200" velocitymin="-10" />
-          <ParticleEmitter anglemax="30" anglemin="-30" copyentityangle="true" particle="spark" particleamount="3" scalemax="2" scalemin="1.5" velocitymax="300" velocitymin="10" />
-          <ParticleEmitter anglemax="20" anglemin="-20" copyentityangle="true" particle="shrapnel" particleamount="3" scalemax="2" scalemin="1" velocitymax="300" velocitymin="50" />
-        </StatusEffect>
-        <StatusEffect target="This" type="OnBroken">
-          <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode1.ogg" range="7500" selectionmode="Random" volume="0.75" />
-          <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode2.ogg" range="7500" selectionmode="Random" volume="0.75" />
-          <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode3.ogg" range="7500" selectionmode="Random" volume="0.75" />
-          <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode4.ogg" range="7500" selectionmode="Random" volume="0.75" />
-          <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode5.ogg" range="7500" selectionmode="Random" volume="0.75" />
-          <ParticleEmitter particle="ekgunneryunderwaterexplosionfix" particleamount="1" scalemax="3.0" scalemin="2.5" />
-          <ParticleEmitter particle="ekgunneryflakburstmedium" particleamount="1" scalemax="4.5" scalemin="4" startdelaymax="0.35" startdelaymin="0.3" />
-          <Explosion force="10.0" itemdamage="80" onlyoutside="true" range="1750.0" severlimbsprobability="0.1" structuredamage="10" stun="2" underwaterbubble="false">
-            <Affliction identifier="burn" strength="35" />
-            <Affliction identifier="lacerations" strength="40" />
-            <Affliction identifier="explosiondamage" strength="45" />
-            <Affliction identifier="bleeding" strength="25" />
-          </Explosion>
-          <!-- Short range fragmentation if shell penetrates hull -->
-          <Explosion flames="false" force="10.0" itemdamage="60" onlyinside="true" range="300.0" severlimbsprobability="0.1" structuredamage="10" stun="2" underwaterbubble="false">
-            <Affliction identifier="burn" strength="17.5" />
-            <Affliction identifier="explosiondamage" strength="15" />
-            <Affliction identifier="lacerations" strength="15" />
-            <Affliction identifier="bleeding" strength="12.5" />
-          </Explosion>
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-      <MotionSensor DetectOwnMotion="false" IgnoreDead="true" canbeselected="false" minimumvelocity="0" range="750" target="Monster" updateinterval="0.025">
-        <!-- Proximity Fuse Detonation -->
-        <StatusEffect checkconditionalalways="true" comparison="And" condition="-100" delay="0.1" disabledeltatime="true" stackable="false" target="This" type="Always">
-          <Conditional MotionDetected="eq true" targetitemcomponent="MotionSensor" />
-          <Conditional Condition="lt 90" />
-        </StatusEffect>
-      </MotionSensor>
-    </Item>
+    <!--<Item cargocontaineridentifier="ekgunnery_mediumsslrocket_cargocontainer" category="Misc,Weapon" identifier="ekgunnery_mediumsslrocket_flak" impactsoundtag="impact_metal_heavy" name="__ekgunnery_mediumsslrocket_flak__" scale="0.4" sonarsize="5" tags="ekgunnery_mediumsslammo,ekgunnery_tagsmallshell"><PreferredContainer primary="ekgunnery_mediumsslammosource,railgunammocontainer" /><Price baseprice="75" minleveldifficulty="20" sold="false"><Price multiplier="1.3" storeidentifier="merchantoutpost" /><Price multiplier="1.2" storeidentifier="merchantcity" /><Price multiplier="1.3" storeidentifier="merchantresearch" /><Price minavailable="8" multiplier="0.9" sold="true" storeidentifier="merchantmilitary" /><Price multiplier="1.25" storeidentifier="merchantmine" /><Price minavailable="4" multiplier="1.2" sold="true" storeidentifier="merchantarmory" /></Price><Deconstruct time="10"><Item identifier="steel" outcondition="0.5" /><Item identifier="c4block" outcondition="0.5" /><Item identifier="copper" outcondition="0.5" /><Item identifier="fpgacircuit" outcondition="0.5" /></Deconstruct><Fabricate amount="2" requiredtime="35" suitablefabricators="modfabricator,fabricator"><RequiredSkill identifier="mechanical" level="40" /><RequiredItem identifier="steel" /><RequiredItem identifier="c4block" /><RequiredItem identifier="copper" /></Fabricate><Fabricate requiredtime="20" suitablefabricators="modfabricator,fabricator"><RequiredSkill identifier="mechanical" level="40" /><RequiredItem identifier="steel" mincondition="0.5" usecondition="true" /><RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" /><RequiredItem identifier="copper" mincondition="0.5" usecondition="true" /></Fabricate><InventoryIcon sourcerect="272,96,32,32" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_launcherammo.png" /><Sprite depth="0.55" origin="0.5,0.5" sourcerect="0,96,224,32" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_launcherammo.png" /><ContainedSprite allowedcontainertags="mediumsslcontainer_compact" depth="0.54" origin="0.5,0.5" sourcerect="224,96,48,32" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_launcherammo.png" /><Body density="30" height="30" width="215" /><Holdable aimable="false" handle1="0,0" holdpos="0,-50" msg="ItemMsgPickUpSelect" slots="RightHand,LeftHand" /><Projectile characterusable="false" impulsespread="0.3" launchimpulse="80.0"><Attack maxtargetstohit="2" severlimbsprobability="1.0" structuredamage="30"><Affliction identifier="lacerations" strength="40" /><Affliction identifier="bleeding" strength="6" /><Affliction identifier="stun" strength="0.5" /></Attack>/* velocity jumping fix */<StatusEffect condition="-1" disabledeltatime="true" stackable="false" target="This" type="OnActive"><Conditional condition="eq 100" /><Use /></StatusEffect><StatusEffect checkconditionalalways="true" delay="0.25" disabledeltatime="true" stackable="false" target="This" type="OnActive"><Conditional Condition="gt 70" /><Use /></StatusEffect><StatusEffect condition="-90" target="This" type="OnActive"><ParticleEmitter anglemax="360" anglemin="0" colormultiplier="255,125,100,255" copyentityangle="true" particle="ekgunneryrockettrailmedium" particlespersecond="60" scalemax="1.1" scalemin="0.5" velocitymax="400" velocitymin="0" /><ParticleEmitter colormultiplier="255,175,125,150" particle="ekgunnery_hdimpactsmall" particlespersecond="60" scalemax="6" scalemin="4" velocitymax="0" velocitymin="0" /><ParticleEmitter anglemax="360" anglemin="0" particle="ekgunnerybubblesshort" particlespersecond="30" scalemax="2" scalemin="1" velocitychangewater="0,0.5" velocitymax="50" velocitymin="0" /></StatusEffect><StatusEffect condition="-100" delay="0.02" disabledeltatime="true" stackable="false" target="This" type="OnImpact" /><StatusEffect condition="-100" delay="4.5" disabledeltatime="true" stackable="false" target="This" type="OnActive" />/* Prevent deflection */<StatusEffect condition="-45" disabledeltatime="true" target="This" type="OnImpact"><Conditional Condition="gt 60" /></StatusEffect><StatusEffect target="UseTarget" type="OnImpact"><Conditional entitytype="eq Structure" /><Conditional hastag="eq door" /><ParticleEmitter anglemax="15" anglemin="-15" copyentityangle="true" particle="spark" particleamount="4" scalemax="2" scalemin="1.5" velocitymax="-200" velocitymin="-10" /><ParticleEmitter anglemax="30" anglemin="-30" copyentityangle="true" particle="spark" particleamount="3" scalemax="2" scalemin="1.5" velocitymax="300" velocitymin="10" /><ParticleEmitter anglemax="20" anglemin="-20" copyentityangle="true" particle="shrapnel" particleamount="3" scalemax="2" scalemin="1" velocitymax="300" velocitymin="50" /></StatusEffect><StatusEffect target="This" type="OnBroken"><Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode1.ogg" range="7500" selectionmode="Random" volume="0.75" /><Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode2.ogg" range="7500" selectionmode="Random" volume="0.75" /><Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode3.ogg" range="7500" selectionmode="Random" volume="0.75" /><Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode4.ogg" range="7500" selectionmode="Random" volume="0.75" /><Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode5.ogg" range="7500" selectionmode="Random" volume="0.75" /><ParticleEmitter particle="ekgunneryunderwaterexplosionfix" particleamount="1" scalemax="3.0" scalemin="2.5" /><ParticleEmitter particle="ekgunneryflakburstmedium" particleamount="1" scalemax="4.5" scalemin="4" startdelaymax="0.35" startdelaymin="0.3" /><Explosion force="10.0" itemdamage="80" onlyoutside="true" range="1750.0" severlimbsprobability="0.1" structuredamage="10" stun="2" underwaterbubble="false"><Affliction identifier="burn" strength="35" /><Affliction identifier="lacerations" strength="40" /><Affliction identifier="explosiondamage" strength="45" /><Affliction identifier="bleeding" strength="25" /></Explosion>/* Short range fragmentation if shell penetrates hull */<Explosion flames="false" force="10.0" itemdamage="60" onlyinside="true" range="300.0" severlimbsprobability="0.1" structuredamage="10" stun="2" underwaterbubble="false"><Affliction identifier="burn" strength="17.5" /><Affliction identifier="explosiondamage" strength="15" /><Affliction identifier="lacerations" strength="15" /><Affliction identifier="bleeding" strength="12.5" /></Explosion><Remove /></StatusEffect></Projectile></Item>-->
+    <!--<Item cargocontaineridentifier="ekgunnery_mediumsslrocket_cargocontainer" category="Misc,Weapon" identifier="ekgunnery_mediumsslrocket_flak_smartfuse" impactsoundtag="impact_metal_heavy" name="__ekgunnery_mediumsslrocket_flak_smartfuse__" scale="0.4" sonarsize="5" tags="ekgunnery_mediumsslammo,ekgunnery_tagsmallshell"><PreferredContainer primary="ekgunnery_mediumsslammosource,railgunammocontainer" /><Price baseprice="105" minleveldifficulty="20" sold="false"><Price multiplier="1.3" storeidentifier="merchantoutpost" /><Price multiplier="1.2" storeidentifier="merchantcity" /><Price multiplier="1.3" storeidentifier="merchantresearch" /><Price minavailable="4" multiplier="0.9" sold="true" storeidentifier="merchantmilitary" /><Price multiplier="1.25" storeidentifier="merchantmine" /><Price minavailable="2" multiplier="1.2" sold="true" storeidentifier="merchantarmory" /></Price><Deconstruct time="10"><Item identifier="steel" outcondition="0.5" /><Item identifier="c4block" outcondition="0.5" /><Item identifier="aluminium" outcondition="0.5" /><Item identifier="fpgacircuit" outcondition="0.5" /></Deconstruct><Fabricate amount="2" requiredtime="35" suitablefabricators="modfabricator,fabricator"><RequiredSkill identifier="mechanical" level="40" /><RequiredItem identifier="steel" /><RequiredItem identifier="c4block" /><RequiredItem identifier="copper" /><RequiredItem identifier="fpgacircuit" /></Fabricate><Fabricate requiredtime="20" suitablefabricators="modfabricator,fabricator"><RequiredSkill identifier="mechanical" level="40" /><RequiredItem identifier="steel" mincondition="0.5" usecondition="true" /><RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" /><RequiredItem identifier="copper" mincondition="0.5" usecondition="true" /><RequiredItem identifier="fpgacircuit" mincondition="0.5" usecondition="true" /></Fabricate><InventoryIcon sourcerect="272,144,32,32" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_launcherammo.png" /><Sprite depth="0.55" origin="0.5,0.5" sourcerect="0,144,224,32" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_launcherammo.png" /><ContainedSprite allowedcontainertags="mediumsslcontainer_compact" depth="0.54" origin="0.5,0.5" sourcerect="224,144,48,32" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_launcherammo.png" /><Body density="30" height="30" width="215" /><Holdable aimable="false" handle1="0,0" holdpos="0,-50" msg="ItemMsgPickUpSelect" slots="RightHand,LeftHand" /><Projectile characterusable="false" impulsespread="0.3" launchimpulse="80.0"><Attack maxtargetstohit="2" severlimbsprobability="1.0" structuredamage="30"><Affliction identifier="lacerations" strength="40" /><Affliction identifier="bleeding" strength="6" /><Affliction identifier="stun" strength="0.5" /></Attack>/* velocity jumping fix */<StatusEffect condition="-1" disabledeltatime="true" stackable="false" target="This" type="OnActive"><Conditional condition="eq 100" /><Use /></StatusEffect><StatusEffect checkconditionalalways="true" delay="0.25" disabledeltatime="true" stackable="false" target="This" type="OnActive"><Conditional Condition="gt 70" /><Use /></StatusEffect><StatusEffect condition="-10" target="This" type="OnActive"><ParticleEmitter anglemax="360" anglemin="0" colormultiplier="255,125,100,255" copyentityangle="true" particle="ekgunneryrockettrailmedium" particlespersecond="60" scalemax="1.1" scalemin="0.5" velocitymax="400" velocitymin="0" /><ParticleEmitter colormultiplier="255,175,125,150" particle="ekgunnery_hdimpactsmall" particlespersecond="60" scalemax="6" scalemin="4" velocitymax="0" velocitymin="0" /><Conditional Condition="gt 70" /></StatusEffect><StatusEffect condition="-20" target="This" type="OnActive"><ParticleEmitter anglemax="360" anglemin="0" particle="ekgunnerybubblesshort" particlespersecond="30" scalemax="2" scalemin="1" velocitychangewater="0,0.5" velocitymax="50" velocitymin="0" /></StatusEffect><StatusEffect condition="-100" delay="0.02" disabledeltatime="true" stackable="false" target="This" type="OnImpact" /><StatusEffect condition="-100" delay="4.5" disabledeltatime="true" stackable="false" target="This" type="OnActive" />/* Prevent deflection */<StatusEffect condition="-45" disabledeltatime="true" target="This" type="OnImpact"><Conditional Condition="gt 60" /></StatusEffect><StatusEffect target="UseTarget" type="OnImpact"><Conditional entitytype="eq Structure" /><Conditional hastag="eq door" /><ParticleEmitter anglemax="15" anglemin="-15" copyentityangle="true" particle="spark" particleamount="4" scalemax="2" scalemin="1.5" velocitymax="-200" velocitymin="-10" /><ParticleEmitter anglemax="30" anglemin="-30" copyentityangle="true" particle="spark" particleamount="3" scalemax="2" scalemin="1.5" velocitymax="300" velocitymin="10" /><ParticleEmitter anglemax="20" anglemin="-20" copyentityangle="true" particle="shrapnel" particleamount="3" scalemax="2" scalemin="1" velocitymax="300" velocitymin="50" /></StatusEffect><StatusEffect target="This" type="OnBroken"><Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode1.ogg" range="7500" selectionmode="Random" volume="0.75" /><Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode2.ogg" range="7500" selectionmode="Random" volume="0.75" /><Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode3.ogg" range="7500" selectionmode="Random" volume="0.75" /><Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode4.ogg" range="7500" selectionmode="Random" volume="0.75" /><Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_bigflakexplode5.ogg" range="7500" selectionmode="Random" volume="0.75" /><ParticleEmitter particle="ekgunneryunderwaterexplosionfix" particleamount="1" scalemax="3.0" scalemin="2.5" /><ParticleEmitter particle="ekgunneryflakburstmedium" particleamount="1" scalemax="4.5" scalemin="4" startdelaymax="0.35" startdelaymin="0.3" /><Explosion force="10.0" itemdamage="80" onlyoutside="true" range="1750.0" severlimbsprobability="0.1" structuredamage="10" stun="2" underwaterbubble="false"><Affliction identifier="burn" strength="35" /><Affliction identifier="lacerations" strength="40" /><Affliction identifier="explosiondamage" strength="45" /><Affliction identifier="bleeding" strength="25" /></Explosion>/* Short range fragmentation if shell penetrates hull */<Explosion flames="false" force="10.0" itemdamage="60" onlyinside="true" range="300.0" severlimbsprobability="0.1" structuredamage="10" stun="2" underwaterbubble="false"><Affliction identifier="burn" strength="17.5" /><Affliction identifier="explosiondamage" strength="15" /><Affliction identifier="lacerations" strength="15" /><Affliction identifier="bleeding" strength="12.5" /></Explosion><Remove /></StatusEffect></Projectile><MotionSensor DetectOwnMotion="false" IgnoreDead="true" canbeselected="false" minimumvelocity="0" range="750" target="Monster" updateinterval="0.025">/* Proximity Fuse Detonation */<StatusEffect checkconditionalalways="true" comparison="And" condition="-100" delay="0.1" disabledeltatime="true" stackable="false" target="This" type="Always"><Conditional MotionDetected="eq true" targetitemcomponent="MotionSensor" /><Conditional Condition="lt 90" /></StatusEffect></MotionSensor></Item>-->
     <!--<Item category="Misc,Weapon" hideinmenus="true" identifier="ekgunnery_vortexringpellet" name="ekgunnery_vortexringpellet" scale="1" sonarsize="2.5"><Sprite depth="0.55" sourcerect="0,0,1,1" texture="%ModDir:EK Forked%/Items/Weapons/Images/ekgunnery_vortexringcannon.png" /><Body density="75" radius="160" /><AiTarget fadeouttime="2" maxsoundrange="500" minsoundrange="0" sightrange="0.0" sonardisruption="0.25" /><Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" /><Projectile characterusable="false" launchimpulse="75.0" maxtargetstohit="4" spread="30"><Attack itemdamage="15" penetration="0.5" severlimbsprobability="1.0" structuredamage="0"><Affliction identifier="explosiondamage" strength="5" /></Attack><StatusEffect condition="-50" target="This" type="OnActive"><ParticleEmitter anglemax="360" anglemin="0" distancemax="400" distancemin="0" particle="ekgunnery_newvortexringtrail" particleamount="1" scalemax="4" scalemin="2" velocitymax="100" velocitymin="0" /></StatusEffect><StatusEffect condition="-1" disabledeltatime="true" stackable="false" target="This" type="OnActive"><Conditional condition="gt 99" /><Use /></StatusEffect><StatusEffect checkconditionalalways="true" delay="0.2" disabledeltatime="true" stackable="false" target="This" type="OnActive"><Conditional Condition="gt 70" /><Use /></StatusEffect><StatusEffect delay="1.75" stackable="false" target="This" type="OnNotContained"><Remove /></StatusEffect><StatusEffect condition="-30" disabledeltatime="true" target="This" type="OnImpact"><Explosion applyfireeffects="false" flames="false" flash="false" force="12.5" onlyoutside="true" range="300.0" severlimbsprobability="0.1" shockwave="false" smoke="false" sparks="false" stun="0.25" underwaterbubble="false"><Affliction identifier="bleeding" strength="3.75" /><Affliction identifier="internaldamage" strength="5" /><Affliction identifier="organdamage" strength="5" /><Affliction identifier="nausea" strength="7.5" /><Affliction identifier="explosiondamage" strength="5" /></Explosion></StatusEffect>/* Break immedeately if hit structure */<StatusEffect condition="-100" disabledeltatime="true" target="UseTarget,This" type="OnImpact"><Conditional entitytype="eq Structure" /><Conditional hastag="eq door" /></StatusEffect><StatusEffect target="This" type="OnBroken"><Remove /></StatusEffect></Projectile></Item>-->
     <Item category="Weapon" hideinmenus="true" identifier="ek_coilgunboltheavy" name="__ek_coilgunboltheavy__" scale="0.5" sonarsize="2">
       <Sprite depth="0.55" sourcerect="144,436,112,9" texture="Content/Items/Weapons/weapons_new.png" />

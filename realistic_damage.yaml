@@ -121,6 +121,35 @@ personalweapon:
           # rest unchanged
         # rest unchanged
 submarineweapon:
+  mediumssl:
+    # i give up on flak
+    he:
+      update:
+        structdamage: 75
+        itemdamage: 75
+        afflictions:
+          lacerations: 40
+          blunttrauma: 60
+          bleeding: 20
+          stun: 1.5
+        explosion:
+          structdamage: 75
+          itemdamage: 75
+          stun: 1.0
+          afflictions:
+            update:
+              explosiondamage: 80
+    ap:
+      update:
+        structdamage: 75
+        itemdamage: 75
+        explosion:
+          structdamage: 100
+          itemdamage: 100
+          stun: 1.5
+          afflictions:
+            update:
+              explosiondamage: 160
   microssl:
     action: uses ek_chaingun ammo
   ek_autocannon:
