@@ -121,6 +121,8 @@ personalweapon:
           # rest unchanged
         # rest unchanged
 submarineweapon:
+  microssl:
+    action: uses ek_chaingun ammo
   ek_autocannon:
     projectiles:
       regular:

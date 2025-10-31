@@ -2701,84 +2701,9 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <Item category="Misc,Weapon" hideinmenus="true" identifier="ekgunnery_mircosslround" name="__ekgunnery_mircosslround__" scale="0.5">
-      <Sprite depth="0.55" sourcerect="928,0,48,16" texture="%ModDir:EK Forked%/Items/Containers/ekgunnery_containers.png" />
-      <Body density="15" height="10" width="160" />
-      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
-      <Projectile characterusable="false" hitscan="true" removeonhit="true" spread="4">
-        <ParticleEmitter colormultiplier="255,50,50,175" particle="ekgunnery_tracerfirearm" particleamount="1" scalemultiplier="1,0.5" velocitymax="0" velocitymin="0" />
-        <Attack severlimbsprobability="0.35" structuredamage="5" targetforce="7">
-          <Affliction identifier="gunshotwound" strength="14" />
-          <Affliction identifier="bleeding" strength="2" />
-        </Attack>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <ParticleEmitter particle="ekgunnery_impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
-        </StatusEffect>
-        <StatusEffect target="This" type="OnImpact">
-          <ParticleEmitter anglemax="180" anglemin="-180" particle="bubbles" particleamount="1" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
-        </StatusEffect>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <Conditional entitytype="eq Structure" />
-          <Conditional hastag="eq door" />
-          <ParticleEmitter anglemax="25" anglemin="-25" copyentityangle="true" particle="spark" particleamount="3" scalemax="1" scalemin="0.5" velocitymax="-300" velocitymin="-10" />
-        </StatusEffect>
-        <StatusEffect delay="1" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-    </Item>
-    <Item category="Misc,Weapon" hideinmenus="true" identifier="ekgunnery_mircosslpiercinground" name="__ekgunnery_mircosslpiercinground__" scale="0.5">
-      <Sprite depth="0.55" sourcerect="928,16,48,16" texture="%ModDir:EK Forked%/Items/Containers/ekgunnery_containers.png" />
-      <Body density="15" height="10" width="160" />
-      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
-      <Projectile characterusable="false" hitscan="true" removeonhit="true" spread="4">
-        <ParticleEmitter colormultiplier="255,50,50,175" particle="ekgunnery_tracerfirearm" particleamount="1" penetration="0.4" scalemultiplier="1,0.5" velocitymax="0" velocitymin="0" />
-        <Attack severlimbsprobability="0.35" structuredamage="8" targetforce="7">
-          <Affliction identifier="gunshotwound" strength="16" />
-          <Affliction identifier="bleeding" strength="1" />
-        </Attack>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <ParticleEmitter particle="ekgunnery_impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
-        </StatusEffect>
-        <StatusEffect target="This" type="OnImpact">
-          <ParticleEmitter anglemax="180" anglemin="-180" particle="bubbles" particleamount="1" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
-        </StatusEffect>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <Conditional entitytype="eq Structure" />
-          <Conditional hastag="eq door" />
-          <ParticleEmitter anglemax="25" anglemin="-25" copyentityangle="true" particle="spark" particleamount="3" scalemax="1" scalemin="0.5" velocitymax="-300" velocitymin="-10" />
-        </StatusEffect>
-        <StatusEffect delay="1" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-    </Item>
-    <Item category="Misc,Weapon" hideinmenus="true" identifier="ekgunnery_mircosslphysicoriumround" name="__ekgunnery_mircosslphysicoriumround__" scale="0.5">
-      <Sprite depth="0.55" sourcerect="976,16,48,16" texture="%ModDir:EK Forked%/Items/Containers/ekgunnery_containers.png" />
-      <Body density="15" height="10" width="160" />
-      <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
-      <Projectile characterusable="false" hitscan="true" removeonhit="true" spread="4">
-        <ParticleEmitter colormultiplier="255,50,50,175" particle="ekgunnery_tracerfirearm" particleamount="1" penetration="0.6" scalemultiplier="1,0.5" velocitymax="0" velocitymin="0" />
-        <Attack severlimbsprobability="0.35" structuredamage="8" targetforce="7">
-          <Affliction identifier="gunshotwound" strength="18" />
-          <Affliction identifier="bleeding" strength="2" />
-        </Attack>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <ParticleEmitter particle="ekgunnery_impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" />
-        </StatusEffect>
-        <StatusEffect target="This" type="OnImpact">
-          <ParticleEmitter anglemax="180" anglemin="-180" particle="bubbles" particleamount="1" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" />
-        </StatusEffect>
-        <StatusEffect target="UseTarget" type="OnImpact">
-          <Conditional entitytype="eq Structure" />
-          <Conditional hastag="eq door" />
-          <ParticleEmitter anglemax="25" anglemin="-25" copyentityangle="true" particle="spark" particleamount="3" scalemax="1" scalemin="0.5" velocitymax="-300" velocitymin="-10" />
-        </StatusEffect>
-        <StatusEffect delay="1" stackable="false" target="This" type="OnNotContained">
-          <Remove />
-        </StatusEffect>
-      </Projectile>
-    </Item>
+    <!--<Item category="Misc,Weapon" hideinmenus="true" identifier="ekgunnery_mircosslround" name="__ekgunnery_mircosslround__" scale="0.5"><Sprite depth="0.55" sourcerect="928,0,48,16" texture="%ModDir:EK Forked%/Items/Containers/ekgunnery_containers.png" /><Body density="15" height="10" width="160" /><Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" /><Projectile characterusable="false" hitscan="true" removeonhit="true" spread="4"><ParticleEmitter colormultiplier="255,50,50,175" particle="ekgunnery_tracerfirearm" particleamount="1" scalemultiplier="1,0.5" velocitymax="0" velocitymin="0" /><Attack severlimbsprobability="0.35" structuredamage="5" targetforce="7"><Affliction identifier="gunshotwound" strength="14" /><Affliction identifier="bleeding" strength="2" /></Attack><StatusEffect target="UseTarget" type="OnImpact"><ParticleEmitter particle="ekgunnery_impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" /></StatusEffect><StatusEffect target="This" type="OnImpact"><ParticleEmitter anglemax="180" anglemin="-180" particle="bubbles" particleamount="1" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" /></StatusEffect><StatusEffect target="UseTarget" type="OnImpact"><Conditional entitytype="eq Structure" /><Conditional hastag="eq door" /><ParticleEmitter anglemax="25" anglemin="-25" copyentityangle="true" particle="spark" particleamount="3" scalemax="1" scalemin="0.5" velocitymax="-300" velocitymin="-10" /></StatusEffect><StatusEffect delay="1" stackable="false" target="This" type="OnNotContained"><Remove /></StatusEffect></Projectile></Item>-->
+    <!--<Item category="Misc,Weapon" hideinmenus="true" identifier="ekgunnery_mircosslpiercinground" name="__ekgunnery_mircosslpiercinground__" scale="0.5"><Sprite depth="0.55" sourcerect="928,16,48,16" texture="%ModDir:EK Forked%/Items/Containers/ekgunnery_containers.png" /><Body density="15" height="10" width="160" /><Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" /><Projectile characterusable="false" hitscan="true" removeonhit="true" spread="4"><ParticleEmitter colormultiplier="255,50,50,175" particle="ekgunnery_tracerfirearm" particleamount="1" penetration="0.4" scalemultiplier="1,0.5" velocitymax="0" velocitymin="0" /><Attack severlimbsprobability="0.35" structuredamage="8" targetforce="7"><Affliction identifier="gunshotwound" strength="16" /><Affliction identifier="bleeding" strength="1" /></Attack><StatusEffect target="UseTarget" type="OnImpact"><ParticleEmitter particle="ekgunnery_impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" /></StatusEffect><StatusEffect target="This" type="OnImpact"><ParticleEmitter anglemax="180" anglemin="-180" particle="bubbles" particleamount="1" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" /></StatusEffect><StatusEffect target="UseTarget" type="OnImpact"><Conditional entitytype="eq Structure" /><Conditional hastag="eq door" /><ParticleEmitter anglemax="25" anglemin="-25" copyentityangle="true" particle="spark" particleamount="3" scalemax="1" scalemin="0.5" velocitymax="-300" velocitymin="-10" /></StatusEffect><StatusEffect delay="1" stackable="false" target="This" type="OnNotContained"><Remove /></StatusEffect></Projectile></Item>-->
+    <!--<Item category="Misc,Weapon" hideinmenus="true" identifier="ekgunnery_mircosslphysicoriumround" name="__ekgunnery_mircosslphysicoriumround__" scale="0.5"><Sprite depth="0.55" sourcerect="976,16,48,16" texture="%ModDir:EK Forked%/Items/Containers/ekgunnery_containers.png" /><Body density="15" height="10" width="160" /><Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" /><Projectile characterusable="false" hitscan="true" removeonhit="true" spread="4"><ParticleEmitter colormultiplier="255,50,50,175" particle="ekgunnery_tracerfirearm" particleamount="1" penetration="0.6" scalemultiplier="1,0.5" velocitymax="0" velocitymin="0" /><Attack severlimbsprobability="0.35" structuredamage="8" targetforce="7"><Affliction identifier="gunshotwound" strength="18" /><Affliction identifier="bleeding" strength="2" /></Attack><StatusEffect target="UseTarget" type="OnImpact"><ParticleEmitter particle="ekgunnery_impactfirearm" particleamount="1" velocitymax="0" velocitymin="0" /></StatusEffect><StatusEffect target="This" type="OnImpact"><ParticleEmitter anglemax="180" anglemin="-180" particle="bubbles" particleamount="1" scalemax="1" scalemin="0.5" velocitymax="-100" velocitymin="-10" /></StatusEffect><StatusEffect target="UseTarget" type="OnImpact"><Conditional entitytype="eq Structure" /><Conditional hastag="eq door" /><ParticleEmitter anglemax="25" anglemin="-25" copyentityangle="true" particle="spark" particleamount="3" scalemax="1" scalemin="0.5" velocitymax="-300" velocitymin="-10" /></StatusEffect><StatusEffect delay="1" stackable="false" target="This" type="OnNotContained"><Remove /></StatusEffect></Projectile></Item>-->
     <Item category="Misc,Weapon" hideinmenus="true" identifier="ekgunnery_smallsslround" name="__ekgunnery_smallsslround__" scale="0.75">
       <Sprite depth="0.55" sourcerect="928,0,48,16" texture="%ModDir:EK Forked%/Items/Containers/ekgunnery_containers.png" />
       <Body density="15" height="16" width="160" />
@@ -3521,5 +3446,193 @@
         </StatusEffect>
       </Projectile>
     </Item>
+    <!--=== MAGAZINE ===-->
+    <Item name="__ekgunnery_mircosslammo__" identifier="ekgunnery_mircosslammo" aliases="Micro SSL Ammo Box" scale="0.5" tags="ammobox,crate,ekgunnery_microsslequipment,ekgunnery_microsslammo" category="Equipment,Weapon" linkable="false" impactsoundtag="impact_metal_heavy">
+      <PreferredContainer primary="ekgunnery_microsslammosource,coilgunammocontainer,ammocontainer" />
+      <Price baseprice="150" sold="false" minleveldifficulty="5">
+        <Price storeidentifier="merchantoutpost" multiplier="1.3" />
+        <Price storeidentifier="merchantcity" multiplier="1.2" />
+        <Price storeidentifier="merchantresearch" multiplier="1.3" />
+        <Price storeidentifier="merchantmilitary" multiplier="0.9" sold="true" minavailable="8" />
+        <Price storeidentifier="merchantmine" multiplier="1.25" />
+        <Price storeidentifier="merchantarmory" multiplier="1.2" sold="true" minavailable="4" />
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="copper" mincondition="0.9" />
+        <Item identifier="tin" mincondition="0.9" />
+        <Item identifier="steel" mincondition="0.9" />
+        <Item identifier="fpgacircuit" mincondition="0.9" />
+        <Item identifier="aluminium" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="modfabricator,fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredSkill identifier="weapons" level="25" />
+        <RequiredItem identifier="copper" />
+        <RequiredItem identifier="tin" />
+        <RequiredItem identifier="fpgacircuit" />
+        <RequiredItem identifier="steel" />
+        <RequiredItem identifier="aluminium" />
+      </Fabricate>
+      <Fabricate suitablefabricators="modfabricator,fabricator" displayname="recycleitem" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="25" />
+        <RequiredSkill identifier="weapons" level="20" />
+        <RequiredItem identifier="copper" />
+        <RequiredItem identifier="tin" />
+        <RequiredItem identifier="steel" />
+        <RequiredItem identifier="fpgacircuit" />
+        <RequiredItem identifier="ekgunnery_mircosslammo" mincondition="0.0" maxcondition="0.5" usecondition="false" />
+      </Fabricate>
+      <Sprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="0,552,104,88" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="104,552,104,88" maxcondition="75" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="208,552,104,88" maxcondition="50" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="312,552,104,88" maxcondition="25" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="416,552,104,88" maxcondition="0" origin="0.5,0.5" />
+      <Body width="115" height="88" density="50" />
+      <Holdable canbecombined="true" removeoncombined="false" slots="RightHand,LeftHand" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect">
+        <StatValue stattype="MovementSpeed" value="-0.2" />
+      </Holdable>
+      <ItemContainer autofill="False" hideitems="true" capacity="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+        <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+        <!-- We cannot detect when a bullet is NOT-contained. Yet bizzarely this works instead. -->
+        <StatusEffect type="OnUse" target="This" condition="0.8" disabledeltatime="true" stackable="false">
+          <Conditional condition="gt 0" />
+          <RequiredItem items="ekgunnery_chaingunround" type="Contained"></RequiredItem>
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" condition="-0.8" disabledeltatime="true" stackable="false">
+          <Conditional condition="gt 0" />
+          <SpawnItem identifiers="ekgunnery_chaingunround" spawnposition="ThisInventory"></SpawnItem>
+        </StatusEffect>
+        <Containable identifiers="ekgunnery_chaingunround" />
+      </ItemContainer>
+      <!--quality-->
+      <Quality>
+        <QualityStat stattype="Condition" value="0.1" />
+      </Quality>
+    </Item>
+    <Item name="__ekgunnery_mircosslpiercingammo__" identifier="ekgunnery_mircosslpiercingammo" aliases="Micro SSL Piercing Ammo Box" scale="0.5" tags="ammobox,crate,ekgunnery_microsslequipment,ekgunnery_microsslammo" category="Equipment,Weapon" linkable="false" impactsoundtag="impact_metal_heavy">
+      <PreferredContainer primary="ekgunnery_microsslammosource,coilgunammocontainer,ammocontainer" />
+      <Price baseprice="190" sold="false" minleveldifficulty="15">
+        <Price storeidentifier="merchantoutpost" multiplier="1.3" />
+        <Price storeidentifier="merchantcity" multiplier="1.2" />
+        <Price storeidentifier="merchantresearch" multiplier="1.3" />
+        <Price storeidentifier="merchantmilitary" multiplier="0.9" sold="true" minavailable="6" />
+        <Price storeidentifier="merchantmine" multiplier="1.25" />
+        <Price storeidentifier="merchantarmory" multiplier="1.2" sold="true" minavailable="3" />
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="copper" mincondition="0.9" />
+        <Item identifier="tin" mincondition="0.9" />
+        <Item identifier="titanium" mincondition="0.9" />
+        <Item identifier="fpgacircuit" />
+        <Item identifier="aluminium" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="modfabricator,fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredSkill identifier="weapons" level="30" />
+        <RequiredItem identifier="copper" />
+        <RequiredItem identifier="tin" />
+        <RequiredItem identifier="fpgacircuit" />
+        <RequiredItem identifier="titanium" />
+        <RequiredItem identifier="aluminium" />
+      </Fabricate>
+      <Fabricate suitablefabricators="modfabricator,fabricator" displayname="recycleitem" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="25" />
+        <RequiredSkill identifier="weapons" level="25" />
+        <RequiredItem identifier="copper" />
+        <RequiredItem identifier="tin" />
+        <RequiredItem identifier="titanium" />
+        <RequiredItem identifier="fpgacircuit" />
+        <RequiredItem identifier="ekgunnery_mircosslpiercingammo" mincondition="0.0" maxcondition="0.5" usecondition="false" />
+      </Fabricate>
+      <Sprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="520,552,104,88" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="624,552,104,88" maxcondition="75" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="728,552,104,88" maxcondition="50" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="832,552,104,88" maxcondition="25" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="936,552,104,88" maxcondition="0" origin="0.5,0.5" />
+      <Body width="115" height="88" density="50" />
+      <Holdable canbecombined="true" removeoncombined="false" slots="RightHand,LeftHand" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect">
+        <StatValue stattype="MovementSpeed" value="-0.2" />
+      </Holdable>
+      <ItemContainer autofill="False" hideitems="true" capacity="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+        <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+        <!-- We cannot detect when a bullet is NOT-contained. Yet bizzarely this works instead. -->
+        <StatusEffect type="OnUse" target="This" condition="0.8" disabledeltatime="true" stackable="false">
+          <Conditional condition="gt 0" />
+          <RequiredItem items="ekgunnery_chaingunpiercinground" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" condition="-0.8" disabledeltatime="true" stackable="false">
+          <Conditional condition="gt 0" />
+          <SpawnItem identifiers="ekgunnery_chaingunpiercinground" spawnposition="ThisInventory" />
+        </StatusEffect>
+        <Containable identifiers="ekgunnery_chaingunpiercinground" />
+      </ItemContainer>
+      <!--quality-->
+      <Quality>
+        <QualityStat stattype="Condition" value="0.1" />
+      </Quality>
+    </Item>
+    <Item name="__ekgunnery_mircosslphysicoriumammo__" identifier="ekgunnery_mircosslphysicoriumammo" aliases="Micro SSL Physicorium Ammo Box" scale="0.5" tags="ammobox,crate,ekgunnery_microsslequipment,ekgunnery_microsslammo" category="Equipment,Weapon" linkable="false" impactsoundtag="impact_metal_heavy">
+      <PreferredContainer primary="ekgunnery_microsslammosource,coilgunammocontainer,ammocontainer" />
+      <Price baseprice="300" sold="false" minleveldifficulty="25">
+        <Price storeidentifier="merchantoutpost" multiplier="1.3" />
+        <Price storeidentifier="merchantcity" multiplier="1.2" />
+        <Price storeidentifier="merchantresearch" multiplier="0.9" sold="true" minavailable="4" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.3" />
+        <Price storeidentifier="merchantmine" multiplier="1.25" />
+        <Price storeidentifier="merchantarmory" multiplier="1.2" sold="true" minavailable="1" />
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="copper" mincondition="0.9" />
+        <Item identifier="tin" mincondition="0.9" />
+        <Item identifier="physicorium" mincondition="0.9" />
+        <Item identifier="fpgacircuit" />
+        <Item identifier="aluminium" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="modfabricator,fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredSkill identifier="weapons" level="30" />
+        <RequiredItem identifier="copper" />
+        <RequiredItem identifier="tin" />
+        <RequiredItem identifier="physicorium" />
+        <RequiredItem identifier="fpgacircuit" />
+        <RequiredItem identifier="aluminium" />
+      </Fabricate>
+      <Fabricate suitablefabricators="modfabricator,fabricator" displayname="recycleitem" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="25" />
+        <RequiredSkill identifier="weapons" level="25" />
+        <RequiredItem identifier="copper" />
+        <RequiredItem identifier="tin" />
+        <RequiredItem identifier="physicorium" />
+        <RequiredItem identifier="fpgacircuit" />
+        <RequiredItem identifier="ekgunnery_mircosslphysicoriumammo" mincondition="0.0" maxcondition="0.5" usecondition="false" />
+      </Fabricate>
+      <Sprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="1040,552,104,88" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="1144,552,104,88" maxcondition="75" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="1248,552,104,88" maxcondition="50" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="1352,552,104,88" maxcondition="25" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers.png" depth="0.54" sourcerect="1456,552,104,88" maxcondition="0" origin="0.5,0.5" />
+      <Body width="115" height="88" density="50" />
+      <Holdable canbecombined="true" removeoncombined="false" slots="RightHand,LeftHand" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect">
+        <StatValue stattype="MovementSpeed" value="-0.2" />
+      </Holdable>
+      <ItemContainer autofill="False" hideitems="true" capacity="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+        <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+        <!-- We cannot detect when a bullet is NOT-contained. Yet bizzarely this works instead. -->
+        <StatusEffect type="OnUse" target="This" condition="0.8" disabledeltatime="true" stackable="false">
+          <Conditional condition="gt 0" />
+          <RequiredItem items="ekgunnery_chaingunphysicoriumround" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" condition="-0.8" disabledeltatime="true" stackable="false">
+          <Conditional condition="gt 0" />
+          <SpawnItem identifiers="ekgunnery_chaingunphysicoriumround" spawnposition="ThisInventory" />
+        </StatusEffect>
+        <Containable identifiers="ekgunnery_chaingunphysicoriumround" />
+      </ItemContainer>
+      <!--quality-->
+      <Quality>
+        <QualityStat stattype="Condition" value="0.1" />
+      </Quality>
+    </Item>
+    <!--<Item name="" identifier="ekgunnery_mircosslpiercingexplosiveammo" aliases="Micro SSL Armor-Piercing Explosive Ammo Box" scale="0.5" tags="ammobox,crate,ekgunnery_microsslequipment,ekgunnery_microsslammo" category="Equipment,Weapon" linkable="false" impactsoundtag="impact_metal_heavy"><PreferredContainer primary="ekgunnery_microsslammosource,coilgunammocontainer,ammocontainer" /><Price baseprice="275" sold="false" minleveldifficulty="20"><Price storeidentifier="merchantoutpost" multiplier="1.3" /><Price storeidentifier="merchantcity" multiplier="1.2" /><Price storeidentifier="merchantresearch" multiplier="1.3" /><Price storeidentifier="merchantmilitary" multiplier="0.9" sold="true" minavailable="4" /><Price storeidentifier="merchantmine" multiplier="1.25" /><Price storeidentifier="merchantarmory" multiplier="1.2" sold="true" minavailable="2" /></Price><Deconstruct time="10"><Item identifier="titaniumaluminiumalloy" mincondition="0.9" /><Item identifier="c4block" mincondition="0.9" /><Item identifier="fpgacircuit" /><Item identifier="aluminium" /></Deconstruct><Fabricate suitablefabricators="modfabricator,fabricator" requiredtime="20"><RequiredSkill identifier="mechanical" level="30" /><RequiredSkill identifier="weapons" level="30" /><RequiredItem identifier="titaniumaluminiumalloy" /><RequiredItem identifier="c4block" /><RequiredItem identifier="fpgacircuit" /><RequiredItem identifier="aluminium" /></Fabricate><Fabricate suitablefabricators="modfabricator,fabricator" displayname="recycleitem" requiredtime="20"><RequiredSkill identifier="mechanical" level="25" /><RequiredSkill identifier="weapons" level="25" /><RequiredItem identifier="titaniumaluminiumalloy" /><RequiredItem identifier="c4block" /><RequiredItem identifier="fpgacircuit" /><RequiredItem identifier="ekgunnery_mircosslpiercingexplosiveammo" mincondition="0.0" maxcondition="0.5" usecondition="false" /></Fabricate><Sprite texture="%ModDir%/Items/Containers/ekgunnery_containers2.png" depth="0.54" sourcerect="0,384,104,88" origin="0.5,0.5" /><BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers2.png" depth="0.54" sourcerect="104,384,104,88" maxcondition="75" origin="0.5,0.5" /><BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers2.png" depth="0.54" sourcerect="208,384,104,88" maxcondition="50" origin="0.5,0.5" /><BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers2.png" depth="0.54" sourcerect="312,384,104,88" maxcondition="25" origin="0.5,0.5" /><BrokenSprite texture="%ModDir%/Items/Containers/ekgunnery_containers2.png" depth="0.54" sourcerect="416,384,104,88" maxcondition="0" origin="0.5,0.5" /><Body width="115" height="88" density="50" /><Holdable canbecombined="true" removeoncombined="false" slots="RightHand,LeftHand" holdpos="0,-30" handle1="0,-30" aimable="false" msg="ItemMsgPickUpSelect"><StatValue stattype="MovementSpeed" value="-0.2" /></Holdable><ItemContainer autofill="False" hideitems="true" capacity="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true"><ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />/* We cannot detect when a bullet is NOT-contained. Yet bizzarely this works instead. */<StatusEffect type="OnUse" target="This" condition="0.8" disabledeltatime="true" stackable="false"><Conditional condition="gt 0" /><RequiredItem items="ekgunnery_chaingunpiercingexplosiveround" type="Contained" /></StatusEffect><StatusEffect type="OnUse" target="This" condition="-0.8" disabledeltatime="true" stackable="false"><Conditional condition="gt 0" /><SpawnItem identifiers="ekgunnery_chaingunpiercingexplosiveround" spawnposition="ThisInventory" /></StatusEffect><Containable identifiers="ekgunnery_chaingunpiercingexplosiveround" /></ItemContainer>/*quality*/<Quality><QualityStat stattype="Condition" value="0.1" /></Quality></Item>-->
   </Override>
 </Items>
