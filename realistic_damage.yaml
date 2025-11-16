@@ -188,7 +188,7 @@ submarineweapon:
           gunshotwound: 60
           bleeding: 60
           stun: 1.0
-      flechetee:
+      flechette:
         action: double pellets
       flak(/smartfuse):
         action: duplicated both explosions and attack (let's see what'll happen)
@@ -372,6 +372,29 @@ submarineweapon:
             stun: 1.125
       ek_pulselaserplasmabolt:
         action: exactly same as regular
+  heavyrailgun:
+    projectiles:
+      regular:
+        update:
+          afflictions:
+            gunshotwound: 300
+            blunttrauma: 300
+            bleeding: 100
+            stun: 15
+          explosion:
+            explosiondamage: 500
+            stun: 15
+      flechette:
+        action: double the flechette pellets
+      nuclear:
+        update:
+          explosion:
+            afflictions:
+              burn: 2000
+              radiation: 200
+              explosiondamage: 2000
+              stun: 60
+            empstrength: 5
   railgun:
     projectiles:
       canister:

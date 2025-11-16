@@ -1666,10 +1666,10 @@
       </Holdable>
       <Projectile characterusable="false" launchimpulse="80.0" maxtargetstohit="2">
         <Attack itemdamage="250" penetration="0.8" severlimbsprobability="1.9" structuredamage="250">
-          <Affliction identifier="gunshotwound" strength="250" />
-          <Affliction identifier="blunttrauma" strength="250" />
+          <Affliction identifier="gunshotwound" strength="300" />
+          <Affliction identifier="blunttrauma" strength="300" />
           <Affliction identifier="bleeding" strength="100" />
-          <Affliction identifier="stun" strength="10" />
+          <Affliction identifier="stun" strength="15" />
         </Attack>
         <!-- velocity jumping fix -->
         <StatusEffect condition="-1" disabledeltatime="true" stackable="false" target="This" type="OnActive">
@@ -1714,7 +1714,7 @@
         <StatusEffect Condition="-55.0" disabledeltatime="true" target="This" type="OnImpact">
           <Explosion decal="explosion" force="50.0" itemdamage="75" range="500.0" severlimbsprobability="1.9" structuredamage="75">
             <Affliction identifier="explosiondamage" strength="500" />
-            <Affliction identifier="stun" strength="2" />
+            <Affliction identifier="stun" strength="15" />
           </Explosion>
         </StatusEffect>
         <!-- Remove the item after exploding -->
@@ -1770,6 +1770,9 @@
         </StatusEffect>
         <StatusEffect condition="-4" delay="0.005" disabledeltatime="true" target="This" type="OnActive">
           <Conditional condition="gt 0" />
+          <SpawnItem identifiers="ekgunnery_heavyrailgunflechettepellet" spawnposition="ThisInventory" />
+          <SpawnItem identifiers="ekgunnery_heavyrailgunflechettepellet" spawnposition="ThisInventory" />
+          <SpawnItem identifiers="ekgunnery_heavyrailgunflechettepellet" spawnposition="ThisInventory" />
           <SpawnItem identifiers="ekgunnery_heavyrailgunflechettepellet" spawnposition="ThisInventory" />
           <SpawnItem identifiers="ekgunnery_heavyrailgunflechettepellet" spawnposition="ThisInventory" />
           <SpawnItem identifiers="ekgunnery_heavyrailgunflechettepellet" spawnposition="ThisInventory" />
@@ -1893,12 +1896,12 @@
           <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" range="50000" selectionmode="Random" />
           <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" range="50000" selectionmode="Random" />
           <Explosion camerashake="500" camerashakerange="50000" decal="explosion" decalsize="1.0" flashduration="5.0" flashrange="10000" force="50.0" itemdamage="1000" range="2000.0" screencolor="255,255,255,255" screencolorduration="5.0" screencolorrange="5000" severlimbsprobability="2" structuredamage="1000">
-            <Affliction identifier="burn" strength="1500" />
+            <Affliction identifier="burn" strength="2000" />
             <Affliction identifier="radiationsickness" strength="200" />
-            <Affliction identifier="explosiondamage" strength="1000" />
-            <Affliction identifier="stun" strength="20" />
+            <Affliction identifier="explosiondamage" strength="2000" />
+            <Affliction identifier="stun" strength="60" />
           </Explosion>
-          <Explosion applyfireeffects="false" empstrength="2" force="0.0" range="4000" smoke="false" sparks="false" />
+          <Explosion applyfireeffects="false" empstrength="5" force="0.0" range="4000" smoke="false" sparks="false" />
           <SpawnItem identifier="ekgunnery_nuclearaftereffectemitter" spawnposition="This" />
         </StatusEffect>
         <!-- Remove the item after exploding -->
