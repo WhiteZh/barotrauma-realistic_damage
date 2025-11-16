@@ -2709,10 +2709,10 @@
       <Body density="15" height="16" width="160" />
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
       <Projectile characterusable="false" launchimpulse="100.0" maxtargetstohit="1" spread="4">
-        <Attack itemdamage="30" levelwalldamage="35" penetration="0.1" severlimbsprobability="0.25" structuredamage="10" targetforce="7">
-          <Affliction identifier="lacerations" strength="14" />
-          <Affliction identifier="gunshotwound" strength="12" />
-          <Affliction identifier="bleeding" strength="2" />
+        <Attack itemdamage="30" levelwalldamage="35" penetration="0.1" severlimbsprobability="0.25" structuredamage="30" targetforce="7" stun="0.75">
+          <Affliction identifier="lacerations" strength="28" />
+          <Affliction identifier="gunshotwound" strength="24" />
+          <Affliction identifier="bleeding" strength="4" />
         </Attack>
         <StatusEffect condition="-28" target="This" type="OnActive">
           <Conditional condition="gt 50" />
@@ -2756,10 +2756,10 @@
       <Body density="15" height="16" width="160" />
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
       <Projectile characterusable="false" launchimpulse="100.0" maxtargetstohit="2" spread="4">
-        <Attack itemdamage="30" levelwalldamage="35" penetration="0.4" severlimbsprobability="0.3" structuredamage="15" targetforce="7">
-          <Affliction identifier="lacerations" strength="16" />
-          <Affliction identifier="gunshotwound" strength="14" />
-          <Affliction identifier="bleeding" strength="3" />
+        <Attack itemdamage="35" levelwalldamage="35" penetration="0.4" severlimbsprobability="0.3" structuredamage="35" targetforce="7" stun="0.75">
+          <Affliction identifier="lacerations" strength="32" />
+          <Affliction identifier="gunshotwound" strength="28" />
+          <Affliction identifier="bleeding" strength="6" />
         </Attack>
         <StatusEffect condition="-28" target="This" type="OnActive">
           <Conditional condition="gt 50" />
@@ -2803,10 +2803,10 @@
       <Body density="15" height="16" width="160" />
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
       <Projectile characterusable="false" launchimpulse="100.0" maxtargetstohit="1" spread="4">
-        <Attack itemdamage="30" levelwalldamage="35" penetration="0.1" severlimbsprobability="0.25" structuredamage="10" targetforce="7">
-          <Affliction identifier="lacerations" strength="14" />
-          <Affliction identifier="gunshotwound" strength="12" />
-          <Affliction identifier="bleeding" strength="2" />
+        <Attack itemdamage="30" levelwalldamage="35" penetration="0.1" severlimbsprobability="0.25" structuredamage="30" targetforce="7" stun="0.75">
+          <Affliction identifier="lacerations" strength="28" />
+          <Affliction identifier="gunshotwound" strength="24" />
+          <Affliction identifier="bleeding" strength="4" />
         </Attack>
         <StatusEffect condition="-28" target="This" type="OnActive">
           <Conditional condition="gt 50" />
@@ -2826,10 +2826,10 @@
           <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="7500" selectionmode="Random" />
           <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="7500" selectionmode="Random" />
           <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="7500" selectionmode="Random" />
-          <Explosion decal="explosion" decalsize="0.5" force="20.0" itemdamage="50" range="400.0" severlimbsprobability="0.5" structuredamage="7.5" underwaterbubble="false">
-            <Affliction identifier="bleeding" strength="2" />
-            <Affliction identifier="lacerations" strength="25" />
-            <Affliction identifier="explosiondamage" strength="15" />
+          <Explosion decal="explosion" decalsize="0.5" force="20.0" itemdamage="50" range="400.0" severlimbsprobability="0.5" structuredamage="30" underwaterbubble="false" stun="0.75">
+            <Affliction identifier="bleeding" strength="4" />
+            <Affliction identifier="lacerations" strength="50" />
+            <Affliction identifier="explosiondamage" strength="30" />
           </Explosion>
           <ParticleEmitter particle="ekgunneryunderwaterexplosionfix" particleamount="1" scalemax="2.25" scalemin="1.75" />
           <ParticleEmitter colormultiplier="255,220,175,255" particle="ekgunnery_hdimpactmedium" particleamount="1" scalemax="3" scalemin="2" velocitymax="0" velocitymin="0" />
@@ -2849,10 +2849,10 @@
       <Body density="15" height="16" width="160" />
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
       <Projectile characterusable="false" launchimpulse="100.0" maxtargetstohit="2" spread="4">
-        <Attack itemdamage="35" levelwalldamage="35" penetration="0.6" severlimbsprobability="0.35" structuredamage="20" targetforce="7">
-          <Affliction identifier="lacerations" strength="18" />
-          <Affliction identifier="gunshotwound" strength="16" />
-          <Affliction identifier="bleeding" strength="4" />
+        <Attack itemdamage="35" levelwalldamage="35" penetration="0.6" severlimbsprobability="0.35" structuredamage="35" targetforce="7" stun="0.75">
+          <Affliction identifier="lacerations" strength="36" />
+          <Affliction identifier="gunshotwound" strength="32" />
+          <Affliction identifier="bleeding" strength="8" />
         </Attack>
         <StatusEffect condition="-28" target="This" type="OnActive">
           <Conditional condition="gt 50" />
@@ -2896,11 +2896,11 @@
       <Body density="15" height="16" width="160" />
       <Holdable aimable="false" handle1="-10,0" handle2="10,0" holdpos="0,-50" slots="RightHand+LeftHand" />
       <Projectile characterusable="false" launchimpulse="100.0" maxtargetstohit="2" spread="4">
-        <Attack itemdamage="40" levelwalldamage="35" penetration="0.8" severlimbsprobability="0.25" structuredamage="30" targetforce="7">
-          <Affliction identifier="gunshotwound" strength="17.5" />
-          <Affliction identifier="lacerations" strength="20" />
-          <Affliction identifier="internaldamage" strength="15" />
-          <Affliction identifier="bleeding" strength="4" />
+        <Attack itemdamage="40" levelwalldamage="35" penetration="0.8" severlimbsprobability="0.25" structuredamage="40" targetforce="7" stun="0.75">
+          <Affliction identifier="gunshotwound" strength="35" />
+          <Affliction identifier="lacerations" strength="40" />
+          <Affliction identifier="explosivedamage" strength="30" />
+          <Affliction identifier="bleeding" strength="8" />
         </Attack>
         <StatusEffect condition="-28" target="This" type="OnActive">
           <Conditional condition="gt 50" />
@@ -2925,10 +2925,10 @@
           <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_autocannon_aphe4.ogg" range="4000" selectionmode="Random" volume="0.65" />
           <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_autocannon_aphe5.ogg" range="4000" selectionmode="Random" volume="0.65" />
           <Sound file="%ModDir:EK Forked%/Items/Weapons/Sounds/ekgunnery_autocannon_aphe6.ogg" range="4000" selectionmode="Random" volume="0.65" />
-          <Explosion force="10.0" itemdamage="25" range="150.0" severlimbsprobability="0.35" structuredamage="25" underwaterbubble="false">
-            <Affliction identifier="bleeding" strength="2" />
-            <Affliction identifier="lacerations" strength="20" />
-            <Affliction identifier="explosiondamage" strength="15" />
+          <Explosion force="10.0" itemdamage="25" range="150.0" severlimbsprobability="0.35" structuredamage="25" underwaterbubble="false" stun="0.75">
+            <Affliction identifier="bleeding" strength="4" />
+            <Affliction identifier="lacerations" strength="40" />
+            <Affliction identifier="explosiondamage" strength="30" />
           </Explosion>
         </StatusEffect>
         <StatusEffect target="UseTarget" type="OnImpact">

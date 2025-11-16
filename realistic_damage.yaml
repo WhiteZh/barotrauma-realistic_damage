@@ -121,6 +121,9 @@ personalweapon:
           # rest unchanged
         # rest unchanged
 submarineweapon:
+  smallssl:
+    projectiles:
+      action: double damage and 0.75 stun and better item/struct damage
   mediumssl:
     # i give up on flak
     he:
