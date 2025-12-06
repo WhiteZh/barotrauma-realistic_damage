@@ -40,9 +40,9 @@
       </Holdable>
       <aitarget fadeouttime="20" sightrange="500" sonarlabel="Decoy" soundrange="7500" />
       <Projectile characterusable="false" launchimpulse="95">
-        <Attack damagetype="Blunt" severlimbsprobability="0.3" structuredamage="3">
-          <Affliction identifier="internaldamage" strength="65" />
-          <Affliction identifier="bleeding" strength="5" />
+        <Attack damagetype="Blunt" severlimbsprobability="0.3" structuredamage="65" itemdamage="65">
+          <Affliction identifier="blunttrauma" strength="130" />
+          <Affliction identifier="bleeding" strength="50" />
           <Affliction identifier="stun" strength="10" />
         </Attack>
         <StatusEffect target="This" type="OnActive">
@@ -113,7 +113,7 @@
       </Holdable>
       <aitarget fadeouttime="20" sightrange="500" sonarlabel="Decoy" soundrange="7500" />
       <Projectile characterusable="false" launchimpulse="95">
-        <Attack damagetype="Blunt" penetration="0.6" severlimbsprobability="0.3" structuredamage="3">
+        <Attack damagetype="Blunt" penetration="0.6" severlimbsprobability="0.3" structuredamage="65" itemdamage="65">
           <Affliction identifier="lacerations" strength="250" />
           <Affliction identifier="bleeding" strength="50" />
           <Affliction identifier="stun" strength="15" />
@@ -201,6 +201,9 @@
         </StatusEffect>
         <StatusEffect condition="-4" delay="0.005" disabledeltatime="true" target="This" type="OnActive">
           <Conditional condition="gt 0" />
+          <SpawnItem identifiers="ek_railgun_flechette_pellet" spawnposition="ThisInventory" />
+          <SpawnItem identifiers="ek_railgun_flechette_pellet" spawnposition="ThisInventory" />
+          <SpawnItem identifiers="ek_railgun_flechette_pellet" spawnposition="ThisInventory" />
           <SpawnItem identifiers="ek_railgun_flechette_pellet" spawnposition="ThisInventory" />
           <SpawnItem identifiers="ek_railgun_flechette_pellet" spawnposition="ThisInventory" />
           <SpawnItem identifiers="ek_railgun_flechette_pellet" spawnposition="ThisInventory" />

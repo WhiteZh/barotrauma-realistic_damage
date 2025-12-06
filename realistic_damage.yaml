@@ -397,6 +397,20 @@ submarineweapon:
             empstrength: 5
   railgun:
     projectiles:
+      decoy:
+        update:
+          afflictions:
+            blunttrauma: 130
+            bleeding: 50
+            stun: 10
+          structdamage: 65
+          itemdamage: 65
+      nuclear_decoy:
+        update:
+          structdamage: 65
+          itemdamage: 65
+      flechette:
+        action: double the pellets
       canister:
         action: double the shrapels
       gravity:
